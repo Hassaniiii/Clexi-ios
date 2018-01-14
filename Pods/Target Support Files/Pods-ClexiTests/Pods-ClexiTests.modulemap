@@ -1,0 +1,6 @@
+framework module Pods_ClexiTests {
+  umbrella header "Pods-ClexiTests-umbrella.h"
+
+  export *
+  module * { export * }
+}

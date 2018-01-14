@@ -1,0 +1,25 @@
+{
+  "name": "BLEManager",
+  "version": "1.0.0",
+  "summary": "BLEManager is a library to manage BLE-related tasks",
+  "source": {
+    "git": "https://github.com/Hassaniiii/BLEManager.git",
+    "branch": "master"
+  },
+  "description": "BLEManager is a library to manage BLE-related tasks",
+  "homepage": "http://vancosys.com",
+  "license": {
+    "type": "GNU",
+    "file": "LICENSE.txt"
+  },
+  "authors": "Hassan Shahbazi",
+  "social_media_url": "https://www.linkedin.com/in/hassanshahbazi/",
+  "platforms": {
+    "ios": "9.0"
+  },
+  "source_files": [
+    "Classes",
+    "BLEManager/Classes/*.{h,m,plist}"
+  ],
+  "exclude_files": "Classes/Exclude"
+}

@@ -1,0 +1,6 @@
+framework module Pods_Clexi {
+  umbrella header "Pods-Clexi-umbrella.h"
+
+  export *
+  module * { export * }
+}

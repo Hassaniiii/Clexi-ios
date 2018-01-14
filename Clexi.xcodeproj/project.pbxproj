@@ -1,0 +1,776 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		17E2C62E200A0CF600503FD0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17E2C62D200A0CF600503FD0 /* AppDelegate.swift */; };
+		17E2C630200A0CF600503FD0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17E2C62F200A0CF600503FD0 /* ViewController.swift */; };
+		17E2C633200A0CF600503FD0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 17E2C631200A0CF600503FD0 /* Main.storyboard */; };
+		17E2C635200A0CF600503FD0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 17E2C634200A0CF600503FD0 /* Assets.xcassets */; };
+		17E2C638200A0CF600503FD0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 17E2C636200A0CF600503FD0 /* LaunchScreen.storyboard */; };
+		17E2C643200A0CF700503FD0 /* ClexiTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17E2C642200A0CF700503FD0 /* ClexiTests.swift */; };
+		17E2C64E200A0CF700503FD0 /* ClexiUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17E2C64D200A0CF700503FD0 /* ClexiUITests.swift */; };
+		5DCFB590C5ED7C5679AFD7B9 /* Pods_ClexiUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 23F0B63B5633159B744703EC /* Pods_ClexiUITests.framework */; };
+		8518A68582AD150C9D8008EB /* Pods_Clexi.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6755A887D64F82C9BEF366B9 /* Pods_Clexi.framework */; };
+		E1A5E4504C3894B88D78565B /* Pods_ClexiTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 410D5671024AC821392337C7 /* Pods_ClexiTests.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		17E2C63F200A0CF700503FD0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 17E2C622200A0CF600503FD0 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 17E2C629200A0CF600503FD0;
+			remoteInfo = Clexi;
+		};
+		17E2C64A200A0CF700503FD0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 17E2C622200A0CF600503FD0 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 17E2C629200A0CF600503FD0;
+			remoteInfo = Clexi;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		17E2C62A200A0CF600503FD0 /* Clexi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Clexi.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		17E2C62D200A0CF600503FD0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		17E2C62F200A0CF600503FD0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		17E2C632200A0CF600503FD0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		17E2C634200A0CF600503FD0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		17E2C637200A0CF600503FD0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		17E2C639200A0CF600503FD0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		17E2C63E200A0CF700503FD0 /* ClexiTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ClexiTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		17E2C642200A0CF700503FD0 /* ClexiTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClexiTests.swift; sourceTree = "<group>"; };
+		17E2C644200A0CF700503FD0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		17E2C649200A0CF700503FD0 /* ClexiUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ClexiUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		17E2C64D200A0CF700503FD0 /* ClexiUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClexiUITests.swift; sourceTree = "<group>"; };
+		17E2C64F200A0CF700503FD0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		202E4E995F692DAABBF0DEF3 /* Pods-ClexiUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ClexiUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ClexiUITests/Pods-ClexiUITests.release.xcconfig"; sourceTree = "<group>"; };
+		23F0B63B5633159B744703EC /* Pods_ClexiUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ClexiUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3F6B65497AB0099B9AA83E31 /* Pods-Clexi.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Clexi.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Clexi/Pods-Clexi.debug.xcconfig"; sourceTree = "<group>"; };
+		410D5671024AC821392337C7 /* Pods_ClexiTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ClexiTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		468297D42AC30FE8A6F9E74B /* Pods-ClexiTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ClexiTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ClexiTests/Pods-ClexiTests.release.xcconfig"; sourceTree = "<group>"; };
+		6755A887D64F82C9BEF366B9 /* Pods_Clexi.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Clexi.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AA42F8E2B9C80F1C126B6346 /* Pods-ClexiTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ClexiTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ClexiTests/Pods-ClexiTests.debug.xcconfig"; sourceTree = "<group>"; };
+		B67E56D45BB7BC773045FD91 /* Pods-ClexiUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ClexiUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ClexiUITests/Pods-ClexiUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		F2F321799F0935751C5586E6 /* Pods-Clexi.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Clexi.release.xcconfig"; path = "Pods/Target Support Files/Pods-Clexi/Pods-Clexi.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		17E2C627200A0CF600503FD0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8518A68582AD150C9D8008EB /* Pods_Clexi.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		17E2C63B200A0CF700503FD0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E1A5E4504C3894B88D78565B /* Pods_ClexiTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		17E2C646200A0CF700503FD0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5DCFB590C5ED7C5679AFD7B9 /* Pods_ClexiUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		17E2C621200A0CF600503FD0 = {
+			isa = PBXGroup;
+			children = (
+				17E2C62C200A0CF600503FD0 /* Clexi */,
+				17E2C641200A0CF700503FD0 /* ClexiTests */,
+				17E2C64C200A0CF700503FD0 /* ClexiUITests */,
+				17E2C62B200A0CF600503FD0 /* Products */,
+				AE0965E879DFC5670E2DC744 /* Pods */,
+				4006895E7F1C1224C71FACC5 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		17E2C62B200A0CF600503FD0 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				17E2C62A200A0CF600503FD0 /* Clexi.app */,
+				17E2C63E200A0CF700503FD0 /* ClexiTests.xctest */,
+				17E2C649200A0CF700503FD0 /* ClexiUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		17E2C62C200A0CF600503FD0 /* Clexi */ = {
+			isa = PBXGroup;
+			children = (
+				17E2C62D200A0CF600503FD0 /* AppDelegate.swift */,
+				17E2C62F200A0CF600503FD0 /* ViewController.swift */,
+				17E2C631200A0CF600503FD0 /* Main.storyboard */,
+				17E2C634200A0CF600503FD0 /* Assets.xcassets */,
+				17E2C636200A0CF600503FD0 /* LaunchScreen.storyboard */,
+				17E2C639200A0CF600503FD0 /* Info.plist */,
+			);
+			path = Clexi;
+			sourceTree = "<group>";
+		};
+		17E2C641200A0CF700503FD0 /* ClexiTests */ = {
+			isa = PBXGroup;
+			children = (
+				17E2C642200A0CF700503FD0 /* ClexiTests.swift */,
+				17E2C644200A0CF700503FD0 /* Info.plist */,
+			);
+			path = ClexiTests;
+			sourceTree = "<group>";
+		};
+		17E2C64C200A0CF700503FD0 /* ClexiUITests */ = {
+			isa = PBXGroup;
+			children = (
+				17E2C64D200A0CF700503FD0 /* ClexiUITests.swift */,
+				17E2C64F200A0CF700503FD0 /* Info.plist */,
+			);
+			path = ClexiUITests;
+			sourceTree = "<group>";
+		};
+		4006895E7F1C1224C71FACC5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6755A887D64F82C9BEF366B9 /* Pods_Clexi.framework */,
+				410D5671024AC821392337C7 /* Pods_ClexiTests.framework */,
+				23F0B63B5633159B744703EC /* Pods_ClexiUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		AE0965E879DFC5670E2DC744 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				3F6B65497AB0099B9AA83E31 /* Pods-Clexi.debug.xcconfig */,
+				F2F321799F0935751C5586E6 /* Pods-Clexi.release.xcconfig */,
+				AA42F8E2B9C80F1C126B6346 /* Pods-ClexiTests.debug.xcconfig */,
+				468297D42AC30FE8A6F9E74B /* Pods-ClexiTests.release.xcconfig */,
+				B67E56D45BB7BC773045FD91 /* Pods-ClexiUITests.debug.xcconfig */,
+				202E4E995F692DAABBF0DEF3 /* Pods-ClexiUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		17E2C629200A0CF600503FD0 /* Clexi */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 17E2C652200A0CF700503FD0 /* Build configuration list for PBXNativeTarget "Clexi" */;
+			buildPhases = (
+				50F6987B219401A12A3FF8BC /* [CP] Check Pods Manifest.lock */,
+				17E2C626200A0CF600503FD0 /* Sources */,
+				17E2C627200A0CF600503FD0 /* Frameworks */,
+				17E2C628200A0CF600503FD0 /* Resources */,
+				EB873F83F4D366A82E649089 /* [CP] Embed Pods Frameworks */,
+				1803287F3587BC815AA48355 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Clexi;
+			productName = Clexi;
+			productReference = 17E2C62A200A0CF600503FD0 /* Clexi.app */;
+			productType = "com.apple.product-type.application";
+		};
+		17E2C63D200A0CF700503FD0 /* ClexiTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 17E2C655200A0CF700503FD0 /* Build configuration list for PBXNativeTarget "ClexiTests" */;
+			buildPhases = (
+				FF2DC69AB0EFAE5B54FDFC9B /* [CP] Check Pods Manifest.lock */,
+				17E2C63A200A0CF700503FD0 /* Sources */,
+				17E2C63B200A0CF700503FD0 /* Frameworks */,
+				17E2C63C200A0CF700503FD0 /* Resources */,
+				7030F19394637EF339BAF34F /* [CP] Embed Pods Frameworks */,
+				FA99D14957D88E5C29EB3190 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				17E2C640200A0CF700503FD0 /* PBXTargetDependency */,
+			);
+			name = ClexiTests;
+			productName = ClexiTests;
+			productReference = 17E2C63E200A0CF700503FD0 /* ClexiTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		17E2C648200A0CF700503FD0 /* ClexiUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 17E2C658200A0CF700503FD0 /* Build configuration list for PBXNativeTarget "ClexiUITests" */;
+			buildPhases = (
+				0BB7B5F3BE43295121C6B46F /* [CP] Check Pods Manifest.lock */,
+				17E2C645200A0CF700503FD0 /* Sources */,
+				17E2C646200A0CF700503FD0 /* Frameworks */,
+				17E2C647200A0CF700503FD0 /* Resources */,
+				E1816BCCA4374F289DDF7DB3 /* [CP] Embed Pods Frameworks */,
+				78DA003AC8E96FF445C15EE7 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				17E2C64B200A0CF700503FD0 /* PBXTargetDependency */,
+			);
+			name = ClexiUITests;
+			productName = ClexiUITests;
+			productReference = 17E2C649200A0CF700503FD0 /* ClexiUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		17E2C622200A0CF600503FD0 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0920;
+				LastUpgradeCheck = 0920;
+				ORGANIZATIONNAME = "Hassan Shahbazi";
+				TargetAttributes = {
+					17E2C629200A0CF600503FD0 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+					};
+					17E2C63D200A0CF700503FD0 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 17E2C629200A0CF600503FD0;
+					};
+					17E2C648200A0CF700503FD0 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 17E2C629200A0CF600503FD0;
+					};
+				};
+			};
+			buildConfigurationList = 17E2C625200A0CF600503FD0 /* Build configuration list for PBXProject "Clexi" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 17E2C621200A0CF600503FD0;
+			productRefGroup = 17E2C62B200A0CF600503FD0 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				17E2C629200A0CF600503FD0 /* Clexi */,
+				17E2C63D200A0CF700503FD0 /* ClexiTests */,
+				17E2C648200A0CF700503FD0 /* ClexiUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		17E2C628200A0CF600503FD0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				17E2C638200A0CF600503FD0 /* LaunchScreen.storyboard in Resources */,
+				17E2C635200A0CF600503FD0 /* Assets.xcassets in Resources */,
+				17E2C633200A0CF600503FD0 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		17E2C63C200A0CF700503FD0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		17E2C647200A0CF700503FD0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0BB7B5F3BE43295121C6B46F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ClexiUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		1803287F3587BC815AA48355 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Clexi/Pods-Clexi-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		50F6987B219401A12A3FF8BC /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Clexi-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7030F19394637EF339BAF34F /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ClexiTests/Pods-ClexiTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		78DA003AC8E96FF445C15EE7 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ClexiUITests/Pods-ClexiUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E1816BCCA4374F289DDF7DB3 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ClexiUITests/Pods-ClexiUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EB873F83F4D366A82E649089 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Clexi/Pods-Clexi-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/BLEManager/BLEManager.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/BLEManager.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Clexi/Pods-Clexi-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FA99D14957D88E5C29EB3190 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ClexiTests/Pods-ClexiTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FF2DC69AB0EFAE5B54FDFC9B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ClexiTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		17E2C626200A0CF600503FD0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				17E2C630200A0CF600503FD0 /* ViewController.swift in Sources */,
+				17E2C62E200A0CF600503FD0 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		17E2C63A200A0CF700503FD0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				17E2C643200A0CF700503FD0 /* ClexiTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		17E2C645200A0CF700503FD0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				17E2C64E200A0CF700503FD0 /* ClexiUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		17E2C640200A0CF700503FD0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 17E2C629200A0CF600503FD0 /* Clexi */;
+			targetProxy = 17E2C63F200A0CF700503FD0 /* PBXContainerItemProxy */;
+		};
+		17E2C64B200A0CF700503FD0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 17E2C629200A0CF600503FD0 /* Clexi */;
+			targetProxy = 17E2C64A200A0CF700503FD0 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		17E2C631200A0CF600503FD0 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				17E2C632200A0CF600503FD0 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		17E2C636200A0CF600503FD0 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				17E2C637200A0CF600503FD0 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		17E2C650200A0CF700503FD0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		17E2C651200A0CF700503FD0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		17E2C653200A0CF700503FD0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3F6B65497AB0099B9AA83E31 /* Pods-Clexi.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 0;
+				DEVELOPMENT_TEAM = 92TDT63R6P;
+				INFOPLIST_FILE = Clexi/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.clexi.Clexi;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		17E2C654200A0CF700503FD0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F2F321799F0935751C5586E6 /* Pods-Clexi.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 0;
+				DEVELOPMENT_TEAM = 92TDT63R6P;
+				INFOPLIST_FILE = Clexi/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.clexi.Clexi;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		17E2C656200A0CF700503FD0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = AA42F8E2B9C80F1C126B6346 /* Pods-ClexiTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 4A6ZQ29Y2F;
+				INFOPLIST_FILE = ClexiTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.clexi.ClexiTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Clexi.app/Clexi";
+			};
+			name = Debug;
+		};
+		17E2C657200A0CF700503FD0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 468297D42AC30FE8A6F9E74B /* Pods-ClexiTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 4A6ZQ29Y2F;
+				INFOPLIST_FILE = ClexiTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.clexi.ClexiTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Clexi.app/Clexi";
+			};
+			name = Release;
+		};
+		17E2C659200A0CF700503FD0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B67E56D45BB7BC773045FD91 /* Pods-ClexiUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 4A6ZQ29Y2F;
+				INFOPLIST_FILE = ClexiUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.clexi.ClexiUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Clexi;
+			};
+			name = Debug;
+		};
+		17E2C65A200A0CF700503FD0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 202E4E995F692DAABBF0DEF3 /* Pods-ClexiUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 4A6ZQ29Y2F;
+				INFOPLIST_FILE = ClexiUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.clexi.ClexiUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Clexi;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		17E2C625200A0CF600503FD0 /* Build configuration list for PBXProject "Clexi" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				17E2C650200A0CF700503FD0 /* Debug */,
+				17E2C651200A0CF700503FD0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		17E2C652200A0CF700503FD0 /* Build configuration list for PBXNativeTarget "Clexi" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				17E2C653200A0CF700503FD0 /* Debug */,
+				17E2C654200A0CF700503FD0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		17E2C655200A0CF700503FD0 /* Build configuration list for PBXNativeTarget "ClexiTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				17E2C656200A0CF700503FD0 /* Debug */,
+				17E2C657200A0CF700503FD0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		17E2C658200A0CF700503FD0 /* Build configuration list for PBXNativeTarget "ClexiUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				17E2C659200A0CF700503FD0 /* Debug */,
+				17E2C65A200A0CF700503FD0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 17E2C622200A0CF600503FD0 /* Project object */;
+}
