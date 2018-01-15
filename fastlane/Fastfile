@@ -18,11 +18,11 @@ platform :ios do
 
   lane :update do
     update_fastlane
+    clean_cocoapods_cache
+    cocoapods
   end
 
   lane :test do
-    clean_cocoapods_cache
-    cocoapods
     run_tests(
             workspace: "Clexi.xcworkspace",
             scheme: "Clexi",

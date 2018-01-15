@@ -34,7 +34,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "17E2C63D200A0CF700503FD0"
-               BuildableName = "ClexiTests.xctest"
+               BuildableName = "ClexiTests"
                BlueprintName = "ClexiTests"
                ReferencedContainer = "container:Clexi.xcodeproj">
             </BuildableReference>

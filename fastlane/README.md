@@ -18,6 +18,11 @@ xcode-select --install
 
 # Available Actions
 ## iOS
+### ios update
+```
+fastlane ios update
+```
+
 ### ios test
 ```
 fastlane ios test
