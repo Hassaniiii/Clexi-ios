@@ -7,8 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1739B2F1200CB2D700F6BD48 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1739B2EF200CB2D700F6BD48 /* ViewController.swift */; };
-		1739B2F2200CB2D700F6BD48 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1739B2F0200CB2D700F6BD48 /* AppDelegate.swift */; };
 		1739B2FC200CB30A00F6BD48 /* DBManager_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1739B2FB200CB30A00F6BD48 /* DBManager_Tests.swift */; };
 		1739B2FE200CB32400F6BD48 /* DBManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1739B2FD200CB32400F6BD48 /* DBManager.swift */; };
 		1739B308200CB34200F6BD48 /* ChangesStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1739B302200CB34100F6BD48 /* ChangesStack.swift */; };
@@ -24,6 +22,8 @@
 		17534D01200B853E0062F480 /* NSUserDefaultManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17534D00200B853E0062F480 /* NSUserDefaultManager.swift */; };
 		17534D03200B85720062F480 /* NSUserDefaultManager_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17534D02200B85720062F480 /* NSUserDefaultManager_Tests.swift */; };
 		17534D06200B880B0062F480 /* ClexiDB.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 17534D04200B880B0062F480 /* ClexiDB.xcdatamodeld */; };
+		17913F93200CF5BD00717EAA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17913F91200CF5BD00717EAA /* ViewController.swift */; };
+		17913F94200CF5BD00717EAA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17913F92200CF5BD00717EAA /* AppDelegate.swift */; };
 		17E2C64E200A0CF700503FD0 /* ClexiUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17E2C64D200A0CF700503FD0 /* ClexiUITests.swift */; };
 		5DCFB590C5ED7C5679AFD7B9 /* Pods_ClexiUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 23F0B63B5633159B744703EC /* Pods_ClexiUITests.framework */; };
 		8518A68582AD150C9D8008EB /* Pods_Clexi.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6755A887D64F82C9BEF366B9 /* Pods_Clexi.framework */; };
@@ -48,8 +48,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		1739B2EF200CB2D700F6BD48 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ViewController.swift; path = "../../../../../../../untitled folder/View Controller/ViewController.swift"; sourceTree = "<group>"; };
-		1739B2F0200CB2D700F6BD48 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = "../../../../../../../untitled folder/View Controller/AppDelegate.swift"; sourceTree = "<group>"; };
 		1739B2FB200CB30A00F6BD48 /* DBManager_Tests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DBManager_Tests.swift; sourceTree = "<group>"; };
 		1739B2FD200CB32400F6BD48 /* DBManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DBManager.swift; sourceTree = "<group>"; };
 		1739B302200CB34100F6BD48 /* ChangesStack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChangesStack.swift; sourceTree = "<group>"; };
@@ -66,6 +64,8 @@
 		17534D00200B853E0062F480 /* NSUserDefaultManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSUserDefaultManager.swift; sourceTree = "<group>"; };
 		17534D02200B85720062F480 /* NSUserDefaultManager_Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSUserDefaultManager_Tests.swift; sourceTree = "<group>"; };
 		17534D05200B880B0062F480 /* ClexiDB.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ClexiDB.xcdatamodel; sourceTree = "<group>"; };
+		17913F91200CF5BD00717EAA /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		17913F92200CF5BD00717EAA /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		17E2C62A200A0CF600503FD0 /* Clexi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Clexi.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		17E2C63E200A0CF700503FD0 /* ClexiTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ClexiTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		17E2C644200A0CF700503FD0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -142,8 +142,8 @@
 		17534CFC200B4EAF0062F480 /* View Controller */ = {
 			isa = PBXGroup;
 			children = (
-				1739B2F0200CB2D700F6BD48 /* AppDelegate.swift */,
-				1739B2EF200CB2D700F6BD48 /* ViewController.swift */,
+				17913F92200CF5BD00717EAA /* AppDelegate.swift */,
+				17913F91200CF5BD00717EAA /* ViewController.swift */,
 			);
 			path = "View Controller";
 			sourceTree = "<group>";
@@ -539,12 +539,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				17913F94200CF5BD00717EAA /* AppDelegate.swift in Sources */,
 				1739B2FE200CB32400F6BD48 /* DBManager.swift in Sources */,
-				1739B2F2200CB2D700F6BD48 /* AppDelegate.swift in Sources */,
-				1739B2F1200CB2D700F6BD48 /* ViewController.swift in Sources */,
 				17534D01200B853E0062F480 /* NSUserDefaultManager.swift in Sources */,
 				1739B324200CBBE600F6BD48 /* BLEClone.swift in Sources */,
 				1739B311200CB35600F6BD48 /* BLECloneModel.swift in Sources */,
+				17913F93200CF5BD00717EAA /* ViewController.swift in Sources */,
 				1739B310200CB35600F6BD48 /* LocalAttributesModel.swift in Sources */,
 				1739B308200CB34200F6BD48 /* ChangesStack.swift in Sources */,
 				1739B30B200CB34200F6BD48 /* LocalAttributes.swift in Sources */,
