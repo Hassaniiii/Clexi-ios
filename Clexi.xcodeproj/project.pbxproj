@@ -7,14 +7,26 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1739B2F1200CB2D700F6BD48 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1739B2EF200CB2D700F6BD48 /* ViewController.swift */; };
+		1739B2F2200CB2D700F6BD48 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1739B2F0200CB2D700F6BD48 /* AppDelegate.swift */; };
+		1739B2FC200CB30A00F6BD48 /* DBManager_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1739B2FB200CB30A00F6BD48 /* DBManager_Tests.swift */; };
+		1739B2FE200CB32400F6BD48 /* DBManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1739B2FD200CB32400F6BD48 /* DBManager.swift */; };
+		1739B306200CB34200F6BD48 /* BLEClone+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1739B300200CB34100F6BD48 /* BLEClone+CoreDataProperties.swift */; };
+		1739B307200CB34200F6BD48 /* ChangesStack+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1739B301200CB34100F6BD48 /* ChangesStack+CoreDataProperties.swift */; };
+		1739B308200CB34200F6BD48 /* ChangesStack+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1739B302200CB34100F6BD48 /* ChangesStack+CoreDataClass.swift */; };
+		1739B309200CB34200F6BD48 /* LocalAttributes+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1739B303200CB34100F6BD48 /* LocalAttributes+CoreDataProperties.swift */; };
+		1739B30A200CB34200F6BD48 /* BLEClone+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1739B304200CB34100F6BD48 /* BLEClone+CoreDataClass.swift */; };
+		1739B30B200CB34200F6BD48 /* LocalAttributes+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1739B305200CB34200F6BD48 /* LocalAttributes+CoreDataClass.swift */; };
+		1739B310200CB35600F6BD48 /* LocalAttributesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1739B30D200CB35500F6BD48 /* LocalAttributesModel.swift */; };
+		1739B311200CB35600F6BD48 /* BLECloneModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1739B30E200CB35500F6BD48 /* BLECloneModel.swift */; };
+		1739B312200CB35600F6BD48 /* ChangesStackModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1739B30F200CB35600F6BD48 /* ChangesStackModel.swift */; };
+		1739B314200CB3B700F6BD48 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1739B313200CB3B700F6BD48 /* Assets.xcassets */; };
+		1739B31F200CB3E200F6BD48 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1739B31B200CB3E200F6BD48 /* LaunchScreen.storyboard */; };
+		1739B320200CB3E200F6BD48 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1739B31D200CB3E200F6BD48 /* Main.storyboard */; };
+		1739B322200CB3F600F6BD48 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1739B321200CB3F600F6BD48 /* Info.plist */; };
 		17534D01200B853E0062F480 /* NSUserDefaultManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17534D00200B853E0062F480 /* NSUserDefaultManager.swift */; };
 		17534D03200B85720062F480 /* NSUserDefaultManager_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17534D02200B85720062F480 /* NSUserDefaultManager_Tests.swift */; };
 		17534D06200B880B0062F480 /* ClexiDB.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 17534D04200B880B0062F480 /* ClexiDB.xcdatamodeld */; };
-		17E2C62E200A0CF600503FD0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17E2C62D200A0CF600503FD0 /* AppDelegate.swift */; };
-		17E2C630200A0CF600503FD0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17E2C62F200A0CF600503FD0 /* ViewController.swift */; };
-		17E2C633200A0CF600503FD0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 17E2C631200A0CF600503FD0 /* Main.storyboard */; };
-		17E2C635200A0CF600503FD0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 17E2C634200A0CF600503FD0 /* Assets.xcassets */; };
-		17E2C638200A0CF600503FD0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 17E2C636200A0CF600503FD0 /* LaunchScreen.storyboard */; };
 		17E2C64E200A0CF700503FD0 /* ClexiUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17E2C64D200A0CF700503FD0 /* ClexiUITests.swift */; };
 		5DCFB590C5ED7C5679AFD7B9 /* Pods_ClexiUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 23F0B63B5633159B744703EC /* Pods_ClexiUITests.framework */; };
 		8518A68582AD150C9D8008EB /* Pods_Clexi.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6755A887D64F82C9BEF366B9 /* Pods_Clexi.framework */; };
@@ -39,16 +51,27 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1739B2EF200CB2D700F6BD48 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ViewController.swift; path = "../../../../../../../untitled folder/View Controller/ViewController.swift"; sourceTree = "<group>"; };
+		1739B2F0200CB2D700F6BD48 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = "../../../../../../../untitled folder/View Controller/AppDelegate.swift"; sourceTree = "<group>"; };
+		1739B2FB200CB30A00F6BD48 /* DBManager_Tests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DBManager_Tests.swift; sourceTree = "<group>"; };
+		1739B2FD200CB32400F6BD48 /* DBManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DBManager.swift; sourceTree = "<group>"; };
+		1739B300200CB34100F6BD48 /* BLEClone+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "BLEClone+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		1739B301200CB34100F6BD48 /* ChangesStack+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ChangesStack+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		1739B302200CB34100F6BD48 /* ChangesStack+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ChangesStack+CoreDataClass.swift"; sourceTree = "<group>"; };
+		1739B303200CB34100F6BD48 /* LocalAttributes+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "LocalAttributes+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		1739B304200CB34100F6BD48 /* BLEClone+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "BLEClone+CoreDataClass.swift"; sourceTree = "<group>"; };
+		1739B305200CB34200F6BD48 /* LocalAttributes+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "LocalAttributes+CoreDataClass.swift"; sourceTree = "<group>"; };
+		1739B30D200CB35500F6BD48 /* LocalAttributesModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocalAttributesModel.swift; sourceTree = "<group>"; };
+		1739B30E200CB35500F6BD48 /* BLECloneModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BLECloneModel.swift; sourceTree = "<group>"; };
+		1739B30F200CB35600F6BD48 /* ChangesStackModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChangesStackModel.swift; sourceTree = "<group>"; };
+		1739B313200CB3B700F6BD48 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		1739B31C200CB3E200F6BD48 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		1739B31E200CB3E200F6BD48 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		1739B321200CB3F600F6BD48 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		17534D00200B853E0062F480 /* NSUserDefaultManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSUserDefaultManager.swift; sourceTree = "<group>"; };
 		17534D02200B85720062F480 /* NSUserDefaultManager_Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSUserDefaultManager_Tests.swift; sourceTree = "<group>"; };
 		17534D05200B880B0062F480 /* ClexiDB.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ClexiDB.xcdatamodel; sourceTree = "<group>"; };
 		17E2C62A200A0CF600503FD0 /* Clexi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Clexi.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		17E2C62D200A0CF600503FD0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		17E2C62F200A0CF600503FD0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		17E2C632200A0CF600503FD0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		17E2C634200A0CF600503FD0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		17E2C637200A0CF600503FD0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		17E2C639200A0CF600503FD0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		17E2C63E200A0CF700503FD0 /* ClexiTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ClexiTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		17E2C644200A0CF700503FD0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		17E2C649200A0CF700503FD0 /* ClexiUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ClexiUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -93,6 +116,29 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1739B2FF200CB33300F6BD48 /* ManagedObjects */ = {
+			isa = PBXGroup;
+			children = (
+				1739B304200CB34100F6BD48 /* BLEClone+CoreDataClass.swift */,
+				1739B300200CB34100F6BD48 /* BLEClone+CoreDataProperties.swift */,
+				1739B302200CB34100F6BD48 /* ChangesStack+CoreDataClass.swift */,
+				1739B301200CB34100F6BD48 /* ChangesStack+CoreDataProperties.swift */,
+				1739B305200CB34200F6BD48 /* LocalAttributes+CoreDataClass.swift */,
+				1739B303200CB34100F6BD48 /* LocalAttributes+CoreDataProperties.swift */,
+			);
+			path = ManagedObjects;
+			sourceTree = "<group>";
+		};
+		1739B30C200CB34D00F6BD48 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				1739B30E200CB35500F6BD48 /* BLECloneModel.swift */,
+				1739B30F200CB35600F6BD48 /* ChangesStackModel.swift */,
+				1739B30D200CB35500F6BD48 /* LocalAttributesModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		17534CFB200B4E8F0062F480 /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -104,8 +150,8 @@
 		17534CFC200B4EAF0062F480 /* View Controller */ = {
 			isa = PBXGroup;
 			children = (
-				17E2C62D200A0CF600503FD0 /* AppDelegate.swift */,
-				17E2C62F200A0CF600503FD0 /* ViewController.swift */,
+				1739B2F0200CB2D700F6BD48 /* AppDelegate.swift */,
+				1739B2EF200CB2D700F6BD48 /* ViewController.swift */,
 			);
 			path = "View Controller";
 			sourceTree = "<group>";
@@ -113,7 +159,10 @@
 		17534CFE200B4F370062F480 /* Database */ = {
 			isa = PBXGroup;
 			children = (
+				1739B30C200CB34D00F6BD48 /* Models */,
+				1739B2FF200CB33300F6BD48 /* ManagedObjects */,
 				17534D00200B853E0062F480 /* NSUserDefaultManager.swift */,
+				1739B2FD200CB32400F6BD48 /* DBManager.swift */,
 				17534D04200B880B0062F480 /* ClexiDB.xcdatamodeld */,
 			);
 			path = Database;
@@ -122,10 +171,10 @@
 		17534CFF200B84940062F480 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				17E2C631200A0CF600503FD0 /* Main.storyboard */,
-				17E2C636200A0CF600503FD0 /* LaunchScreen.storyboard */,
-				17E2C634200A0CF600503FD0 /* Assets.xcassets */,
-				17E2C639200A0CF600503FD0 /* Info.plist */,
+				1739B31B200CB3E200F6BD48 /* LaunchScreen.storyboard */,
+				1739B31D200CB3E200F6BD48 /* Main.storyboard */,
+				1739B313200CB3B700F6BD48 /* Assets.xcassets */,
+				1739B321200CB3F600F6BD48 /* Info.plist */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -165,6 +214,7 @@
 		17E2C641200A0CF700503FD0 /* ClexiTests */ = {
 			isa = PBXGroup;
 			children = (
+				1739B2FB200CB30A00F6BD48 /* DBManager_Tests.swift */,
 				17534D02200B85720062F480 /* NSUserDefaultManager_Tests.swift */,
 				17E2C644200A0CF700503FD0 /* Info.plist */,
 			);
@@ -319,9 +369,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				17E2C638200A0CF600503FD0 /* LaunchScreen.storyboard in Resources */,
-				17E2C635200A0CF600503FD0 /* Assets.xcassets in Resources */,
-				17E2C633200A0CF600503FD0 /* Main.storyboard in Resources */,
+				1739B322200CB3F600F6BD48 /* Info.plist in Resources */,
+				1739B320200CB3E200F6BD48 /* Main.storyboard in Resources */,
+				1739B314200CB3B700F6BD48 /* Assets.xcassets in Resources */,
+				1739B31F200CB3E200F6BD48 /* LaunchScreen.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -496,10 +547,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				17E2C630200A0CF600503FD0 /* ViewController.swift in Sources */,
-				17E2C62E200A0CF600503FD0 /* AppDelegate.swift in Sources */,
+				1739B2FE200CB32400F6BD48 /* DBManager.swift in Sources */,
+				1739B2F2200CB2D700F6BD48 /* AppDelegate.swift in Sources */,
+				1739B2F1200CB2D700F6BD48 /* ViewController.swift in Sources */,
 				17534D01200B853E0062F480 /* NSUserDefaultManager.swift in Sources */,
+				1739B311200CB35600F6BD48 /* BLECloneModel.swift in Sources */,
+				1739B310200CB35600F6BD48 /* LocalAttributesModel.swift in Sources */,
+				1739B309200CB34200F6BD48 /* LocalAttributes+CoreDataProperties.swift in Sources */,
+				1739B308200CB34200F6BD48 /* ChangesStack+CoreDataClass.swift in Sources */,
+				1739B30B200CB34200F6BD48 /* LocalAttributes+CoreDataClass.swift in Sources */,
 				17534D06200B880B0062F480 /* ClexiDB.xcdatamodeld in Sources */,
+				1739B312200CB35600F6BD48 /* ChangesStackModel.swift in Sources */,
+				1739B307200CB34200F6BD48 /* ChangesStack+CoreDataProperties.swift in Sources */,
+				1739B306200CB34200F6BD48 /* BLEClone+CoreDataProperties.swift in Sources */,
+				1739B30A200CB34200F6BD48 /* BLEClone+CoreDataClass.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -508,6 +569,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				17534D03200B85720062F480 /* NSUserDefaultManager_Tests.swift in Sources */,
+				1739B2FC200CB30A00F6BD48 /* DBManager_Tests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -535,20 +597,20 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		17E2C631200A0CF600503FD0 /* Main.storyboard */ = {
+		1739B31B200CB3E200F6BD48 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				17E2C632200A0CF600503FD0 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		17E2C636200A0CF600503FD0 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				17E2C637200A0CF600503FD0 /* Base */,
+				1739B31C200CB3E200F6BD48 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		1739B31D200CB3E200F6BD48 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1739B31E200CB3E200F6BD48 /* Base */,
+			);
+			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
