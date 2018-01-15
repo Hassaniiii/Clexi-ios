@@ -5,27 +5,17 @@
     
     
       
-      <testcase classname="fastlane.lanes" name="0: default_platform" time="0.010756">
+      <testcase classname="fastlane.lanes" name="0: default_platform" time="0.023773">
         
       </testcase>
     
       
-      <testcase classname="fastlane.lanes" name="1: update_fastlane" time="5.932174">
+      <testcase classname="fastlane.lanes" name="1: clean_cocoapods_cache" time="4.293001">
         
       </testcase>
     
       
-      <testcase classname="fastlane.lanes" name="2: unlock_keychain" time="2.371009">
-        
-      </testcase>
-    
-      
-      <testcase classname="fastlane.lanes" name="3: match" time="19.295124">
-        
-      </testcase>
-    
-      
-      <testcase classname="fastlane.lanes" name="4: gym" time="411.802729">
+      <testcase classname="fastlane.lanes" name="2: cocoapods" time="305.482438">
         
       </testcase>
     

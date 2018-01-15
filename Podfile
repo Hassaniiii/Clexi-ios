@@ -6,9 +6,6 @@ target 'Clexi' do
   use_frameworks!
 
   pod 'BLEManager', :git => "https://github.com/Hassaniiii/BLEManager.git"
-  pod 'Realm', git: 'https://github.com/realm/realm-cocoa.git', branch: 'master', :submodules => true
-  pod 'RealmSwift', git: 'https://github.com/realm/realm-cocoa.git', branch: 'master', :submodules => true
-
   
   target 'ClexiTests' do
     inherit! :search_paths
