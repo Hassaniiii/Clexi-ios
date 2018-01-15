@@ -10,10 +10,10 @@ import XCTest
 @testable import Clexi
 
 class DBManager_Tests: XCTestCase {
-    
+        
     override func setUp() {
         super.setUp()
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+        DBManager.isMock = true
     }
     
     override func tearDown() {
@@ -22,31 +22,57 @@ class DBManager_Tests: XCTestCase {
     }
     
     //MARK:- BLE Clone Tests
-    func tests_01_BLECloneList() {
-        let list = DBManager.GetBLECloneItemList()
-        XCTAssertNotNil(list)
-    }
-    func tests_02_BLECloneInsert() {
+    func tests_01_BLECloneInsert() {
         let newItem = BLECloneModel()
+        newItem.id          = 0
+        newItem.title       = "TEST TITILE"
+        newItem.url         = "TEST URL"
+        newItem.username    = "TEST USERNAME"
+        newItem.appid       = nil
+        
         let result = DBManager.InsertNew(BLEItem: newItem)
         XCTAssertTrue(result)
+    }
+    func tests_02_BLECloneList() {
+        let list = DBManager.GetBLECloneItemList()
+        XCTAssertNotNil(list)
+        XCTAssertGreaterThan(list.count, 0)
     }
     func tests_03_BLECloneLoad() {
         let id = 0
         let result = DBManager.LoadBLECloneItem(With: id)
         XCTAssertNotNil(result)
+        XCTAssertEqual(result?.title, "TEST TITILE")
+        XCTAssertEqual(result?.url, "TEST URL")
+        XCTAssertEqual(result?.username, "TEST USERNAME")
+        XCTAssertNil(result?.appid)
     }
-    func tests_04_BLECloneRemove() {
+    func tests_04_BLECloneUpdate() {
+        let id = 0
+        let newItem = BLECloneModel()
+        newItem.title       = "TEST TITILE 2"
+        newItem.url         = "TEST URL 2"
+        newItem.username    = "TEST USERNAME 2"
+        newItem.appid       = nil
+        
+        let result = DBManager.UpdateBLECloneItem(With: id, To: newItem)
+        XCTAssertTrue(result)
+        
+        let updatedItem = DBManager.LoadBLECloneItem(With: id)
+        XCTAssertEqual(updatedItem?.title, "TEST TITILE 2")
+        XCTAssertEqual(updatedItem?.url, "TEST URL 2")
+        XCTAssertEqual(updatedItem?.username, "TEST USERNAME 2")
+        XCTAssertNil(updatedItem?.appid)
+    }
+    func tests_05_BLECloneRemove() {
         let id = 0
         let result = DBManager.RemoveBLECloneItem(With: id)
         XCTAssertTrue(result)
+        
+        let list = DBManager.GetBLECloneItemList()
+        XCTAssertEqual(list.count, 0)
     }
-    func tests_05_BLECloneUpdate() {
-        let id = 0
-        let newItem = BLECloneModel()
-        let result = DBManager.UpdateBLECloneItem(With: id, To: newItem)
-        XCTAssertTrue(result)
-    }
+    
     
     //MARK:- Changes Stack Tests
     func tests_11_BLEStackList() {
@@ -96,44 +122,5 @@ class DBManager_Tests: XCTestCase {
         let newItem = LocalAttributesModel()
         let result = DBManager.UpdateAttribute(With: id, To: newItem)
         XCTAssertTrue(result)
-    }
-    
-    //MARK:- Conversations Tests
-    func test_31_BLECloneItem_To_BLEItemModel() {
-        let item = BLEClone()
-        let result = DBManager.ItemToModel(from: item)
-        XCTAssertNotNil(result)
-        XCTAssertTrue(result.isKind(of: BLECloneModel.classForCoder()))
-    }
-    func test_32_BLEStackItem_To_BLEStackModel() {
-        let item = ChangesStack()
-        let result = DBManager.ItemToModel(from: item)
-        XCTAssertNotNil(result)
-        XCTAssertTrue(result.isKind(of: ChangesStackModel.classForCoder()))
-    }
-    func test_33_AttributeItem_To_AttributeModel() {
-        let item = LocalAttributes()
-        let result = DBManager.ItemToModel(from: item)
-        XCTAssertNotNil(result)
-        XCTAssertTrue(result.isKind(of: LocalAttributesModel.classForCoder()))
-    }
-    
-    func test_34_BLECloneModel_To_BLEItemItem() {
-        let item = BLECloneModel()
-        let result = DBManager.ModelToItem(from: item)
-        XCTAssertNotNil(result)
-        XCTAssertTrue(result.isKind(of: BLEClone.classForCoder()))
-    }
-    func test_35_BLEStackModel_To_BLEStackItem() {
-        let item = ChangesStackModel()
-        let result = DBManager.ModelToItem(from: item)
-        XCTAssertNotNil(result)
-        XCTAssertTrue(result.isKind(of: ChangesStack.classForCoder()))
-    }
-    func test_36_AttributeModel_To_AttributeItem() {
-        let item = LocalAttributesModel()
-        let result = DBManager.ModelToItem(from: item)
-        XCTAssertNotNil(result)
-        XCTAssertTrue(result.isKind(of: LocalAttributes.classForCoder()))
     }
 }

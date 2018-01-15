@@ -11,19 +11,16 @@
 		1739B2F2200CB2D700F6BD48 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1739B2F0200CB2D700F6BD48 /* AppDelegate.swift */; };
 		1739B2FC200CB30A00F6BD48 /* DBManager_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1739B2FB200CB30A00F6BD48 /* DBManager_Tests.swift */; };
 		1739B2FE200CB32400F6BD48 /* DBManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1739B2FD200CB32400F6BD48 /* DBManager.swift */; };
-		1739B306200CB34200F6BD48 /* BLEClone+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1739B300200CB34100F6BD48 /* BLEClone+CoreDataProperties.swift */; };
-		1739B307200CB34200F6BD48 /* ChangesStack+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1739B301200CB34100F6BD48 /* ChangesStack+CoreDataProperties.swift */; };
-		1739B308200CB34200F6BD48 /* ChangesStack+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1739B302200CB34100F6BD48 /* ChangesStack+CoreDataClass.swift */; };
-		1739B309200CB34200F6BD48 /* LocalAttributes+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1739B303200CB34100F6BD48 /* LocalAttributes+CoreDataProperties.swift */; };
-		1739B30A200CB34200F6BD48 /* BLEClone+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1739B304200CB34100F6BD48 /* BLEClone+CoreDataClass.swift */; };
-		1739B30B200CB34200F6BD48 /* LocalAttributes+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1739B305200CB34200F6BD48 /* LocalAttributes+CoreDataClass.swift */; };
+		1739B308200CB34200F6BD48 /* ChangesStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1739B302200CB34100F6BD48 /* ChangesStack.swift */; };
+		1739B30B200CB34200F6BD48 /* LocalAttributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1739B305200CB34200F6BD48 /* LocalAttributes.swift */; };
 		1739B310200CB35600F6BD48 /* LocalAttributesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1739B30D200CB35500F6BD48 /* LocalAttributesModel.swift */; };
 		1739B311200CB35600F6BD48 /* BLECloneModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1739B30E200CB35500F6BD48 /* BLECloneModel.swift */; };
 		1739B312200CB35600F6BD48 /* ChangesStackModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1739B30F200CB35600F6BD48 /* ChangesStackModel.swift */; };
 		1739B314200CB3B700F6BD48 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1739B313200CB3B700F6BD48 /* Assets.xcassets */; };
 		1739B31F200CB3E200F6BD48 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1739B31B200CB3E200F6BD48 /* LaunchScreen.storyboard */; };
 		1739B320200CB3E200F6BD48 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1739B31D200CB3E200F6BD48 /* Main.storyboard */; };
-		1739B322200CB3F600F6BD48 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1739B321200CB3F600F6BD48 /* Info.plist */; };
+		1739B324200CBBE600F6BD48 /* BLEClone.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1739B323200CBBE600F6BD48 /* BLEClone.swift */; };
+		1739B329200CC53100F6BD48 /* DatabaseInstance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1739B328200CC53100F6BD48 /* DatabaseInstance.swift */; };
 		17534D01200B853E0062F480 /* NSUserDefaultManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17534D00200B853E0062F480 /* NSUserDefaultManager.swift */; };
 		17534D03200B85720062F480 /* NSUserDefaultManager_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17534D02200B85720062F480 /* NSUserDefaultManager_Tests.swift */; };
 		17534D06200B880B0062F480 /* ClexiDB.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 17534D04200B880B0062F480 /* ClexiDB.xcdatamodeld */; };
@@ -55,12 +52,8 @@
 		1739B2F0200CB2D700F6BD48 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = "../../../../../../../untitled folder/View Controller/AppDelegate.swift"; sourceTree = "<group>"; };
 		1739B2FB200CB30A00F6BD48 /* DBManager_Tests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DBManager_Tests.swift; sourceTree = "<group>"; };
 		1739B2FD200CB32400F6BD48 /* DBManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DBManager.swift; sourceTree = "<group>"; };
-		1739B300200CB34100F6BD48 /* BLEClone+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "BLEClone+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		1739B301200CB34100F6BD48 /* ChangesStack+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ChangesStack+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		1739B302200CB34100F6BD48 /* ChangesStack+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ChangesStack+CoreDataClass.swift"; sourceTree = "<group>"; };
-		1739B303200CB34100F6BD48 /* LocalAttributes+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "LocalAttributes+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		1739B304200CB34100F6BD48 /* BLEClone+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "BLEClone+CoreDataClass.swift"; sourceTree = "<group>"; };
-		1739B305200CB34200F6BD48 /* LocalAttributes+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "LocalAttributes+CoreDataClass.swift"; sourceTree = "<group>"; };
+		1739B302200CB34100F6BD48 /* ChangesStack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChangesStack.swift; sourceTree = "<group>"; };
+		1739B305200CB34200F6BD48 /* LocalAttributes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocalAttributes.swift; sourceTree = "<group>"; };
 		1739B30D200CB35500F6BD48 /* LocalAttributesModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocalAttributesModel.swift; sourceTree = "<group>"; };
 		1739B30E200CB35500F6BD48 /* BLECloneModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BLECloneModel.swift; sourceTree = "<group>"; };
 		1739B30F200CB35600F6BD48 /* ChangesStackModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChangesStackModel.swift; sourceTree = "<group>"; };
@@ -68,6 +61,8 @@
 		1739B31C200CB3E200F6BD48 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1739B31E200CB3E200F6BD48 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		1739B321200CB3F600F6BD48 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1739B323200CBBE600F6BD48 /* BLEClone.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BLEClone.swift; sourceTree = "<group>"; };
+		1739B328200CC53100F6BD48 /* DatabaseInstance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseInstance.swift; sourceTree = "<group>"; };
 		17534D00200B853E0062F480 /* NSUserDefaultManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSUserDefaultManager.swift; sourceTree = "<group>"; };
 		17534D02200B85720062F480 /* NSUserDefaultManager_Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSUserDefaultManager_Tests.swift; sourceTree = "<group>"; };
 		17534D05200B880B0062F480 /* ClexiDB.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ClexiDB.xcdatamodel; sourceTree = "<group>"; };
@@ -119,12 +114,9 @@
 		1739B2FF200CB33300F6BD48 /* ManagedObjects */ = {
 			isa = PBXGroup;
 			children = (
-				1739B304200CB34100F6BD48 /* BLEClone+CoreDataClass.swift */,
-				1739B300200CB34100F6BD48 /* BLEClone+CoreDataProperties.swift */,
-				1739B302200CB34100F6BD48 /* ChangesStack+CoreDataClass.swift */,
-				1739B301200CB34100F6BD48 /* ChangesStack+CoreDataProperties.swift */,
-				1739B305200CB34200F6BD48 /* LocalAttributes+CoreDataClass.swift */,
-				1739B303200CB34100F6BD48 /* LocalAttributes+CoreDataProperties.swift */,
+				1739B323200CBBE600F6BD48 /* BLEClone.swift */,
+				1739B302200CB34100F6BD48 /* ChangesStack.swift */,
+				1739B305200CB34200F6BD48 /* LocalAttributes.swift */,
 			);
 			path = ManagedObjects;
 			sourceTree = "<group>";
@@ -159,11 +151,11 @@
 		17534CFE200B4F370062F480 /* Database */ = {
 			isa = PBXGroup;
 			children = (
+				1739B328200CC53100F6BD48 /* DatabaseInstance.swift */,
 				1739B30C200CB34D00F6BD48 /* Models */,
 				1739B2FF200CB33300F6BD48 /* ManagedObjects */,
-				17534D00200B853E0062F480 /* NSUserDefaultManager.swift */,
 				1739B2FD200CB32400F6BD48 /* DBManager.swift */,
-				17534D04200B880B0062F480 /* ClexiDB.xcdatamodeld */,
+				17534D00200B853E0062F480 /* NSUserDefaultManager.swift */,
 			);
 			path = Database;
 			sourceTree = "<group>";
@@ -171,6 +163,7 @@
 		17534CFF200B84940062F480 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				17534D04200B880B0062F480 /* ClexiDB.xcdatamodeld */,
 				1739B31B200CB3E200F6BD48 /* LaunchScreen.storyboard */,
 				1739B31D200CB3E200F6BD48 /* Main.storyboard */,
 				1739B313200CB3B700F6BD48 /* Assets.xcassets */,
@@ -369,7 +362,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1739B322200CB3F600F6BD48 /* Info.plist in Resources */,
 				1739B320200CB3E200F6BD48 /* Main.storyboard in Resources */,
 				1739B314200CB3B700F6BD48 /* Assets.xcassets in Resources */,
 				1739B31F200CB3E200F6BD48 /* LaunchScreen.storyboard in Resources */,
@@ -551,16 +543,14 @@
 				1739B2F2200CB2D700F6BD48 /* AppDelegate.swift in Sources */,
 				1739B2F1200CB2D700F6BD48 /* ViewController.swift in Sources */,
 				17534D01200B853E0062F480 /* NSUserDefaultManager.swift in Sources */,
+				1739B324200CBBE600F6BD48 /* BLEClone.swift in Sources */,
 				1739B311200CB35600F6BD48 /* BLECloneModel.swift in Sources */,
 				1739B310200CB35600F6BD48 /* LocalAttributesModel.swift in Sources */,
-				1739B309200CB34200F6BD48 /* LocalAttributes+CoreDataProperties.swift in Sources */,
-				1739B308200CB34200F6BD48 /* ChangesStack+CoreDataClass.swift in Sources */,
-				1739B30B200CB34200F6BD48 /* LocalAttributes+CoreDataClass.swift in Sources */,
+				1739B308200CB34200F6BD48 /* ChangesStack.swift in Sources */,
+				1739B30B200CB34200F6BD48 /* LocalAttributes.swift in Sources */,
 				17534D06200B880B0062F480 /* ClexiDB.xcdatamodeld in Sources */,
 				1739B312200CB35600F6BD48 /* ChangesStackModel.swift in Sources */,
-				1739B307200CB34200F6BD48 /* ChangesStack+CoreDataProperties.swift in Sources */,
-				1739B306200CB34200F6BD48 /* BLEClone+CoreDataProperties.swift in Sources */,
-				1739B30A200CB34200F6BD48 /* BLEClone+CoreDataClass.swift in Sources */,
+				1739B329200CC53100F6BD48 /* DatabaseInstance.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

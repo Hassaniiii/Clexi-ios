@@ -9,5 +9,13 @@
 import UIKit
 
 class BLECloneModel: NSObject {
-
+    var appid:      String?
+    var id:         Int16!
+    var title:      String!
+    var url:        String?
+    var username:   String?
+    
+    override init() {
+        super.init()
+    }
 }

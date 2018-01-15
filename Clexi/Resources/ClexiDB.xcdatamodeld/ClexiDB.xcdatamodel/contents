@@ -21,7 +21,7 @@
     </entity>
     <elements>
         <element name="BLEClone" positionX="-63" positionY="-18" width="128" height="135"/>
-        <element name="LocalAttributes" positionX="-54" positionY="-9" width="128" height="105"/>
         <element name="ChangesStack" positionX="-36" positionY="9" width="128" height="90"/>
+        <element name="LocalAttributes" positionX="-54" positionY="-9" width="128" height="105"/>
     </elements>
 </model>
