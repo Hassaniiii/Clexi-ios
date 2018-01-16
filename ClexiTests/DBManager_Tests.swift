@@ -60,6 +60,7 @@ class DBManager_Tests: XCTestCase {
         XCTAssertTrue(result)
         
         let updatedItem = DBManager.LoadBLECloneItem(With: id)
+        XCTAssertNotNil(updatedItem)
         XCTAssertEqual(updatedItem?.title, "TEST TITILE 2")
         XCTAssertEqual(updatedItem?.url, "TEST URL 2")
         XCTAssertEqual(updatedItem?.username, "TEST USERNAME 2")
@@ -86,31 +87,83 @@ class DBManager_Tests: XCTestCase {
     
     
     //MARK:- Changes Stack Tests
-    func tests_11_BLEStackList() {
-        let list = DBManager.GetBLEStackItemList()
-        XCTAssertNotNil(list)
-    }
-    func tests_12_BLEStackInsert() {
+    func tests_11_BLEStackInsert() {
         let newItem = ChangesStackModel()
+        newItem.id          = 0
+        newItem.title       = "TEST TITILE"
+        newItem.url         = "TEST URL"
+        newItem.username    = "TEST USERNAME"
+        newItem.appid       = nil
+        newItem.password    = "TEST PASSWORD"
+        newItem.changekey   = ChangeKey.Insert
+        newItem.hashKey     = "TEST HASH"
+        
         let result = DBManager.InsertNew(StackItem: newItem)
         XCTAssertTrue(result)
+    }
+    func tests_12_BLEStackList() {
+        let list = DBManager.GetBLEStackItemList()
+        XCTAssertNotNil(list)
+        XCTAssertGreaterThan(list.count, 0)
     }
     func tests_13_BLEStackLoad() {
         let id = 0
         let result = DBManager.LoadBLEStackItem(With: id)
         XCTAssertNotNil(result)
+        XCTAssertEqual(result?.title, "TEST TITILE")
+        XCTAssertEqual(result?.url, "TEST URL")
+        XCTAssertEqual(result?.username, "TEST USERNAME")
+        XCTAssertNil(result?.appid)
+        XCTAssertEqual(result?.password, "TEST PASSWORD")
+        XCTAssertEqual(result?.changekey, ChangeKey.Insert)
+        XCTAssertEqual(result?.hashKey, "TEST HASH")
     }
-    func tests_14_BLEStackRemove() {
+    func tests_14_BLEStackUpdate() {
+        let id = 0
+        let newItem = ChangesStackModel()
+        newItem.id          = Int16(id)
+        newItem.title       = "TEST TITILE 2"
+        newItem.url         = "TEST URL 2"
+        newItem.username    = "TEST USERNAME 2"
+        newItem.appid       = nil
+        newItem.password    = "TEST PASSWORD 2"
+        newItem.changekey   = ChangeKey.Remove
+        newItem.hashKey     = "TEST HASH 2"
+
+        
+        let result = DBManager.UpdateBLEStackItem(With: id, To: newItem)
+        XCTAssertTrue(result)
+        
+        let updatedItem = DBManager.LoadBLEStackItem(With: id)
+        XCTAssertNotNil(updatedItem)
+        XCTAssertEqual(updatedItem?.title, "TEST TITILE 2")
+        XCTAssertEqual(updatedItem?.url, "TEST URL 2")
+        XCTAssertEqual(updatedItem?.username, "TEST USERNAME 2")
+        XCTAssertNil(updatedItem?.appid)
+        XCTAssertEqual(updatedItem?.password, "TEST PASSWORD 2")
+        XCTAssertEqual(updatedItem?.changekey, ChangeKey.Remove)
+        XCTAssertEqual(updatedItem?.hashKey, "TEST HASH 2")
+
+    }
+    func tests_15_BLEStackRemove() {
         let id = 0
         let result = DBManager.RemoveBLEStackItem(With: id)
         XCTAssertTrue(result)
+        
+        let list = DBManager.GetBLEStackItemList()
+        XCTAssertEqual(list.count, 0)
     }
-    func tests_15_BLEStackUpdate() {
+    func tests_16_BLECloneLoadInvallid() {
         let id = 0
-        let newItem = ChangesStackModel()
-        let result = DBManager.UpdateBLEStackItem(With: id, To: newItem)
-        XCTAssertTrue(result)
+        let result = DBManager.LoadBLEStackItem(With: id)
+        XCTAssertNil(result)
     }
+    func tests_17_BLECloneDoubleRemove() {
+        let id = 0
+        let result = DBManager.RemoveBLEStackItem(With: id)
+        XCTAssertFalse(result)
+    }
+    
     
     //MARK:- Local Attributes Tests
     func tests_21_AttributeInsert() {

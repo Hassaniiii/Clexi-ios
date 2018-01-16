@@ -8,7 +8,7 @@
 
 import UIKit
 
-class BLECloneModel: NSObject {
+class BLECloneModel: BaseModel {
     var appid:      String?
     var id:         Int16!
     var title:      String!
@@ -18,4 +18,15 @@ class BLECloneModel: NSObject {
     override init() {
         super.init()
     }
+    
+    override func ModelToItem(Item: inout BaseManagedObject) {
+        if let item = Item as? BLEClone {
+            item.appid = self.appid
+            item.id = self.id
+            item.url = self.url
+            item.title = self.title
+            item.username = self.username
+        }
+    }
 }
+

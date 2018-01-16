@@ -25,6 +25,8 @@
 		17913F93200CF5BD00717EAA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17913F91200CF5BD00717EAA /* ViewController.swift */; };
 		17913F94200CF5BD00717EAA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17913F92200CF5BD00717EAA /* AppDelegate.swift */; };
 		17E2C64E200A0CF700503FD0 /* ClexiUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17E2C64D200A0CF700503FD0 /* ClexiUITests.swift */; };
+		17E3EE13200DF79F00B5AD95 /* BaseManagedObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17E3EE12200DF79F00B5AD95 /* BaseManagedObject.swift */; };
+		17E3EE15200DFA8700B5AD95 /* BaseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17E3EE14200DFA8700B5AD95 /* BaseModel.swift */; };
 		5DCFB590C5ED7C5679AFD7B9 /* Pods_ClexiUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 23F0B63B5633159B744703EC /* Pods_ClexiUITests.framework */; };
 		8518A68582AD150C9D8008EB /* Pods_Clexi.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6755A887D64F82C9BEF366B9 /* Pods_Clexi.framework */; };
 		E1A5E4504C3894B88D78565B /* Pods_ClexiTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 410D5671024AC821392337C7 /* Pods_ClexiTests.framework */; };
@@ -72,6 +74,8 @@
 		17E2C649200A0CF700503FD0 /* ClexiUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ClexiUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		17E2C64D200A0CF700503FD0 /* ClexiUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClexiUITests.swift; sourceTree = "<group>"; };
 		17E2C64F200A0CF700503FD0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		17E3EE12200DF79F00B5AD95 /* BaseManagedObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseManagedObject.swift; sourceTree = "<group>"; };
+		17E3EE14200DFA8700B5AD95 /* BaseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseModel.swift; sourceTree = "<group>"; };
 		202E4E995F692DAABBF0DEF3 /* Pods-ClexiUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ClexiUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ClexiUITests/Pods-ClexiUITests.release.xcconfig"; sourceTree = "<group>"; };
 		23F0B63B5633159B744703EC /* Pods_ClexiUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ClexiUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F6B65497AB0099B9AA83E31 /* Pods-Clexi.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Clexi.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Clexi/Pods-Clexi.debug.xcconfig"; sourceTree = "<group>"; };
@@ -114,6 +118,7 @@
 		1739B2FF200CB33300F6BD48 /* ManagedObjects */ = {
 			isa = PBXGroup;
 			children = (
+				17E3EE12200DF79F00B5AD95 /* BaseManagedObject.swift */,
 				1739B323200CBBE600F6BD48 /* BLEClone.swift */,
 				1739B302200CB34100F6BD48 /* ChangesStack.swift */,
 				1739B305200CB34200F6BD48 /* LocalAttributes.swift */,
@@ -124,6 +129,7 @@
 		1739B30C200CB34D00F6BD48 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				17E3EE14200DFA8700B5AD95 /* BaseModel.swift */,
 				1739B30E200CB35500F6BD48 /* BLECloneModel.swift */,
 				1739B30F200CB35600F6BD48 /* ChangesStackModel.swift */,
 				1739B30D200CB35500F6BD48 /* LocalAttributesModel.swift */,
@@ -541,9 +547,11 @@
 			files = (
 				17913F94200CF5BD00717EAA /* AppDelegate.swift in Sources */,
 				1739B2FE200CB32400F6BD48 /* DBManager.swift in Sources */,
+				17E3EE15200DFA8700B5AD95 /* BaseModel.swift in Sources */,
 				17534D01200B853E0062F480 /* NSUserDefaultManager.swift in Sources */,
 				1739B324200CBBE600F6BD48 /* BLEClone.swift in Sources */,
 				1739B311200CB35600F6BD48 /* BLECloneModel.swift in Sources */,
+				17E3EE13200DF79F00B5AD95 /* BaseManagedObject.swift in Sources */,
 				17913F93200CF5BD00717EAA /* ViewController.swift in Sources */,
 				1739B310200CB35600F6BD48 /* LocalAttributesModel.swift in Sources */,
 				1739B308200CB34200F6BD48 /* ChangesStack.swift in Sources */,

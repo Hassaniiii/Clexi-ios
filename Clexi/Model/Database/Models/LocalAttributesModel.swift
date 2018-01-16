@@ -8,6 +8,8 @@
 
 import UIKit
 
-class LocalAttributesModel: NSObject {
-
+class LocalAttributesModel: BaseModel {
+    override func ModelToItem(Item: inout BaseManagedObject) {
+        
+    }
 }

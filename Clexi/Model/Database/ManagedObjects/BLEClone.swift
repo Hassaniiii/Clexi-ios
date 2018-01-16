@@ -11,7 +11,7 @@ import Foundation
 import CoreData
 
 
-class BLEClone: NSManagedObject {
+class BLEClone: BaseManagedObject {
     @nonobjc public class func FetchRequest() -> NSFetchRequest<BLEClone> {
         return NSFetchRequest<BLEClone>(entityName: "BLEClone")
     }
@@ -22,4 +22,16 @@ class BLEClone: NSManagedObject {
     @NSManaged public var title: String?
     @NSManaged public var username: String?
     @NSManaged public var ble_local: LocalAttributes?
+    
+    override func ItemToModel() -> NSObject {
+        let model = BLECloneModel()
+        
+        model.appid = self.appid
+        model.id = self.id
+        model.title = self.title
+        model.url = self.url
+        model.username = self.username
+        
+        return model
+    }
 }
