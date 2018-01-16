@@ -12,7 +12,7 @@ import CoreData
 
 
 class ChangesStack: BLEClone {
-    @nonobjc public class func fetchRequest() -> NSFetchRequest<ChangesStack> {
+    @nonobjc public class func FetchRequest() -> NSFetchRequest<ChangesStack> {
         return NSFetchRequest<ChangesStack>(entityName: "ChangesStack")
     }
     

@@ -17,24 +17,64 @@ class DBManager: NSObject {
         return database.managedObjectContext()
     }
     
-    
-    //MARK:- BLE Clone
-    class func GetBLECloneItemList() -> [BLECloneModel] {
+    //MARK:- Shared functions
+    private class func GetList(from Request: NSFetchRequest<NSFetchRequestResult>, result: inout [NSObject]) {
         let managedContext = GetDatabaseInstance()
-        let fetchRequest = BLEClone.FetchRequest()
-        var result = [BLECloneModel]()
-        
-        if let fetchResults = (try? managedContext.fetch(fetchRequest)) {
+        if let fetchResults = (try? managedContext.fetch(Request)) {
             for record in fetchResults {
-                result.append(ItemToModel(from: record))
+                if let rec = record as? NSManagedObject {
+                    result.append(ItemToModel(from: rec))
+                }
             }
         }
-        return result
     }
-    class func InsertNew(BLEItem: BLECloneModel) -> Bool {
+    private class func GetItem(from Request: NSFetchRequest<NSFetchRequestResult>, result: inout NSObject) {
         let managedContext = GetDatabaseInstance()
-        if var newItem = NSEntityDescription.insertNewObject(forEntityName: "BLEClone", into:managedContext) as? BLEClone {
-            ModelToItem(from: BLEItem, To: &newItem)
+        do {
+            let fetchResults = try managedContext.fetch(Request)
+            if let rec = fetchResults.first as? NSManagedObject {
+                result = ItemToModel(from: rec)
+            }
+        } catch {
+            result = NSObject()
+        }
+    }
+    private class func InsertItem(entity Request: String, item: NSObject) -> Bool {
+        let managedContext = GetDatabaseInstance()
+        var newItem = NSEntityDescription.insertNewObject(forEntityName: Request, into:managedContext)
+        ModelToItem(from: item, To: &newItem)
+        
+        do {
+            try managedContext.save()
+            return true
+        } catch {
+            return false
+        }
+    }
+    private class func RemoveItem(from Request: NSFetchRequest<NSFetchRequestResult>) -> Bool {
+        let managedContext = GetDatabaseInstance()
+        if let fetchResult = (try? managedContext.fetch(Request)) {
+            if fetchResult.count == 1 {
+                if let rec = fetchResult.first as? NSManagedObject {
+                    managedContext.delete(rec)
+                }
+            }
+            else {
+                return false
+            }
+            do {
+                try managedContext.save()
+                return true
+            } catch {
+                return false
+            }
+        }
+        return false
+    }
+    private class func UpdateItem(from Request: NSFetchRequest<NSFetchRequestResult>, To New: NSObject) -> Bool {
+        let managedContext = GetDatabaseInstance()
+        if var fetchResult = (try? managedContext.fetch(Request))?.first as? NSManagedObject {
+            ModelToItem(from: New, To: &fetchResult)
             
             do {
                 try managedContext.save()
@@ -45,61 +85,47 @@ class DBManager: NSObject {
         }
         return false
     }
+    
+    //MARK:- BLE Clone
+    class func GetBLECloneItemList() -> [BLECloneModel] {
+        var result = [NSObject]()
+        GetList(from: BLEClone.fetchRequest(), result: &result)
+        if let res = result as? [BLECloneModel] {
+            return res
+        }
+        return [BLECloneModel]()
+    }
+    class func InsertNew(BLEItem: BLECloneModel) -> Bool {
+        return InsertItem(entity: "BLEClone", item: BLEItem)
+    }
     class func LoadBLECloneItem(With ID: Int) -> BLECloneModel? {
-        let managedContext = GetDatabaseInstance()
-        let fetchRequest = BLEClone.FetchRequest()
+        let fetchRequest = BLEClone.fetchRequest()
         let fetchPredicate = NSPredicate(format: "id = \(ID)")
         fetchRequest.predicate = fetchPredicate
         
-        if let fetchResult = (try? managedContext.fetch(fetchRequest)) {
-            if fetchResult.count == 1 {
-                return ItemToModel(from: fetchResult.first!)
-            }
-        }
-        return nil
+        var result = NSObject()
+        GetItem(from: fetchRequest, result: &result)
+        return result as? BLECloneModel
     }
     class func RemoveBLECloneItem(With ID: Int) -> Bool {
-        let managedContext = GetDatabaseInstance()
-        let fetchRequest = BLEClone.FetchRequest()
+        let fetchRequest = BLEClone.fetchRequest()
         let fetchPredicate = NSPredicate(format: "id = \(ID)")
         fetchRequest.predicate = fetchPredicate
         
-        if let fetchResult = (try? managedContext.fetch(fetchRequest)) {
-            if fetchResult.count == 1 {
-                managedContext.delete(fetchResult.first!)
-            }
-            do {
-                try managedContext.save()
-                return true
-            } catch {
-                return false
-            }
-        }
-        return false
+        return RemoveItem(from: fetchRequest)
     }
     class func UpdateBLECloneItem(With ID: Int, To newItem: BLECloneModel) -> Bool {
-        let managedContext = GetDatabaseInstance()
-        let fetchRequest = BLEClone.FetchRequest()
+        let fetchRequest = BLEClone.fetchRequest()
         let fetchPredicate = NSPredicate(format: "id = \(ID)")
         fetchRequest.predicate = fetchPredicate
         
-        if var fetchResult = (try? managedContext.fetch(fetchRequest))?.first {
-            newItem.id = Int16(ID)
-            ModelToItem(from: newItem, To: &fetchResult)
-
-            do {
-                try managedContext.save()
-                return true
-            } catch {
-                return false
-            }
-        }
-        return false
+        return UpdateItem(from: fetchRequest, To: newItem)
     }
     
     //MARK:- Changes Stack
     class func GetBLEStackItemList() -> [ChangesStackModel] {
-        return [ChangesStackModel]()
+        var result = [ChangesStackModel]()
+        return result
     }
     class func InsertNew(StackItem: ChangesStackModel) -> Bool {
         return true
@@ -131,35 +157,30 @@ class DBManager: NSObject {
 
 extension DBManager {
     //MARK:- Item To Model
-    private class func ItemToModel(from Item: BLEClone) -> BLECloneModel {
-        let model = BLECloneModel()
-        model.appid = Item.appid
-        model.id = Item.id
-        model.title = Item.title
-        model.url = Item.url
-        model.username = Item.username
-        
-        return model
-    }
-    private class func ItemToModel(from Item: ChangesStack) -> ChangesStackModel {
-        return ChangesStackModel()
-    }
-    private class func ItemToModel(from Item: LocalAttributes) -> LocalAttributesModel {
-        return LocalAttributesModel()
+    private class func ItemToModel(from Item: NSManagedObject) -> NSObject {
+        if let item = Item as? BLEClone {
+            let model = BLECloneModel()
+            model.appid = item.appid
+            model.id = item.id
+            model.title = item.title
+            model.url = item.url
+            model.username = item.username
+            
+            return model
+        }
+        return NSObject()
     }
     
     //MARK:- Model To Item
-    private class func ModelToItem(from Model: BLECloneModel, To Item: inout BLEClone) {
-        Item.appid = Model.appid
-        Item.id = Model.id
-        Item.url = Model.url
-        Item.title = Model.title
-        Item.username = Model.username
-    }
-    private class func ModelToItem(from Model: ChangesStackModel) -> ChangesStack {
-        return ChangesStack()
-    }
-    private class func ModelToItem(from Model: LocalAttributesModel) -> LocalAttributes {
-        return LocalAttributes()
+    private class func ModelToItem(from Model: NSObject, To Item: inout NSManagedObject) {
+        if let model = Model as? BLECloneModel{
+            if let item = Item as? BLEClone {
+                item.appid = model.appid
+                item.id = model.id
+                item.url = model.url
+                item.title = model.title
+                item.username = model.username
+            }
+        }
     }
 }

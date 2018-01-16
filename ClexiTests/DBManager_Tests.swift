@@ -50,6 +50,7 @@ class DBManager_Tests: XCTestCase {
     func tests_04_BLECloneUpdate() {
         let id = 0
         let newItem = BLECloneModel()
+        newItem.id          = Int16(id)
         newItem.title       = "TEST TITILE 2"
         newItem.url         = "TEST URL 2"
         newItem.username    = "TEST USERNAME 2"
@@ -71,6 +72,16 @@ class DBManager_Tests: XCTestCase {
         
         let list = DBManager.GetBLECloneItemList()
         XCTAssertEqual(list.count, 0)
+    }
+    func tests_06_BLECloneLoadInvallid() {
+        let id = 0
+        let result = DBManager.LoadBLECloneItem(With: id)
+        XCTAssertNil(result)
+    }
+    func tests_07_BLECloneDoubleRemove() {
+        let id = 0
+        let result = DBManager.RemoveBLECloneItem(With: id)
+        XCTAssertFalse(result)
     }
     
     
