@@ -18,7 +18,7 @@ class DBManager: NSObject {
     }
     
     //MARK:- Shared functions
-    private class func GetList(from Request: NSFetchRequest<NSFetchRequestResult>, result: inout [NSObject]) {
+    private class func GetList(from Request: NSFetchRequest<NSFetchRequestResult>, result: inout [BaseModel]) {
         let managedContext = GetDatabaseInstance()
         if let fetchResults = (try? managedContext.fetch(Request)) {
             for record in fetchResults {
@@ -28,7 +28,7 @@ class DBManager: NSObject {
             }
         }
     }
-    private class func GetItem(from Request: NSFetchRequest<NSFetchRequestResult>, result: inout NSObject) {
+    private class func GetItem(from Request: NSFetchRequest<NSFetchRequestResult>, result: inout BaseModel) {
         let managedContext = GetDatabaseInstance()
         do {
             let fetchResults = try managedContext.fetch(Request)
@@ -36,7 +36,7 @@ class DBManager: NSObject {
                 result = ItemToModel(from: rec)
             }
         } catch {
-            result = NSObject()
+            result = BaseModel()
         }
     }
     private class func InsertItem(entity Request: String, item: BaseModel) -> Bool {
@@ -54,8 +54,11 @@ class DBManager: NSObject {
             return false
         }
     }
-    private class func RemoveItem(from Request: NSFetchRequest<NSFetchRequestResult>) -> Bool {
+    private class func RemoveItem(from Request: NSFetchRequest<NSFetchRequestResult>, With ID: Int) -> Bool {
         let managedContext = GetDatabaseInstance()
+        let fetchPredicate = NSPredicate(format: "id = \(ID)")
+        Request.predicate = fetchPredicate
+        
         if let fetchResult = (try? managedContext.fetch(Request)) {
             if fetchResult.count == 1 {
                 if let rec = fetchResult.first as? BaseManagedObject {
@@ -74,8 +77,11 @@ class DBManager: NSObject {
         }
         return false
     }
-    private class func UpdateItem(from Request: NSFetchRequest<NSFetchRequestResult>, To New: BaseModel) -> Bool {
+    private class func UpdateItem(from Request: NSFetchRequest<NSFetchRequestResult>, To New: BaseModel, With ID: Int) -> Bool {
         let managedContext = GetDatabaseInstance()
+        let fetchPredicate = NSPredicate(format: "id = \(ID)")
+        Request.predicate = fetchPredicate
+        
         if var fetchResult = (try? managedContext.fetch(Request))?.first as? BaseManagedObject {
             ModelToItem(from: New, To: &fetchResult)
             
@@ -91,7 +97,7 @@ class DBManager: NSObject {
     
     //MARK:- BLE Clone
     class func GetBLECloneItemList() -> [BLECloneModel] {
-        var result = [NSObject]()
+        var result = [BaseModel]()
         GetList(from: BLEClone.fetchRequest(), result: &result)
         if let res = result as? [BLECloneModel] {
             return res
@@ -106,28 +112,22 @@ class DBManager: NSObject {
         let fetchPredicate = NSPredicate(format: "id = \(ID)")
         fetchRequest.predicate = fetchPredicate
         
-        var result = NSObject()
+        var result = BaseModel()
         GetItem(from: fetchRequest, result: &result)
         return result as? BLECloneModel
     }
     class func RemoveBLECloneItem(With ID: Int) -> Bool {
         let fetchRequest = BLEClone.fetchRequest()
-        let fetchPredicate = NSPredicate(format: "id = \(ID)")
-        fetchRequest.predicate = fetchPredicate
-        
-        return RemoveItem(from: fetchRequest)
+        return RemoveItem(from: fetchRequest, With: ID)
     }
     class func UpdateBLECloneItem(With ID: Int, To newItem: BLECloneModel) -> Bool {
         let fetchRequest = BLEClone.fetchRequest()
-        let fetchPredicate = NSPredicate(format: "id = \(ID)")
-        fetchRequest.predicate = fetchPredicate
-        
-        return UpdateItem(from: fetchRequest, To: newItem)
+        return UpdateItem(from: fetchRequest, To: newItem, With: ID)
     }
     
     //MARK:- Changes Stack
     class func GetBLEStackItemList() -> [ChangesStackModel] {
-        var result = [NSObject]()
+        var result = [BaseModel]()
         GetList(from: ChangesStack.fetchRequest(), result: &result)
         if let res = result as? [ChangesStackModel] {
             return res
@@ -142,43 +142,45 @@ class DBManager: NSObject {
         let fetchPredicate = NSPredicate(format: "id = \(ID)")
         fetchRequest.predicate = fetchPredicate
         
-        var result = NSObject()
+        var result = BaseModel()
         GetItem(from: fetchRequest, result: &result)
         return result as? ChangesStackModel
     }
     class func RemoveBLEStackItem(With ID: Int) -> Bool {
         let fetchRequest = ChangesStack.fetchRequest()
-        let fetchPredicate = NSPredicate(format: "id = \(ID)")
-        fetchRequest.predicate = fetchPredicate
-        
-        return RemoveItem(from: fetchRequest)
+        return RemoveItem(from: fetchRequest, With: ID)
     }
     class func UpdateBLEStackItem(With ID: Int, To newItem: ChangesStackModel) -> Bool {
         let fetchRequest = ChangesStack.fetchRequest()
-        let fetchPredicate = NSPredicate(format: "id = \(ID)")
-        fetchRequest.predicate = fetchPredicate
-        
-        return UpdateItem(from: fetchRequest, To: newItem)
+        return UpdateItem(from: fetchRequest, To: newItem, With: ID)
     }
     
     //MARK:- Local Attributes
-    class func AddAttribute(To ID: Int) -> Bool {
-        return true
+    class func AddAttribute(Attributes: LocalAttributesModel) -> Bool {
+        return InsertItem(entity: "LocalAttributes", item: Attributes)
     }
-    class func LoadAttribute(With ID: Int) -> LocalAttributesModel {
-        return LocalAttributesModel()
+    class func LoadAttribute(With ID: Int) -> LocalAttributesModel? {
+        let fetchRequest = LocalAttributes.fetchRequest()
+        let fetchPredicate = NSPredicate(format: "id = \(ID)")
+        fetchRequest.predicate = fetchPredicate
+        
+        var result = BaseModel()
+        GetItem(from: fetchRequest, result: &result)
+        return result as? LocalAttributesModel
     }
     class func RemoveAttribute(With ID: Int) -> Bool {
-        return true
+        let fetchRequest = LocalAttributes.fetchRequest()
+        return RemoveItem(from: fetchRequest, With: ID)
     }
     class func UpdateAttribute(With ID: Int, To newAttribute: LocalAttributesModel) -> Bool {
-        return true
+        let fetchRequest = LocalAttributes.fetchRequest()
+        return UpdateItem(from: fetchRequest, To: newAttribute, With: ID)
     }
 }
 
 extension DBManager {
     //MARK:- Item To Model
-    private class func ItemToModel(from Item: BaseManagedObject) -> NSObject {
+    private class func ItemToModel(from Item: BaseManagedObject) -> BaseModel {
         return Item.ItemToModel()
     }
     

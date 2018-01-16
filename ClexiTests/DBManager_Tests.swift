@@ -168,23 +168,60 @@ class DBManager_Tests: XCTestCase {
     //MARK:- Local Attributes Tests
     func tests_21_AttributeInsert() {
         let id = 0
-        let result = DBManager.AddAttribute(To: id)
+        let newItem = BLECloneModel()
+        newItem.id          = Int16(id)
+        newItem.title       = "TEST TITILE"
+        newItem.url         = "TEST URL"
+        newItem.username    = "TEST USERNAME"
+        newItem.appid       = nil
+        var result = DBManager.InsertNew(BLEItem: newItem)
+        XCTAssertTrue(result)
+
+        let formatter = DateFormatter()
+        formatter.dateFormat = "yyyy-MM-dd HH:mm"
+        let date = formatter.string(from: Date())
+        
+        let newAttributes = LocalAttributesModel()
+        newAttributes.id = newItem.id
+        newAttributes.popularity = 0
+        newAttributes.lastused = formatter.date(from: date)! as NSDate
+        
+        result = DBManager.AddAttribute(Attributes: newAttributes)
         XCTAssertTrue(result)
     }
     func tests_22_AttributeLoad() {
         let id = 0
         let result = DBManager.LoadAttribute(With: id)
+        
+        let formatter = DateFormatter()
+        formatter.dateFormat = "yyyy-MM-dd HH:mm"
+        let date = formatter.string(from: Date())
+
         XCTAssertNotNil(result)
+        XCTAssertEqual(result?.popularity, 0)
+        XCTAssertEqual(result?.lastused, formatter.date(from: date) as NSDate?)
     }
-    func tests_23_AttributeRemove() {
+    func tests_23_AttributeUpdate() {
+        let id = 0
+        let formatter = DateFormatter()
+        formatter.dateFormat = "yyyy-MM-dd HH:mm"
+
+        let newItem = LocalAttributesModel()
+        newItem.id          = Int16(id)
+        newItem.popularity  = 1
+        newItem.lastused    = formatter.date(from: "2018-01-15 12:00")! as NSDate
+        
+        let result = DBManager.UpdateAttribute(With: id, To: newItem)
+        XCTAssertTrue(result)
+        
+        let updatedItem = DBManager.LoadAttribute(With: id)
+        XCTAssertNotNil(updatedItem)
+        XCTAssertEqual(updatedItem?.popularity, 1)
+        XCTAssertEqual(updatedItem?.lastused, formatter.date(from: "2018-01-15 12:00") as NSDate?)
+    }
+    func tests_24_AttributeRemove() {
         let id = 0
         let result = DBManager.RemoveAttribute(With: id)
-        XCTAssertTrue(result)
-    }
-    func tests_24_AttributeUpdate() {
-        let id = 0
-        let newItem = LocalAttributesModel()
-        let result = DBManager.UpdateAttribute(With: id, To: newItem)
         XCTAssertTrue(result)
     }
 }

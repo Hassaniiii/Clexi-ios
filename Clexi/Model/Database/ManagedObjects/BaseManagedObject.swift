@@ -10,7 +10,7 @@ import UIKit
 import CoreData
 
 class BaseManagedObject: NSManagedObject {
-    func ItemToModel() -> NSObject {
-        return NSObject()
+    func ItemToModel() -> BaseModel {
+        return BaseModel()
     }
 }

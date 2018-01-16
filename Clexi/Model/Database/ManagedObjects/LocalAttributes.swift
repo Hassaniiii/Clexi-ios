@@ -11,13 +11,22 @@ import Foundation
 import CoreData
 
 
-class LocalAttributes: NSManagedObject {
-    @nonobjc public class func fetchRequest() -> NSFetchRequest<LocalAttributes> {
+class LocalAttributes: BaseManagedObject {
+    @nonobjc public class func FetchRequest() -> NSFetchRequest<LocalAttributes> {
         return NSFetchRequest<LocalAttributes>(entityName: "LocalAttributes")
     }
     
     @NSManaged public var id: Int16
     @NSManaged public var popularity: Int32
     @NSManaged public var lastused: NSDate?
-    @NSManaged public var local_ble: BLEClone?
+    
+    override func ItemToModel() -> LocalAttributesModel {
+        let model = LocalAttributesModel()
+
+        model.id = self.id
+        model.popularity = self.popularity
+        model.lastused = self.lastused
+
+        return model
+    }
 }

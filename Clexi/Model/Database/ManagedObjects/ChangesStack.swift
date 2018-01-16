@@ -20,7 +20,7 @@ class ChangesStack: BLEClone {
     @NSManaged public var changekey: Int16
     @NSManaged public var hashkey: String?
     
-    override func ItemToModel() -> NSObject {
+    override func ItemToModel() -> ChangesStackModel {
         let model = ChangesStackModel()
         
         model.appid = self.appid

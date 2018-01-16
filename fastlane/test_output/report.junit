@@ -1,11 +1,11 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <testsuites name='ClexiTests.xctest' tests='19' failures='0'>
   <testsuite name='ClexiTests.DBManager_Tests' tests='18' failures='0'>
-    <testcase classname='ClexiTests.DBManager_Tests' name='tests_01_BLECloneInsert' time='0.014'/>
+    <testcase classname='ClexiTests.DBManager_Tests' name='tests_01_BLECloneInsert' time='0.017'/>
     <testcase classname='ClexiTests.DBManager_Tests' name='tests_02_BLECloneList' time='0.003'/>
     <testcase classname='ClexiTests.DBManager_Tests' name='tests_03_BLECloneLoad' time='0.002'/>
     <testcase classname='ClexiTests.DBManager_Tests' name='tests_04_BLECloneUpdate' time='0.001'/>
-    <testcase classname='ClexiTests.DBManager_Tests' name='tests_05_BLECloneRemove' time='0.001'/>
+    <testcase classname='ClexiTests.DBManager_Tests' name='tests_05_BLECloneRemove' time='0.002'/>
     <testcase classname='ClexiTests.DBManager_Tests' name='tests_06_BLECloneLoadInvallid' time='0.001'/>
     <testcase classname='ClexiTests.DBManager_Tests' name='tests_07_BLECloneDoubleRemove' time='0.001'/>
     <testcase classname='ClexiTests.DBManager_Tests' name='tests_11_BLEStackInsert' time='0.002'/>
@@ -15,12 +15,12 @@
     <testcase classname='ClexiTests.DBManager_Tests' name='tests_15_BLEStackRemove' time='0.001'/>
     <testcase classname='ClexiTests.DBManager_Tests' name='tests_16_BLECloneLoadInvallid' time='0.001'/>
     <testcase classname='ClexiTests.DBManager_Tests' name='tests_17_BLECloneDoubleRemove' time='0.001'/>
-    <testcase classname='ClexiTests.DBManager_Tests' name='tests_21_AttributeInsert' time='0.001'/>
-    <testcase classname='ClexiTests.DBManager_Tests' name='tests_22_AttributeLoad' time='0.000'/>
-    <testcase classname='ClexiTests.DBManager_Tests' name='tests_23_AttributeRemove' time='0.010'/>
+    <testcase classname='ClexiTests.DBManager_Tests' name='tests_21_AttributeInsert' time='0.003'/>
+    <testcase classname='ClexiTests.DBManager_Tests' name='tests_22_AttributeLoad' time='0.002'/>
+    <testcase classname='ClexiTests.DBManager_Tests' name='tests_23_AttributeRemove' time='0.001'/>
     <testcase classname='ClexiTests.DBManager_Tests' name='tests_24_AttributeUpdate' time='0.000'/>
   </testsuite>
   <testsuite name='ClexiTests.NSUserDefaultManager_Tests' tests='1' failures='0'>
-    <testcase classname='ClexiTests.NSUserDefaultManager_Tests' name='test_1_InsertLoad' time='0.022'/>
+    <testcase classname='ClexiTests.NSUserDefaultManager_Tests' name='test_1_InsertLoad' time='0.025'/>
   </testsuite>
 </testsuites>
