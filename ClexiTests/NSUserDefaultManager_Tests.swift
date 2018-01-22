@@ -20,7 +20,7 @@ class NSUserDefaultManager_Tests: XCTestCase {
         super.tearDown()
     }
     
-    func test_1_InsertLoad() {
+    func test_0_1_InsertLoad() {
         let str = "Hello World!"
         
         NSUserDefaultManager.SaveItem(str, key: "TEST_KEY")

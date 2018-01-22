@@ -10,9 +10,11 @@ import XCTest
 @testable import Clexi
 
 class DBManager_Tests: XCTestCase {
-        
+    
     override func setUp() {
         super.setUp()
+        
+        
         DBManager.isMock = true
     }
     
@@ -22,7 +24,7 @@ class DBManager_Tests: XCTestCase {
     }
     
     //MARK:- BLE Clone Tests
-    func tests_01_BLECloneInsert() {
+    func tests_1_01_BLECloneInsert() {
         let newItem = BLECloneModel()
         newItem.id          = 0
         newItem.title       = "TEST TITILE"
@@ -33,12 +35,12 @@ class DBManager_Tests: XCTestCase {
         let result = DBManager.InsertNew(BLEItem: newItem)
         XCTAssertTrue(result)
     }
-    func tests_02_BLECloneList() {
+    func tests_1_02_BLECloneList() {
         let list = DBManager.GetBLECloneItemList()
         XCTAssertNotNil(list)
         XCTAssertGreaterThan(list.count, 0)
     }
-    func tests_03_BLECloneLoad() {
+    func tests_1_03_BLECloneLoad() {
         let id = 0
         let result = DBManager.LoadBLECloneItem(With: id)
         XCTAssertNotNil(result)
@@ -47,7 +49,7 @@ class DBManager_Tests: XCTestCase {
         XCTAssertEqual(result?.username, "TEST USERNAME")
         XCTAssertNil(result?.appid)
     }
-    func tests_04_BLECloneUpdate() {
+    func tests_1_04_BLECloneUpdate() {
         let id = 0
         let newItem = BLECloneModel()
         newItem.id          = Int16(id)
@@ -66,20 +68,21 @@ class DBManager_Tests: XCTestCase {
         XCTAssertEqual(updatedItem?.username, "TEST USERNAME 2")
         XCTAssertNil(updatedItem?.appid)
     }
-    func tests_05_BLECloneRemove() {
+    func tests_1_05_BLECloneRemove() {
         let id = 0
+        let list_before = DBManager.GetBLECloneItemList()
         let result = DBManager.RemoveBLECloneItem(With: id)
         XCTAssertTrue(result)
         
-        let list = DBManager.GetBLECloneItemList()
-        XCTAssertEqual(list.count, 0)
+        let list_after = DBManager.GetBLECloneItemList()
+        XCTAssertLessThan(list_after.count, list_before.count)
     }
-    func tests_06_BLECloneLoadInvallid() {
+    func tests_1_06_BLECloneLoadInvallid() {
         let id = 0
         let result = DBManager.LoadBLECloneItem(With: id)
         XCTAssertNil(result)
     }
-    func tests_07_BLECloneDoubleRemove() {
+    func tests_1_07_BLECloneDoubleRemove() {
         let id = 0
         let result = DBManager.RemoveBLECloneItem(With: id)
         XCTAssertFalse(result)
@@ -87,7 +90,7 @@ class DBManager_Tests: XCTestCase {
     
     
     //MARK:- Changes Stack Tests
-    func tests_11_BLEStackInsert() {
+    func tests_1_11_BLEStackInsert() {
         let newItem = ChangesStackModel()
         newItem.id          = 0
         newItem.title       = "TEST TITILE"
@@ -101,12 +104,12 @@ class DBManager_Tests: XCTestCase {
         let result = DBManager.InsertNew(StackItem: newItem)
         XCTAssertTrue(result)
     }
-    func tests_12_BLEStackList() {
+    func tests_1_12_BLEStackList() {
         let list = DBManager.GetBLEStackItemList()
         XCTAssertNotNil(list)
         XCTAssertGreaterThan(list.count, 0)
     }
-    func tests_13_BLEStackLoad() {
+    func tests_1_13_BLEStackLoad() {
         let id = 0
         let result = DBManager.LoadBLEStackItem(With: id)
         XCTAssertNotNil(result)
@@ -118,7 +121,7 @@ class DBManager_Tests: XCTestCase {
         XCTAssertEqual(result?.changekey, ChangeKey.Insert)
         XCTAssertEqual(result?.hashKey, "TEST HASH")
     }
-    func tests_14_BLEStackUpdate() {
+    func tests_1_14_BLEStackUpdate() {
         let id = 0
         let newItem = ChangesStackModel()
         newItem.id          = Int16(id)
@@ -145,7 +148,7 @@ class DBManager_Tests: XCTestCase {
         XCTAssertEqual(updatedItem?.hashKey, "TEST HASH 2")
 
     }
-    func tests_15_BLEStackRemove() {
+    func tests_1_15_BLEStackRemove() {
         let id = 0
         let result = DBManager.RemoveBLEStackItem(With: id)
         XCTAssertTrue(result)
@@ -153,12 +156,12 @@ class DBManager_Tests: XCTestCase {
         let list = DBManager.GetBLEStackItemList()
         XCTAssertEqual(list.count, 0)
     }
-    func tests_16_BLECloneLoadInvallid() {
+    func tests_1_16_BLECloneLoadInvallid() {
         let id = 0
         let result = DBManager.LoadBLEStackItem(With: id)
         XCTAssertNil(result)
     }
-    func tests_17_BLECloneDoubleRemove() {
+    func tests_1_17_BLECloneDoubleRemove() {
         let id = 0
         let result = DBManager.RemoveBLEStackItem(With: id)
         XCTAssertFalse(result)
@@ -166,7 +169,7 @@ class DBManager_Tests: XCTestCase {
     
     
     //MARK:- Local Attributes Tests
-    func tests_21_AttributeInsert() {
+    func tests_1_21_AttributeInsert() {
         let id = 0
         let newItem = BLECloneModel()
         newItem.id          = Int16(id)
@@ -189,7 +192,7 @@ class DBManager_Tests: XCTestCase {
         result = DBManager.AddAttribute(Attributes: newAttributes)
         XCTAssertTrue(result)
     }
-    func tests_22_AttributeLoad() {
+    func tests_1_22_AttributeLoad() {
         let id = 0
         let result = DBManager.LoadAttribute(With: id)
         
@@ -201,7 +204,7 @@ class DBManager_Tests: XCTestCase {
         XCTAssertEqual(result?.popularity, 0)
         XCTAssertEqual(result?.lastused, formatter.date(from: date) as NSDate?)
     }
-    func tests_23_AttributeUpdate() {
+    func tests_1_23_AttributeUpdate() {
         let id = 0
         let formatter = DateFormatter()
         formatter.dateFormat = "yyyy-MM-dd HH:mm"
@@ -219,7 +222,7 @@ class DBManager_Tests: XCTestCase {
         XCTAssertEqual(updatedItem?.popularity, 1)
         XCTAssertEqual(updatedItem?.lastused, formatter.date(from: "2018-01-15 12:00") as NSDate?)
     }
-    func tests_24_AttributeRemove() {
+    func tests_1_24_AttributeRemove() {
         let id = 0
         let result = DBManager.RemoveAttribute(With: id)
         XCTAssertTrue(result)

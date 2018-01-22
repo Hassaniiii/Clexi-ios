@@ -12,9 +12,6 @@ import CoreData
 
 
 class BLEClone: BaseManagedObject {
-    @nonobjc public class func FetchRequest() -> NSFetchRequest<BLEClone> {
-        return NSFetchRequest<BLEClone>(entityName: "BLEClone")
-    }
     
     @NSManaged public var id: Int16
     @NSManaged public var url: String?

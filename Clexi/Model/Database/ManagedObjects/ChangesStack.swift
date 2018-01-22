@@ -11,11 +11,7 @@ import Foundation
 import CoreData
 
 
-class ChangesStack: BLEClone {
-    @nonobjc public class func FetchRequest() -> NSFetchRequest<ChangesStack> {
-        return NSFetchRequest<ChangesStack>(entityName: "ChangesStack")
-    }
-    
+class ChangesStack: BLEClone {    
     @NSManaged public var password: String?
     @NSManaged public var changekey: Int16
     @NSManaged public var hashkey: String?

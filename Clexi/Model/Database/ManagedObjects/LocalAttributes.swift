@@ -11,11 +11,7 @@ import Foundation
 import CoreData
 
 
-class LocalAttributes: BaseManagedObject {
-    @nonobjc public class func FetchRequest() -> NSFetchRequest<LocalAttributes> {
-        return NSFetchRequest<LocalAttributes>(entityName: "LocalAttributes")
-    }
-    
+class LocalAttributes: BaseManagedObject {    
     @NSManaged public var id: Int16
     @NSManaged public var popularity: Int32
     @NSManaged public var lastused: NSDate?
