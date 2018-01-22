@@ -33,6 +33,7 @@ class BluetoothAPDU_Tests: XCTestCase {
         XCTAssertEqual(packet.LC3, 0x06)
         XCTAssertEqual(packet.Data.count, 64)
     }
+    
     func tests_02_CreateAPDU() {
         let result = MockRawData().CreateAPDU()
         

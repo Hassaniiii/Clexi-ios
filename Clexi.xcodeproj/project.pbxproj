@@ -24,6 +24,11 @@
 		1746A1A82015D8A0008059C4 /* Pods_ClexiTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 410D5671024AC821392337C7 /* Pods_ClexiTests.framework */; };
 		1746A1CC20160440008059C4 /* APDU.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1746A1CB20160440008059C4 /* APDU.swift */; };
 		1746A1CE2016045D008059C4 /* BluetoothAPDU_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1746A1CD2016045D008059C4 /* BluetoothAPDU_Tests.swift */; };
+		1746A1D020160DD2008059C4 /* PacketStructure.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1746A1CF20160DD2008059C4 /* PacketStructure.swift */; };
+		1746A1D420160FEA008059C4 /* RequestPacket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1746A1D220160FEA008059C4 /* RequestPacket.swift */; };
+		1746A1D520160FEA008059C4 /* ResponsePacket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1746A1D320160FEA008059C4 /* ResponsePacket.swift */; };
+		1746A1D720161406008059C4 /* BluetoothPacket_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1746A1D620161406008059C4 /* BluetoothPacket_Tests.swift */; };
+		1746A1DA20161F5D008059C4 /* BLEManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1746A1D920161F5D008059C4 /* BLEManager.swift */; };
 		17534D01200B853E0062F480 /* NSUserDefaultManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17534D00200B853E0062F480 /* NSUserDefaultManager.swift */; };
 		17534D06200B880B0062F480 /* ClexiDB.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 17534D04200B880B0062F480 /* ClexiDB.xcdatamodeld */; };
 		17913F93200CF5BD00717EAA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17913F91200CF5BD00717EAA /* ViewController.swift */; };
@@ -70,12 +75,14 @@
 		1739B323200CBBE600F6BD48 /* BLEClone.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BLEClone.swift; sourceTree = "<group>"; };
 		1739B328200CC53100F6BD48 /* DatabaseInstance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseInstance.swift; sourceTree = "<group>"; };
 		1746A1AF2015D8A0008059C4 /* ClexiTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ClexiTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-<<<<<<< HEAD
-=======
 		1746A1B02015D8A0008059C4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = "/Users/hassaniiii/Desktop/Projects/iOS/RSA/Clexi/Clexi-ios/ClexiTests/Info.plist"; sourceTree = "<absolute>"; };
 		1746A1CB20160440008059C4 /* APDU.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APDU.swift; sourceTree = "<group>"; };
 		1746A1CD2016045D008059C4 /* BluetoothAPDU_Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BluetoothAPDU_Tests.swift; sourceTree = "<group>"; };
->>>>>>> APDU structure is added. Appropriate tests are added as well
+		1746A1CF20160DD2008059C4 /* PacketStructure.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PacketStructure.swift; sourceTree = "<group>"; };
+		1746A1D220160FEA008059C4 /* RequestPacket.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestPacket.swift; sourceTree = "<group>"; };
+		1746A1D320160FEA008059C4 /* ResponsePacket.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResponsePacket.swift; sourceTree = "<group>"; };
+		1746A1D620161406008059C4 /* BluetoothPacket_Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BluetoothPacket_Tests.swift; sourceTree = "<group>"; };
+		1746A1D920161F5D008059C4 /* BLEManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BLEManager.swift; sourceTree = "<group>"; };
 		17534D00200B853E0062F480 /* NSUserDefaultManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSUserDefaultManager.swift; sourceTree = "<group>"; };
 		17534D02200B85720062F480 /* NSUserDefaultManager_Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSUserDefaultManager_Tests.swift; sourceTree = "<group>"; };
 		17534D05200B880B0062F480 /* ClexiDB.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ClexiDB.xcdatamodel; sourceTree = "<group>"; };
@@ -165,9 +172,21 @@
 		1746A1CA201603E2008059C4 /* Bluetooth */ = {
 			isa = PBXGroup;
 			children = (
-				1746A1CB20160440008059C4 /* APDU.swift */,
+				1746A1D920161F5D008059C4 /* BLEManager.swift */,
+				1746A1D820161F08008059C4 /* Packet */,
 			);
 			path = Bluetooth;
+			sourceTree = "<group>";
+		};
+		1746A1D820161F08008059C4 /* Packet */ = {
+			isa = PBXGroup;
+			children = (
+				1746A1CB20160440008059C4 /* APDU.swift */,
+				1746A1CF20160DD2008059C4 /* PacketStructure.swift */,
+				1746A1D220160FEA008059C4 /* RequestPacket.swift */,
+				1746A1D320160FEA008059C4 /* ResponsePacket.swift */,
+			);
+			path = Packet;
 			sourceTree = "<group>";
 		};
 		17534CFB200B4E8F0062F480 /* Model */ = {
@@ -245,6 +264,7 @@
 		17E2C641200A0CF700503FD0 /* ClexiTests */ = {
 			isa = PBXGroup;
 			children = (
+				1746A1D620161406008059C4 /* BluetoothPacket_Tests.swift */,
 				1746A1CD2016045D008059C4 /* BluetoothAPDU_Tests.swift */,
 				17E3EE19200E389D00B5AD95 /* DBController_Tests.swift */,
 				1739B2FB200CB30A00F6BD48 /* DBManager_Tests.swift */,
@@ -268,14 +288,11 @@
 			isa = PBXGroup;
 			children = (
 				17913F92200CF5BD00717EAA /* AppDelegate.swift */,
-<<<<<<< HEAD
 				17E3EE17200E2E7400B5AD95 /* DBController.swift */,
 				17534D00200B853E0062F480 /* NSUserDefaultManager.swift */,
 				5C74879220207F38009B12B4 /* SearchSort.swift */,
-=======
 				1746A1C9201603DA008059C4 /* Data */,
 				1746A1CA201603E2008059C4 /* Bluetooth */,
->>>>>>> APDU structure is added. Appropriate tests are added as well
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -384,6 +401,11 @@
 					17E2C629200A0CF600503FD0 = {
 						CreatedOnToolsVersion = 9.2;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+						};
 					};
 					17E2C648200A0CF700503FD0 = {
 						CreatedOnToolsVersion = 9.2;
@@ -599,6 +621,7 @@
 				1746A1A52015D8A0008059C4 /* NSUserDefaultManager_Tests.swift in Sources */,
 				1746A1CE2016045D008059C4 /* BluetoothAPDU_Tests.swift in Sources */,
 				1746A1A62015D8A0008059C4 /* DBManager_Tests.swift in Sources */,
+				1746A1D720161406008059C4 /* BluetoothPacket_Tests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -606,21 +629,25 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1746A1D020160DD2008059C4 /* PacketStructure.swift in Sources */,
 				17913F94200CF5BD00717EAA /* AppDelegate.swift in Sources */,
 				1739B2FE200CB32400F6BD48 /* DBManager.swift in Sources */,
 				17E3EE15200DFA8700B5AD95 /* BaseModel.swift in Sources */,
 				17534D01200B853E0062F480 /* NSUserDefaultManager.swift in Sources */,
 				1739B324200CBBE600F6BD48 /* BLEClone.swift in Sources */,
 				1739B311200CB35600F6BD48 /* BLECloneModel.swift in Sources */,
+				1746A1D420160FEA008059C4 /* RequestPacket.swift in Sources */,
 				17E3EE13200DF79F00B5AD95 /* BaseManagedObject.swift in Sources */,
 				17913F93200CF5BD00717EAA /* ViewController.swift in Sources */,
 				1739B310200CB35600F6BD48 /* LocalAttributesModel.swift in Sources */,
 				1739B308200CB34200F6BD48 /* ChangesStack.swift in Sources */,
 				1739B30B200CB34200F6BD48 /* LocalAttributes.swift in Sources */,
 				17534D06200B880B0062F480 /* ClexiDB.xcdatamodeld in Sources */,
+				1746A1D520160FEA008059C4 /* ResponsePacket.swift in Sources */,
 				1739B312200CB35600F6BD48 /* ChangesStackModel.swift in Sources */,
 				5C74879320207F38009B12B4 /* SearchSort.swift in Sources */,
 				1739B329200CC53100F6BD48 /* DatabaseInstance.swift in Sources */,
+				1746A1DA20161F5D008059C4 /* BLEManager.swift in Sources */,
 				17E3EE18200E2E7400B5AD95 /* DBController.swift in Sources */,
 				1746A1CC20160440008059C4 /* APDU.swift in Sources */,
 			);
@@ -827,6 +854,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.clexi.Clexi;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -847,6 +875,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.clexi.Clexi;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
