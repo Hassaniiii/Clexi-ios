@@ -13,8 +13,6 @@ class DBManager_Tests: XCTestCase {
     
     override func setUp() {
         super.setUp()
-        
-        
         DBManager.isMock = true
     }
     
