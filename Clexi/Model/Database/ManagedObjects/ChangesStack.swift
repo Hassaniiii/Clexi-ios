@@ -11,7 +11,13 @@ import Foundation
 import CoreData
 
 
-class ChangesStack: BLEClone {    
+class ChangesStack: BaseManagedObject {
+    
+    @NSManaged public var id: Int16
+    @NSManaged public var url: String?
+    @NSManaged public var appid: String?
+    @NSManaged public var title: String?
+    @NSManaged public var username: String?
     @NSManaged public var password: String?
     @NSManaged public var changekey: Int16
     @NSManaged public var hashkey: String?

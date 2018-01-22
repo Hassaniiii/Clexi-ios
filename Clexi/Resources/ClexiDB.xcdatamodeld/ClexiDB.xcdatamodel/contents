@@ -7,10 +7,15 @@
         <attribute name="url" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="username" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
-    <entity name="ChangesStack" representedClassName=".ChangesStack" parentEntity="BLEClone" syncable="YES">
+    <entity name="ChangesStack" representedClassName=".ChangesStack" syncable="YES">
+        <attribute name="appid" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="changekey" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="hashkey" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="id" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="password" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="title" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="url" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="username" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
     <entity name="LocalAttributes" representedClassName=".LocalAttributes" syncable="YES">
         <attribute name="id" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
@@ -19,7 +24,7 @@
     </entity>
     <elements>
         <element name="BLEClone" positionX="-63" positionY="-18" width="128" height="120"/>
-        <element name="ChangesStack" positionX="-36" positionY="9" width="128" height="90"/>
+        <element name="ChangesStack" positionX="-36" positionY="9" width="128" height="165"/>
         <element name="LocalAttributes" positionX="-54" positionY="-9" width="128" height="90"/>
     </elements>
 </model>

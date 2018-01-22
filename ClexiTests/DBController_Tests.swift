@@ -13,7 +13,7 @@ class DBController_Tests: XCTestCase {
     
     override func setUp() {
         super.setUp()
-        DBManager.isMock = false
+        DBManager.isMock = true
     }
     
     override func tearDown() {

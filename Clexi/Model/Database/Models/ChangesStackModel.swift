@@ -21,7 +21,12 @@ enum ChangeKey: Int16 {
     }
 }
 
-class ChangesStackModel: BLECloneModel {
+class ChangesStackModel: BaseModel {
+    var appid:      String?
+    var id:         Int16!
+    var title:      String!
+    var url:        String?
+    var username:   String?
     var password:   String?
     var changekey:  ChangeKey!
     var hashKey:    String?

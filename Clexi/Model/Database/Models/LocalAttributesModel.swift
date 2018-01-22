@@ -10,7 +10,7 @@ import UIKit
 
 class LocalAttributesModel: BaseModel {
 
-    var id:              Int16!
+    var id:             Int16!
     var popularity:     Int32!
     var lastused:       NSDate!
     
