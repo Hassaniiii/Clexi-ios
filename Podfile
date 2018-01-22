@@ -6,7 +6,7 @@ target 'Clexi' do
   use_frameworks!
 
   pod 'BLEManager', :git => "https://github.com/Hassaniiii/BLEManager.git"
-
+  
   target 'ClexiTests' do
     inherit! :search_paths
     # Pods for testing

@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CoreData
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -39,8 +40,26 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func applicationWillTerminate(_ application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+        self.saveContext()
     }
+    
+    // MARK: - Core Data Saving support
+    func saveContext () {
+        let database = DatabaseInstance.SharedInstance()
+        let moc = database.managedObjectContext()
+        var error: NSError? = nil
+        if moc.hasChanges {
+            do {
+                try moc.save()
+            } catch let error1 as NSError {
+                error = error1
+                // Replace this implementation with code to handle the error appropriately.
+                // abort() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
+                NSLog("Unresolved error \(String(describing: error)), \(error!.userInfo)")
+                abort()
+            }
 
-
+        }
+    }
 }
 

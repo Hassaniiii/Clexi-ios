@@ -33,19 +33,9 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "17E2C63D200A0CF700503FD0"
-               BuildableName = "ClexiTests"
+               BlueprintIdentifier = "1746A19F2015D8A0008059C4"
+               BuildableName = "ClexiTests.xctest"
                BlueprintName = "ClexiTests"
-               ReferencedContainer = "container:Clexi.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "17E2C648200A0CF700503FD0"
-               BuildableName = "ClexiUITests.xctest"
-               BlueprintName = "ClexiUITests"
                ReferencedContainer = "container:Clexi.xcodeproj">
             </BuildableReference>
          </TestableReference>
