@@ -7,21 +7,29 @@
 //
 
 import UIKit
+import CoreBluetooth
+
+let HID_ServiceUUID         = [CBUUID(string: "1812"),
+                               CBUUID(string: "B36E1E00-4B56-3886-4C48-F903401B31F8")]
+let HID_Characterstic       = CBUUID(string: "B36E1E01-4B56-3886-4C48-F903401B31F8")
+let HID_NotifyCharacterstic = CBUUID(string: "B36E1E02-4B56-3886-4C48-F903401B31F8")
 
 class BLEManager: NSObject {
-    internal var PacketManager = ResponsePacket()
-//    let package = BLEPackage()
+    let State = StateManager()
     
     override init() {
         super.init()
     }
     
-    func SendSyncRequest() {
-//        package.SendRequest()
+    func SendRequest() {
+        State.sendRequest()
+    }
+    
+    func SendSync() {
+        State.sendSync()
     }
     
     func DataReceived(_ data: [UInt8]) {
-//        package.GetData(data)
-        PacketManager.AnalyzeData(rawData: data)
+        State.receive(data: data)
     }
 }
