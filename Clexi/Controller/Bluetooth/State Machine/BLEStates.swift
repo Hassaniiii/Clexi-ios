@@ -34,6 +34,7 @@ class ListenForEventState: State {
         PacketManager.AnalyzeData(rawData: Data)
         if PacketManager.APDUPackage.INS == 0x10 {
             print("Single Click event is recieved")
+            NotificationManager.AddLocalNotification(Message: "Single Click event is recieved")
         }
         if PacketManager.APDUPackage.INS == 0x30 {
             print("Double Click event is recieved")
