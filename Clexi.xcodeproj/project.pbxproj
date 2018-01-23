@@ -31,6 +31,9 @@
 		1746A1DA20161F5D008059C4 /* BLEManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1746A1D920161F5D008059C4 /* BLEManager.swift */; };
 		17534D01200B853E0062F480 /* NSUserDefaultManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17534D00200B853E0062F480 /* NSUserDefaultManager.swift */; };
 		17534D06200B880B0062F480 /* ClexiDB.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 17534D04200B880B0062F480 /* ClexiDB.xcdatamodeld */; };
+		175A9FAB20171BD000C9B00A /* StateManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 175A9FAA20171BD000C9B00A /* StateManager.swift */; };
+		175A9FAF20171D3100C9B00A /* BLEStates.swift in Sources */ = {isa = PBXBuildFile; fileRef = 175A9FAE20171D3100C9B00A /* BLEStates.swift */; };
+		175A9FB12017287200C9B00A /* BluetoothStates_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 175A9FB02017287200C9B00A /* BluetoothStates_Tests.swift */; };
 		17913F93200CF5BD00717EAA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17913F91200CF5BD00717EAA /* ViewController.swift */; };
 		17913F94200CF5BD00717EAA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17913F92200CF5BD00717EAA /* AppDelegate.swift */; };
 		17E2C64E200A0CF700503FD0 /* ClexiUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17E2C64D200A0CF700503FD0 /* ClexiUITests.swift */; };
@@ -84,6 +87,9 @@
 		17534D00200B853E0062F480 /* NSUserDefaultManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSUserDefaultManager.swift; sourceTree = "<group>"; };
 		17534D02200B85720062F480 /* NSUserDefaultManager_Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSUserDefaultManager_Tests.swift; sourceTree = "<group>"; };
 		17534D05200B880B0062F480 /* ClexiDB.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ClexiDB.xcdatamodel; sourceTree = "<group>"; };
+		175A9FAA20171BD000C9B00A /* StateManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StateManager.swift; sourceTree = "<group>"; };
+		175A9FAE20171D3100C9B00A /* BLEStates.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BLEStates.swift; sourceTree = "<group>"; };
+		175A9FB02017287200C9B00A /* BluetoothStates_Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BluetoothStates_Tests.swift; sourceTree = "<group>"; };
 		17913F91200CF5BD00717EAA /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		17913F92200CF5BD00717EAA /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		17E2C62A200A0CF600503FD0 /* Clexi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Clexi.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -169,6 +175,7 @@
 			children = (
 				1746A1D920161F5D008059C4 /* BLEManager.swift */,
 				1746A1D820161F08008059C4 /* Packet */,
+				175A9FA920171BBA00C9B00A /* State Machine */,
 			);
 			path = Bluetooth;
 			sourceTree = "<group>";
@@ -223,6 +230,15 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
+		175A9FA920171BBA00C9B00A /* State Machine */ = {
+			isa = PBXGroup;
+			children = (
+				175A9FAA20171BD000C9B00A /* StateManager.swift */,
+				175A9FAE20171D3100C9B00A /* BLEStates.swift */,
+			);
+			path = "State Machine";
+			sourceTree = "<group>";
+		};
 		17E2C621200A0CF600503FD0 = {
 			isa = PBXGroup;
 			children = (
@@ -259,6 +275,7 @@
 		17E2C641200A0CF700503FD0 /* ClexiTests */ = {
 			isa = PBXGroup;
 			children = (
+				175A9FB02017287200C9B00A /* BluetoothStates_Tests.swift */,
 				1746A1D620161406008059C4 /* BluetoothPacket_Tests.swift */,
 				1746A1CD2016045D008059C4 /* BluetoothAPDU_Tests.swift */,
 				17E3EE19200E389D00B5AD95 /* DBController_Tests.swift */,
@@ -611,6 +628,7 @@
 				1746A1A52015D8A0008059C4 /* NSUserDefaultManager_Tests.swift in Sources */,
 				1746A1CE2016045D008059C4 /* BluetoothAPDU_Tests.swift in Sources */,
 				1746A1A62015D8A0008059C4 /* DBManager_Tests.swift in Sources */,
+				175A9FB12017287200C9B00A /* BluetoothStates_Tests.swift in Sources */,
 				1746A1D720161406008059C4 /* BluetoothPacket_Tests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -626,7 +644,9 @@
 				17534D01200B853E0062F480 /* NSUserDefaultManager.swift in Sources */,
 				1739B324200CBBE600F6BD48 /* BLEClone.swift in Sources */,
 				1739B311200CB35600F6BD48 /* BLECloneModel.swift in Sources */,
+				175A9FAB20171BD000C9B00A /* StateManager.swift in Sources */,
 				1746A1D420160FEA008059C4 /* RequestPacket.swift in Sources */,
+				175A9FAF20171D3100C9B00A /* BLEStates.swift in Sources */,
 				17E3EE13200DF79F00B5AD95 /* BaseManagedObject.swift in Sources */,
 				17913F93200CF5BD00717EAA /* ViewController.swift in Sources */,
 				1739B310200CB35600F6BD48 /* LocalAttributesModel.swift in Sources */,
