@@ -39,6 +39,16 @@
                ReferencedContainer = "container:Clexi.xcodeproj">
             </BuildableReference>
          </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "17E2C648200A0CF700503FD0"
+               BuildableName = "ClexiUITests.xctest"
+               BlueprintName = "ClexiUITests"
+               ReferencedContainer = "container:Clexi.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference
