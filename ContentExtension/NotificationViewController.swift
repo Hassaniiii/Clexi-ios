@@ -12,25 +12,25 @@ import UserNotificationsUI
 
 class NotificationViewController: UIViewController, UNNotificationContentExtension {
 
+    var capsLockOn = true
+    @IBOutlet weak var row1: UIView!
+    @IBOutlet weak var row2: UIView!
+    @IBOutlet weak var row3: UIView!
+    @IBOutlet weak var row4: UIView!
+    @IBOutlet weak var row5: UIView!
+    @IBOutlet weak var charSet1: UIView!
+    @IBOutlet weak var charSet2: UIView!
+
     @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var table: UITableView!
     private var tableItems = [String]()
     private let iconboard = Iconboard()
-    private var timer = Timer()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         self.preferredContentSize = CGSize(width: 350, height: 180)
         searchBar.delegate = self
-        timer = Timer.scheduledTimer(withTimeInterval: 1.0,
-                                     repeats: true,
-                                     block: { _ in
-                                        let text = self.searchBar.text
-                                        self.searchBar.text = text!.appending("a")
-                                        self.searchBar(self.searchBar,
-                                                       textDidChange: self.searchBar.text!)
-        })
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -42,11 +42,88 @@ class NotificationViewController: UIViewController, UNNotificationContentExtensi
         tableItems = ["First item", "Second item", "Third item", "Final item"]
         table.reloadData()
     }
+    
+    @IBAction func nextKeyboardPressed(_ button: UIButton) {
+        //        advanceToNextInputMode()
+    }
+    
+    @IBAction func capsLockPressed(_ button: UIButton) {
+        capsLockOn = !capsLockOn
+        
+        changeCaps(row1)
+        changeCaps(row2)
+        changeCaps(row3)
+        changeCaps(row4)
+    }
+    
+   
+    @IBAction func keyPressed(_ button: UIButton) {
+        let string = button.titleLabel!.text
+        (searchBar.value(forKey: "searchField") as! UIKeyInput).insertText("\(string!)")
+        
+        UIView.animate(withDuration: 0.2, animations: {
+            button.transform = button.transform.scaledBy(x: 2.0, y: 2.0)
+        }, completion: {(_) -> Void in
+            button.transform = button.transform.scaledBy(x: 0.5, y: 0.5)
+        })
+    }
+    
+    @IBAction func backSpacePressed(_ button: UIButton) {
+        (searchBar.value(forKey: "searchField") as! UIKeyInput).deleteBackward()
+    }
+    
+    @IBAction func spacePressed(_ button: UIButton) {
+        (searchBar.value(forKey: "searchField") as! UIKeyInput).insertText(" ")
+    }
+    
+    @IBAction func returnPressed(_ button: UIButton) {
+        (searchBar.value(forKey: "searchField") as! UIKeyInput).insertText("\n")
+    }
+    
+    @IBAction func charSetPressed(_ button: UIButton) {
+        if button.titleLabel!.text == "1/2" {
+            charSet1.isHidden = true
+            charSet2.isHidden = false
+            button.setTitle("2/2", for: .normal)
+        } else if button.titleLabel!.text == "2/2" {
+            charSet1.isHidden = false
+            charSet2.isHidden = true
+            button.setTitle("1/2", for: .normal)
+        }
+    }
+    
+    @IBAction func CopyUsername(_ sender: Any) {
+        UIPasteboard.general.string = "hasan.shahbazi@rsa.ir"
+    }
+    
+    @IBAction func CopyPassword(_ sender: Any) {
+        UIPasteboard.general.string = "123456"
+    }
+    
+    
+    func changeCaps(_ containerView: UIView) {
+        for view in containerView.subviews {
+            if let button = view as? UIButton {
+                let buttonTitle = button.titleLabel!.text
+                if capsLockOn {
+                    let text = buttonTitle!.uppercased()
+                    button.setTitle("\(text)", for: .normal)
+                } else {
+                    let text = buttonTitle!.lowercased()
+                    button.setTitle("\(text)", for: .normal)
+                }
+            }
+        }
+    }
 }
 
 extension NotificationViewController {
     override var inputView: UIView? {
-        return iconboard
+        if let keyboard = UINib(nibName: "KeyboardView", bundle: nil).instantiate(withOwner: self, options: nil)[0] as? UIView {
+            charSet2.isHidden = true
+            return keyboard
+        }
+        return UIView()
     }
 
     override var canBecomeFirstResponder: Bool {
@@ -59,9 +136,6 @@ extension NotificationViewController: UISearchBarDelegate {
         if tableItems.count > 0 {
             tableItems.removeLast()
             table.reloadData()
-        }
-        else {
-            timer.invalidate()
         }
     }
 }

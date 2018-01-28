@@ -18,17 +18,17 @@ class NotificationManager: NSObject {
         notification.body = "Expand this notification for more options"
         notification.categoryIdentifier = "Event"
         
-        let Snooz = UNNotificationAction(identifier: "Username",
-                                            title: "Get Username",
-                                            options: [])
-        let Postpone = UNNotificationAction(identifier: "Password",
-                                            title: "Get Password",
-                                            options: [])
+//        let Snooz = UNNotificationAction(identifier: "Username",
+//                                            title: "Get Username",
+//                                            options: [])
+//        let Postpone = UNNotificationAction(identifier: "Password",
+//                                            title: "Get Password",
+//                                            options: [])
         //                let Cancel = UNNotificationAction(identifier: "Cancel",
         //                                                    title: Notification_Cancel,
         //                                                    options: [])
         let category = UNNotificationCategory(identifier: "Event",
-                                              actions: [Snooz, Postpone],
+                                              actions: [],
                                               intentIdentifiers: [],
                                               options: [])
         let notificationTrigger = UNCalendarNotificationTrigger(dateMatching: GenerateFireDate(), repeats: false)

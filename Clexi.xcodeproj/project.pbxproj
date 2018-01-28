@@ -58,6 +58,7 @@
 		17E3EE18200E2E7400B5AD95 /* DBController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17E3EE17200E2E7400B5AD95 /* DBController.swift */; };
 		543E751F3322E673EF492F55 /* Pods_ContentExtension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 545EE0EE37E26DBC4946A740 /* Pods_ContentExtension.framework */; };
 		5C8AB7BC201DC12A00426686 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5C8AB7BB201DC12900426686 /* Info.plist */; };
+		5CAC8328201DDD4F009F7859 /* KeyboardView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5CAC8326201DDD4F009F7859 /* KeyboardView.xib */; };
 		5DCFB590C5ED7C5679AFD7B9 /* Pods_ClexiUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 23F0B63B5633159B744703EC /* Pods_ClexiUITests.framework */; };
 		8518A68582AD150C9D8008EB /* Pods_Clexi.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6755A887D64F82C9BEF366B9 /* Pods_Clexi.framework */; };
 /* End PBXBuildFile section */
@@ -170,6 +171,7 @@
 		468297D42AC30FE8A6F9E74B /* Pods-ClexiTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ClexiTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ClexiTests/Pods-ClexiTests.release.xcconfig"; sourceTree = "<group>"; };
 		545EE0EE37E26DBC4946A740 /* Pods_ContentExtension.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ContentExtension.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5C8AB7BB201DC12900426686 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5CAC8326201DDD4F009F7859 /* KeyboardView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = KeyboardView.xib; sourceTree = "<group>"; };
 		6755A887D64F82C9BEF366B9 /* Pods_Clexi.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Clexi.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AA42F8E2B9C80F1C126B6346 /* Pods-ClexiTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ClexiTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ClexiTests/Pods-ClexiTests.debug.xcconfig"; sourceTree = "<group>"; };
 		B67E56D45BB7BC773045FD91 /* Pods-ClexiUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ClexiUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ClexiUITests/Pods-ClexiUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -335,6 +337,7 @@
 		175A9FBB201743C400C9B00A /* ContentExtension */ = {
 			isa = PBXGroup;
 			children = (
+				5CAC8324201DDD44009F7859 /* Keyboard */,
 				1705D30A20189359005CA430 /* Iconboard.swift */,
 				1705D30F201893F3005CA430 /* IconboardHeader.swift */,
 				1705D30C201893F2005CA430 /* IconButton.swift */,
@@ -430,6 +433,14 @@
 				545EE0EE37E26DBC4946A740 /* Pods_ContentExtension.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		5CAC8324201DDD44009F7859 /* Keyboard */ = {
+			isa = PBXGroup;
+			children = (
+				5CAC8326201DDD4F009F7859 /* KeyboardView.xib */,
+			);
+			path = Keyboard;
 			sourceTree = "<group>";
 		};
 		AE0965E879DFC5670E2DC744 /* Pods */ = {
@@ -632,6 +643,7 @@
 			files = (
 				1705D31620189622005CA430 /* Assets.xcassets in Resources */,
 				175A9FC0201743C400C9B00A /* MainInterface.storyboard in Resources */,
+				5CAC8328201DDD4F009F7859 /* KeyboardView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
