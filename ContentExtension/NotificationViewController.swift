@@ -21,16 +21,16 @@ class NotificationViewController: UIViewController, UNNotificationContentExtensi
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.preferredContentSize = CGSize(width: 350, height: 20)
+        self.preferredContentSize = CGSize(width: 350, height: 180)
         searchBar.delegate = self
-//        timer = Timer.scheduledTimer(withTimeInterval: 1.0,
-//                                     repeats: true,
-//                                     block: { _ in
-//                                        let text = self.searchBar.text
-//                                        self.searchBar.text = text!.appending("a")
-//                                        self.searchBar(self.searchBar,
-//                                                       textDidChange: self.searchBar.text!)
-//        })
+        timer = Timer.scheduledTimer(withTimeInterval: 1.0,
+                                     repeats: true,
+                                     block: { _ in
+                                        let text = self.searchBar.text
+                                        self.searchBar.text = text!.appending("a")
+                                        self.searchBar(self.searchBar,
+                                                       textDidChange: self.searchBar.text!)
+        })
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -59,6 +59,9 @@ extension NotificationViewController: UISearchBarDelegate {
         if tableItems.count > 0 {
             tableItems.removeLast()
             table.reloadData()
+        }
+        else {
+            timer.invalidate()
         }
     }
 }
