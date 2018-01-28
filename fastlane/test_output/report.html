@@ -30,7 +30,8 @@
       .test.passing { background-color: #CAF59F;}
       .test.failing.odd { background-color: #EEC7CC;}
       .test.passing.odd { background-color: #E5FBCF;}
-      .details { background-color: #F4DDE0; border: 1px solid #C84F5E;}
+      .details.failing { background-color: #F4DDE0; border: 1px solid #C84F5E;}
+      .details.passing { background-color: #E5F4DC; border: 1px solid #A1D761;}
       .test .test-detail:last-child { padding-bottom: 8px;}
       .test .title { float: left; font-size: 0.9em; margin-top: 8px; font-family: Menlo, Monaco, monospace;}
       .test .time { float: left;margin: 4px 10px 0 20px;}
@@ -109,13 +110,7 @@
       </section>
       <section class="right">
         <section id="counters">
-<<<<<<< HEAD
-          <h2 id="test-count"><span class="number">0</span> tests</h2>
-=======
-          <h2 id="test-count"><span class="number">25</span> tests</h2>
-          
-            <h2 id="fail-count"><span class="number">6</span> failures</h2>
->>>>>>> Database
+          <h2 id="test-count"><span class="number">41</span> tests</h2>
           
         </section>
         <section id="segment-bar">
@@ -125,47 +120,33 @@
     </header>
     <section id="test-suites">
       
-<<<<<<< HEAD
-=======
         
-        <section class="test-suite passing" id="ClexiTests.DBController_Tests">
+        <section class="test-suite passing" id="ClexiTests.BluetoothAPDU_Tests">
           <section class="heading" onclick="toggleTests(this);">
-            <h3 class="title">ClexiTests.DBController_Tests</h3>
+            <h3 class="title">ClexiTests.BluetoothAPDU_Tests</h3>
           </section>
           <section class="tests">
-            
             <table>
             
               
-              <tr class="test passing "  onclick="toggleDetails('tests_2_01_InsertBLEClone');">
+              <tr class="test passing "  onclick="toggleDetails('tests_01_ExtractAPDU');">
                 <td>
                   
-                    <h3 class="time">0.121s</h3>
+                    <h3 class="time">0.048s</h3>
                   
                 </td>
-                <td><h3 class="title">tests_2_01_InsertBLEClone</h3></td>
+                <td><h3 class="title">tests_01_ExtractAPDU</h3></td>
               </tr>
               
             
               
-              <tr class="test passing odd"  onclick="toggleDetails('tests_2_02_InsertBLEClone');">
+              <tr class="test passing odd"  onclick="toggleDetails('tests_02_CreateAPDU');">
                 <td>
                   
-                    <h3 class="time">0.004s</h3>
+                    <h3 class="time">0.003s</h3>
                   
                 </td>
-                <td><h3 class="title">tests_2_02_InsertBLEClone</h3></td>
-              </tr>
-              
-            
-              
-              <tr class="test passing "  onclick="toggleDetails('tests_2_11_LoadBLEClone');">
-                <td>
-                  
-                    <h3 class="time">0.002s</h3>
-                  
-                </td>
-                <td><h3 class="title">tests_2_11_LoadBLEClone</h3></td>
+                <td><h3 class="title">tests_02_CreateAPDU</h3></td>
               </tr>
               
             
@@ -174,19 +155,274 @@
         </section>
       
         
-        <section class="test-suite failing" id="ClexiTests.DBManager_Tests">
+        <section class="test-suite passing" id="ClexiTests.BluetoothPacket_Tests">
+          <section class="heading" onclick="toggleTests(this);">
+            <h3 class="title">ClexiTests.BluetoothPacket_Tests</h3>
+          </section>
+          <section class="tests">
+            <table>
+            
+              
+              <tr class="test passing "  onclick="toggleDetails('tests_02_RequestPacketAPDU_Initiate');">
+                <td>
+                  
+                    <h3 class="time">0.005s</h3>
+                  
+                </td>
+                <td><h3 class="title">tests_02_RequestPacketAPDU_Initiate</h3></td>
+              </tr>
+              
+            
+              
+              <tr class="test passing odd"  onclick="toggleDetails('tests_03_RequestPacketAPDU');">
+                <td>
+                  
+                    <h3 class="time">0.001s</h3>
+                  
+                </td>
+                <td><h3 class="title">tests_03_RequestPacketAPDU</h3></td>
+              </tr>
+              
+            
+            </table>
+          </section>
+        </section>
+      
+        
+        <section class="test-suite passing" id="ClexiTests.BluetoothStates_Tests">
+          <section class="heading" onclick="toggleTests(this);">
+            <h3 class="title">ClexiTests.BluetoothStates_Tests</h3>
+          </section>
+          <section class="tests">
+            <table>
+            
+              
+              <tr class="test passing "  onclick="toggleDetails('tests_01_StateInitiate');">
+                <td>
+                  
+                    <h3 class="time">0.012s</h3>
+                  
+                </td>
+                <td><h3 class="title">tests_01_StateInitiate</h3></td>
+              </tr>
+              
+            
+              
+              <tr class="test passing odd"  onclick="toggleDetails('tests_02_SendRequest');">
+                <td>
+                  
+                    <h3 class="time">0.001s</h3>
+                  
+                </td>
+                <td><h3 class="title">tests_02_SendRequest</h3></td>
+              </tr>
+              
+            
+              
+              <tr class="test passing "  onclick="toggleDetails('tests_03_SendSync');">
+                <td>
+                  
+                    <h3 class="time">0.001s</h3>
+                  
+                </td>
+                <td><h3 class="title">tests_03_SendSync</h3></td>
+              </tr>
+              
+            
+              
+              <tr class="test passing odd"  onclick="toggleDetails('tests_04_RequestTimeOut');">
+                <td>
+                  
+                    <h3 class="time">5.002s</h3>
+                  
+                </td>
+                <td><h3 class="title">tests_04_RequestTimeOut</h3></td>
+              </tr>
+              
+            
+            </table>
+          </section>
+        </section>
+      
+        
+        <section class="test-suite passing" id="ClexiTests.DBController_Tests">
+          <section class="heading" onclick="toggleTests(this);">
+            <h3 class="title">ClexiTests.DBController_Tests</h3>
+          </section>
+          <section class="tests">
+            <table>
+            
+              
+              <tr class="test passing "  onclick="toggleDetails('tests_01_01_InsertBLEClone');">
+                <td>
+                  
+                    <h3 class="time">0.026s</h3>
+                  
+                </td>
+                <td><h3 class="title">tests_01_01_InsertBLEClone</h3></td>
+              </tr>
+              
+            
+              
+              <tr class="test passing odd"  onclick="toggleDetails('tests_01_03_InsertStackItem');">
+                <td>
+                  
+                    <h3 class="time">0.001s</h3>
+                  
+                </td>
+                <td><h3 class="title">tests_01_03_InsertStackItem</h3></td>
+              </tr>
+              
+            
+              
+              <tr class="test passing "  onclick="toggleDetails('tests_02_01_LoadBLEClone');">
+                <td>
+                  
+                    <h3 class="time">0.001s</h3>
+                  
+                </td>
+                <td><h3 class="title">tests_02_01_LoadBLEClone</h3></td>
+              </tr>
+              
+            
+              
+              <tr class="test passing odd"  onclick="toggleDetails('tests_02_02_LoadBLEAttributes');">
+                <td>
+                  
+                    <h3 class="time">0.001s</h3>
+                  
+                </td>
+                <td><h3 class="title">tests_02_02_LoadBLEAttributes</h3></td>
+              </tr>
+              
+            
+              
+              <tr class="test passing "  onclick="toggleDetails('tests_02_03_LoadBLEStack');">
+                <td>
+                  
+                    <h3 class="time">0.001s</h3>
+                  
+                </td>
+                <td><h3 class="title">tests_02_03_LoadBLEStack</h3></td>
+              </tr>
+              
+            
+              
+              <tr class="test passing odd"  onclick="toggleDetails('tests_03_01_UpdateCloneItem');">
+                <td>
+                  
+                    <h3 class="time">0.001s</h3>
+                  
+                </td>
+                <td><h3 class="title">tests_03_01_UpdateCloneItem</h3></td>
+              </tr>
+              
+            
+              
+              <tr class="test passing "  onclick="toggleDetails('tests_03_02_UpdateStackItem');">
+                <td>
+                  
+                    <h3 class="time">0.001s</h3>
+                  
+                </td>
+                <td><h3 class="title">tests_03_02_UpdateStackItem</h3></td>
+              </tr>
+              
+            
+              
+              <tr class="test passing odd"  onclick="toggleDetails('tests_03_03_LoadUpdatedCloneItem');">
+                <td>
+                  
+                    <h3 class="time">0.001s</h3>
+                  
+                </td>
+                <td><h3 class="title">tests_03_03_LoadUpdatedCloneItem</h3></td>
+              </tr>
+              
+            
+              
+              <tr class="test passing "  onclick="toggleDetails('tests_03_04_LoadUpdatedStackItem');">
+                <td>
+                  
+                    <h3 class="time">0.001s</h3>
+                  
+                </td>
+                <td><h3 class="title">tests_03_04_LoadUpdatedStackItem</h3></td>
+              </tr>
+              
+            
+              
+              <tr class="test passing odd"  onclick="toggleDetails('tests_04_01_SyncItem');">
+                <td>
+                  
+                    <h3 class="time">0.001s</h3>
+                  
+                </td>
+                <td><h3 class="title">tests_04_01_SyncItem</h3></td>
+              </tr>
+              
+            
+              
+              <tr class="test passing "  onclick="toggleDetails('tests_04_02_AfterSyncCloneItem');">
+                <td>
+                  
+                    <h3 class="time">0.001s</h3>
+                  
+                </td>
+                <td><h3 class="title">tests_04_02_AfterSyncCloneItem</h3></td>
+              </tr>
+              
+            
+              
+              <tr class="test passing odd"  onclick="toggleDetails('tests_04_03_AfterSyncStackItem');">
+                <td>
+                  
+                    <h3 class="time">0.001s</h3>
+                  
+                </td>
+                <td><h3 class="title">tests_04_03_AfterSyncStackItem</h3></td>
+              </tr>
+              
+            
+              
+              <tr class="test passing "  onclick="toggleDetails('tests_05_01_RemoveBLECloneItem');">
+                <td>
+                  
+                    <h3 class="time">0.001s</h3>
+                  
+                </td>
+                <td><h3 class="title">tests_05_01_RemoveBLECloneItem</h3></td>
+              </tr>
+              
+            
+              
+              <tr class="test passing odd"  onclick="toggleDetails('tests_05_02_AfterRemove');">
+                <td>
+                  
+                    <h3 class="time">0.001s</h3>
+                  
+                </td>
+                <td><h3 class="title">tests_05_02_AfterRemove</h3></td>
+              </tr>
+              
+            
+            </table>
+          </section>
+        </section>
+      
+        
+        <section class="test-suite passing" id="ClexiTests.DBManager_Tests">
           <section class="heading" onclick="toggleTests(this);">
             <h3 class="title">ClexiTests.DBManager_Tests</h3>
           </section>
           <section class="tests">
-            
             <table>
             
               
               <tr class="test passing "  onclick="toggleDetails('tests_1_01_BLECloneInsert');">
                 <td>
                   
-                    <h3 class="time">0.004s</h3>
+                    <h3 class="time">0.001s</h3>
                   
                 </td>
                 <td><h3 class="title">tests_1_01_BLECloneInsert</h3></td>
@@ -197,7 +433,7 @@
               <tr class="test passing odd"  onclick="toggleDetails('tests_1_02_BLECloneList');">
                 <td>
                   
-                    <h3 class="time">0.002s</h3>
+                    <h3 class="time">0.003s</h3>
                   
                 </td>
                 <td><h3 class="title">tests_1_02_BLECloneList</h3></td>
@@ -205,88 +441,21 @@
               
             
               
-              <tr class="test failing "  onclick="toggleDetails('tests_1_03_BLECloneLoad');">
+              <tr class="test passing "  onclick="toggleDetails('tests_1_03_BLECloneLoad');">
                 <td>
+                  
+                    <h3 class="time">0.001s</h3>
                   
                 </td>
                 <td><h3 class="title">tests_1_03_BLECloneLoad</h3></td>
               </tr>
-              
-                <tr class="details tests_1_03_BLECloneLoad">
-                  <td></td>
-                  <td>
-                    
-                      <section class="test-detail reason">XCTAssertEqual failed: ("Optional("TEST TITILE 2")") is not equal to ("Optional("TEST TITILE")") - </section>
-                    
-                    
-                      <section class="test-detail snippet"><pre class="highlight"><code>        <span class="kt">XCTAssertNotNil</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>
-        <span class="kt">XCTAssertEqual</span><span class="p">(</span><span class="n">result</span><span class="p">?</span><span class="o">.</span><span class="n">title</span><span class="p">,</span> <span class="s">"TEST TITILE"</span><span class="p">)</span>
-        <span class="kt">XCTAssertEqual</span><span class="p">(</span><span class="n">result</span><span class="p">?</span><span class="o">.</span><span class="n">url</span><span class="p">,</span> <span class="s">"TEST URL"</span><span class="p">)</span>
-</code></pre>
-</section>
-                      <section class="test-detail">/Users/hassaniiii/Desktop/Projects/iOS/RSA/Clexi/Clexi-ios/ClexiTests/DBManager_Tests.swift:47</section>
-                    
-                  </td>
-                </tr>
-              
-            
-              
-              <tr class="test failing odd"  onclick="toggleDetails('tests_1_03_BLECloneLoad');">
-                <td>
-                  
-                </td>
-                <td><h3 class="title">tests_1_03_BLECloneLoad</h3></td>
-              </tr>
-              
-                <tr class="details tests_1_03_BLECloneLoad">
-                  <td></td>
-                  <td>
-                    
-                      <section class="test-detail reason">XCTAssertEqual failed: ("Optional("TEST URL 2")") is not equal to ("Optional("TEST URL")") - </section>
-                    
-                    
-                      <section class="test-detail snippet"><pre class="highlight"><code>        <span class="kt">XCTAssertEqual</span><span class="p">(</span><span class="n">result</span><span class="p">?</span><span class="o">.</span><span class="n">title</span><span class="p">,</span> <span class="s">"TEST TITILE"</span><span class="p">)</span>
-        <span class="kt">XCTAssertEqual</span><span class="p">(</span><span class="n">result</span><span class="p">?</span><span class="o">.</span><span class="n">url</span><span class="p">,</span> <span class="s">"TEST URL"</span><span class="p">)</span>
-        <span class="kt">XCTAssertEqual</span><span class="p">(</span><span class="n">result</span><span class="p">?</span><span class="o">.</span><span class="n">username</span><span class="p">,</span> <span class="s">"TEST USERNAME"</span><span class="p">)</span>
-</code></pre>
-</section>
-                      <section class="test-detail">/Users/hassaniiii/Desktop/Projects/iOS/RSA/Clexi/Clexi-ios/ClexiTests/DBManager_Tests.swift:48</section>
-                    
-                  </td>
-                </tr>
-              
-            
-              
-              <tr class="test failing "  onclick="toggleDetails('tests_1_03_BLECloneLoad');">
-                <td>
-                  
-                </td>
-                <td><h3 class="title">tests_1_03_BLECloneLoad</h3></td>
-              </tr>
-              
-                <tr class="details tests_1_03_BLECloneLoad">
-                  <td></td>
-                  <td>
-                    
-                      <section class="test-detail reason">XCTAssertEqual failed: ("Optional("TEST USERNAME 2")") is not equal to ("Optional("TEST USERNAME")") - </section>
-                    
-                    
-                      <section class="test-detail snippet"><pre class="highlight"><code>        <span class="kt">XCTAssertEqual</span><span class="p">(</span><span class="n">result</span><span class="p">?</span><span class="o">.</span><span class="n">url</span><span class="p">,</span> <span class="s">"TEST URL"</span><span class="p">)</span>
-        <span class="kt">XCTAssertEqual</span><span class="p">(</span><span class="n">result</span><span class="p">?</span><span class="o">.</span><span class="n">username</span><span class="p">,</span> <span class="s">"TEST USERNAME"</span><span class="p">)</span>
-        <span class="kt">XCTAssertNil</span><span class="p">(</span><span class="n">result</span><span class="p">?</span><span class="o">.</span><span class="n">appid</span><span class="p">)</span>
-</code></pre>
-</section>
-                      <section class="test-detail">/Users/hassaniiii/Desktop/Projects/iOS/RSA/Clexi/Clexi-ios/ClexiTests/DBManager_Tests.swift:49</section>
-                    
-                  </td>
-                </tr>
               
             
               
               <tr class="test passing odd"  onclick="toggleDetails('tests_1_04_BLECloneUpdate');">
                 <td>
                   
-                    <h3 class="time">0.007s</h3>
+                    <h3 class="time">0.001s</h3>
                   
                 </td>
                 <td><h3 class="title">tests_1_04_BLECloneUpdate</h3></td>
@@ -294,88 +463,32 @@
               
             
               
-              <tr class="test failing "  onclick="toggleDetails('tests_1_05_BLECloneRemove');">
+              <tr class="test passing "  onclick="toggleDetails('tests_1_05_BLECloneRemove');">
                 <td>
+                  
+                    <h3 class="time">0.001s</h3>
                   
                 </td>
                 <td><h3 class="title">tests_1_05_BLECloneRemove</h3></td>
               </tr>
               
-                <tr class="details tests_1_05_BLECloneRemove">
-                  <td></td>
-                  <td>
-                    
-                      <section class="test-detail reason">XCTAssertTrue failed - </section>
-                    
-                    
-                      <section class="test-detail snippet"><pre class="highlight"><code>        <span class="k">let</span> <span class="nv">result</span> <span class="o">=</span> <span class="kt">DBManager</span><span class="o">.</span><span class="kt">RemoveBLECloneItem</span><span class="p">(</span><span class="kt">With</span><span class="p">:</span> <span class="n">id</span><span class="p">)</span>
-        <span class="kt">XCTAssertTrue</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>
-        
-</code></pre>
-</section>
-                      <section class="test-detail">/Users/hassaniiii/Desktop/Projects/iOS/RSA/Clexi/Clexi-ios/ClexiTests/DBManager_Tests.swift:75</section>
-                    
-                  </td>
-                </tr>
-              
             
               
-              <tr class="test failing odd"  onclick="toggleDetails('tests_1_05_BLECloneRemove');">
+              <tr class="test passing odd"  onclick="toggleDetails('tests_1_06_BLECloneLoadInvallid');">
                 <td>
                   
-                </td>
-                <td><h3 class="title">tests_1_05_BLECloneRemove</h3></td>
-              </tr>
-              
-                <tr class="details tests_1_05_BLECloneRemove">
-                  <td></td>
-                  <td>
-                    
-                      <section class="test-detail reason">XCTAssertLessThan failed: ("5") is not less than ("5") - </section>
-                    
-                    
-                      <section class="test-detail snippet"><pre class="highlight"><code>        <span class="k">let</span> <span class="nv">list_after</span> <span class="o">=</span> <span class="kt">DBManager</span><span class="o">.</span><span class="kt">GetBLECloneItemList</span><span class="p">()</span>
-        <span class="kt">XCTAssertLessThan</span><span class="p">(</span><span class="n">list_after</span><span class="o">.</span><span class="n">count</span><span class="p">,</span> <span class="n">list_before</span><span class="o">.</span><span class="n">count</span><span class="p">)</span>
-    <span class="p">}</span>
-</code></pre>
-</section>
-                      <section class="test-detail">/Users/hassaniiii/Desktop/Projects/iOS/RSA/Clexi/Clexi-ios/ClexiTests/DBManager_Tests.swift:78</section>
-                    
-                  </td>
-                </tr>
-              
-            
-              
-              <tr class="test failing "  onclick="toggleDetails('tests_1_06_BLECloneLoadInvallid');">
-                <td>
+                    <h3 class="time">0.000s</h3>
                   
                 </td>
                 <td><h3 class="title">tests_1_06_BLECloneLoadInvallid</h3></td>
               </tr>
               
-                <tr class="details tests_1_06_BLECloneLoadInvallid">
-                  <td></td>
-                  <td>
-                    
-                      <section class="test-detail reason">XCTAssertNil failed: "<Clexi.BLECloneModel: 0x600000112990>" - </section>
-                    
-                    
-                      <section class="test-detail snippet"><pre class="highlight"><code>        <span class="k">let</span> <span class="nv">result</span> <span class="o">=</span> <span class="kt">DBManager</span><span class="o">.</span><span class="kt">LoadBLECloneItem</span><span class="p">(</span><span class="kt">With</span><span class="p">:</span> <span class="n">id</span><span class="p">)</span>
-        <span class="kt">XCTAssertNil</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>
-    <span class="p">}</span>
-</code></pre>
-</section>
-                      <section class="test-detail">/Users/hassaniiii/Desktop/Projects/iOS/RSA/Clexi/Clexi-ios/ClexiTests/DBManager_Tests.swift:83</section>
-                    
-                  </td>
-                </tr>
-              
             
               
-              <tr class="test passing odd"  onclick="toggleDetails('tests_1_07_BLECloneDoubleRemove');">
+              <tr class="test passing "  onclick="toggleDetails('tests_1_07_BLECloneDoubleRemove');">
                 <td>
                   
-                    <h3 class="time">0.001s</h3>
+                    <h3 class="time">0.000s</h3>
                   
                 </td>
                 <td><h3 class="title">tests_1_07_BLECloneDoubleRemove</h3></td>
@@ -383,10 +496,10 @@
               
             
               
-              <tr class="test passing "  onclick="toggleDetails('tests_1_11_BLEStackInsert');">
+              <tr class="test passing odd"  onclick="toggleDetails('tests_1_11_BLEStackInsert');">
                 <td>
                   
-                    <h3 class="time">0.005s</h3>
+                    <h3 class="time">0.001s</h3>
                   
                 </td>
                 <td><h3 class="title">tests_1_11_BLEStackInsert</h3></td>
@@ -394,10 +507,10 @@
               
             
               
-              <tr class="test passing odd"  onclick="toggleDetails('tests_1_12_BLEStackList');">
+              <tr class="test passing "  onclick="toggleDetails('tests_1_12_BLEStackList');">
                 <td>
                   
-                    <h3 class="time">0.002s</h3>
+                    <h3 class="time">0.001s</h3>
                   
                 </td>
                 <td><h3 class="title">tests_1_12_BLEStackList</h3></td>
@@ -405,10 +518,10 @@
               
             
               
-              <tr class="test passing "  onclick="toggleDetails('tests_1_13_BLEStackLoad');">
+              <tr class="test passing odd"  onclick="toggleDetails('tests_1_13_BLEStackLoad');">
                 <td>
                   
-                    <h3 class="time">0.003s</h3>
+                    <h3 class="time">0.001s</h3>
                   
                 </td>
                 <td><h3 class="title">tests_1_13_BLEStackLoad</h3></td>
@@ -416,10 +529,10 @@
               
             
               
-              <tr class="test passing odd"  onclick="toggleDetails('tests_1_14_BLEStackUpdate');">
+              <tr class="test passing "  onclick="toggleDetails('tests_1_14_BLEStackUpdate');">
                 <td>
                   
-                    <h3 class="time">0.006s</h3>
+                    <h3 class="time">0.001s</h3>
                   
                 </td>
                 <td><h3 class="title">tests_1_14_BLEStackUpdate</h3></td>
@@ -427,10 +540,10 @@
               
             
               
-              <tr class="test passing "  onclick="toggleDetails('tests_1_15_BLEStackRemove');">
+              <tr class="test passing odd"  onclick="toggleDetails('tests_1_15_BLEStackRemove');">
                 <td>
                   
-                    <h3 class="time">0.009s</h3>
+                    <h3 class="time">0.001s</h3>
                   
                 </td>
                 <td><h3 class="title">tests_1_15_BLEStackRemove</h3></td>
@@ -438,10 +551,10 @@
               
             
               
-              <tr class="test passing odd"  onclick="toggleDetails('tests_1_16_BLECloneLoadInvallid');">
+              <tr class="test passing "  onclick="toggleDetails('tests_1_16_BLECloneLoadInvallid');">
                 <td>
                   
-                    <h3 class="time">0.001s</h3>
+                    <h3 class="time">0.000s</h3>
                   
                 </td>
                 <td><h3 class="title">tests_1_16_BLECloneLoadInvallid</h3></td>
@@ -449,10 +562,10 @@
               
             
               
-              <tr class="test passing "  onclick="toggleDetails('tests_1_17_BLECloneDoubleRemove');">
+              <tr class="test passing odd"  onclick="toggleDetails('tests_1_17_BLECloneDoubleRemove');">
                 <td>
                   
-                    <h3 class="time">0.002s</h3>
+                    <h3 class="time">0.000s</h3>
                   
                 </td>
                 <td><h3 class="title">tests_1_17_BLECloneDoubleRemove</h3></td>
@@ -460,10 +573,10 @@
               
             
               
-              <tr class="test passing odd"  onclick="toggleDetails('tests_1_21_AttributeInsert');">
+              <tr class="test passing "  onclick="toggleDetails('tests_1_21_AttributeInsert');">
                 <td>
                   
-                    <h3 class="time">0.006s</h3>
+                    <h3 class="time">0.001s</h3>
                   
                 </td>
                 <td><h3 class="title">tests_1_21_AttributeInsert</h3></td>
@@ -471,10 +584,10 @@
               
             
               
-              <tr class="test passing "  onclick="toggleDetails('tests_1_22_AttributeLoad');">
+              <tr class="test passing odd"  onclick="toggleDetails('tests_1_22_AttributeLoad');">
                 <td>
                   
-                    <h3 class="time">0.002s</h3>
+                    <h3 class="time">0.001s</h3>
                   
                 </td>
                 <td><h3 class="title">tests_1_22_AttributeLoad</h3></td>
@@ -482,10 +595,10 @@
               
             
               
-              <tr class="test passing odd"  onclick="toggleDetails('tests_1_23_AttributeUpdate');">
+              <tr class="test passing "  onclick="toggleDetails('tests_1_23_AttributeUpdate');">
                 <td>
                   
-                    <h3 class="time">0.005s</h3>
+                    <h3 class="time">0.002s</h3>
                   
                 </td>
                 <td><h3 class="title">tests_1_23_AttributeUpdate</h3></td>
@@ -493,10 +606,10 @@
               
             
               
-              <tr class="test passing "  onclick="toggleDetails('tests_1_24_AttributeRemove');">
+              <tr class="test passing odd"  onclick="toggleDetails('tests_1_24_AttributeRemove');">
                 <td>
                   
-                    <h3 class="time">0.004s</h3>
+                    <h3 class="time">0.001s</h3>
                   
                 </td>
                 <td><h3 class="title">tests_1_24_AttributeRemove</h3></td>
@@ -513,14 +626,13 @@
             <h3 class="title">ClexiTests.NSUserDefaultManager_Tests</h3>
           </section>
           <section class="tests">
-            
             <table>
             
               
               <tr class="test passing "  onclick="toggleDetails('test_0_1_InsertLoad');">
                 <td>
                   
-                    <h3 class="time">0.023s</h3>
+                    <h3 class="time">0.004s</h3>
                   
                 </td>
                 <td><h3 class="title">test_0_1_InsertLoad</h3></td>
@@ -531,7 +643,6 @@
           </section>
         </section>
       
->>>>>>> Database
     </section>
     <footer>Report generated with <a href="https://github.com/supermarin/xcpretty">xcpretty</a></footer>
   </body>
