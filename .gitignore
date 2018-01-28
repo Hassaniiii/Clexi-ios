@@ -1,3 +1,5 @@
 fastlane/report.xml
 fastlane/test_output/report.html
 fastlane/test_output/report.junit
+Clexi/.DS_Store
+Clexi/View/.DS_Store
