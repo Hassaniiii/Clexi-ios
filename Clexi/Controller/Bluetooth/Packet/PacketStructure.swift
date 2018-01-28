@@ -9,7 +9,12 @@
 import UIKit
 import BLEManager
 
+enum PacketTypes: UInt8 {
+    case Event = 0xc3
+}
+
 class Packet: NSObject {
+    var PacketType: PacketTypes!
     internal let APDUPackage = APDU()
     internal let PacketLength = 20
     internal var PacketQueue: [[UInt8]] = [[UInt8]]()
@@ -23,7 +28,6 @@ class Packet: NSObject {
         let data = Data(bytes: packet, count: packet.count)
         CentralManager.sharedInstance().write(data)
     }
-    
     
 }
 

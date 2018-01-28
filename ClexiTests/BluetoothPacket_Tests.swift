@@ -55,9 +55,10 @@ class BluetoothPacket_Tests: XCTestCase {
     //MARK:- Response packets
     func tests_11_EventReceived() {
         let packet = ResponsePacket()
-        let rawData = RoundUp(array: CreateMockEventData(INS: 0x03))
+        let rawData = RoundUp(array: CreateMockEventData(INS: 0x10))
         let packetNumbers = rawData.count/packet.PacketLength
         
+        packet.PacketType = PacketTypes.Event
         packet.AnalyzeData(rawData: [UInt8](rawData[0..<packet.PacketLength])) //Initiate packet
         for index in 1..<packetNumbers {
             //continoues packets
@@ -67,15 +68,16 @@ class BluetoothPacket_Tests: XCTestCase {
             
             packet.AnalyzeData(rawData: data)
         }
-        XCTAssertEqual(packet.ResType, 0xd0)
+        XCTAssertEqual(packet.ResType, 0xc3)
         XCTAssertEqual(packet.ResLength, mockEventDataLength + 7) //APDU Header count is 7
         XCTAssertEqual(packet.ResData.count, packet.ResLength)
     }
     func tests_12_EventReceived_APDU() {
         let packet = ResponsePacket()
-        let rawData = RoundUp(array: CreateMockEventData(INS: 0x03))
+        let rawData = RoundUp(array: CreateMockEventData(INS: 0x10))
         let packetNumbers = rawData.count/packet.PacketLength
         
+        packet.PacketType = PacketTypes.Event
         packet.AnalyzeData(rawData: [UInt8](rawData[0..<packet.PacketLength])) //Initiate packet
         for index in 1..<packetNumbers {
             //continoues packets
@@ -87,7 +89,7 @@ class BluetoothPacket_Tests: XCTestCase {
         }
         
         XCTAssertEqual(packet.APDUPackage.CLA, 0x00) //CLA
-        XCTAssertEqual(packet.APDUPackage.INS, 0x03) //INS
+        XCTAssertEqual(packet.APDUPackage.INS, 0x10) //INS
         XCTAssertEqual(packet.APDUPackage.P1, 0x00) //P1
         XCTAssertEqual(packet.APDUPackage.P2, 0x00) //P2
         
@@ -96,7 +98,28 @@ class BluetoothPacket_Tests: XCTestCase {
         XCTAssertEqual(packet.APDUPackage.LC2, UInt8((length & 0x0000ff00) >> 8)) //LC2
         XCTAssertEqual(packet.APDUPackage.LC3, UInt8(length & 0x000000ff)) //LC3
     }
-    
+    func tests_13_InvalidEventReceived() {
+        let packet = ResponsePacket()
+        let rawData = RoundUp(array: CreateMockEventData(Type: 0x00, INS: 0x10))
+        let packetNumbers = rawData.count/packet.PacketLength
+        
+        packet.PacketType = PacketTypes.Event
+        packet.AnalyzeData(rawData: [UInt8](rawData[0..<packet.PacketLength])) //Initiate packet
+        for index in 1..<packetNumbers {
+            //continoues packets
+            var data = [UInt8]()
+            data.append(UInt8(index))
+            data.append(contentsOf: [UInt8](rawData[index * packet.PacketLength ..< (index + 1) * packet.PacketLength]))
+            
+            packet.AnalyzeData(rawData: data)
+        }
+        
+        XCTAssertEqual(packet.APDUPackage.CLA, 0) //CLA
+        XCTAssertNil(packet.APDUPackage.INS) //INS
+        XCTAssertNil(packet.APDUPackage.P1) //P1
+        XCTAssertNil(packet.APDUPackage.P2) //P2
+        XCTAssertEqual(packet.APDUPackage.Data.count, 0) //Data
+    }
 }
 
 extension BluetoothPacket_Tests {
@@ -118,9 +141,9 @@ extension BluetoothPacket_Tests {
         }
         return mockData
     }
-    func CreateMockEventData(INS: UInt8) -> [UInt8] {
+    func CreateMockEventData(Type: UInt8 = 0xc3, INS: UInt8) -> [UInt8] {
         var mockData = [UInt8]()
-        mockData.append(0xd0)
+        mockData.append(Type)
         mockData.append(UInt8(((mockEventDataLength + 7) & 0x00ff0000) >> 16))
         mockData.append(UInt8(((mockEventDataLength + 7) & 0x0000ff00) >> 8))
         mockData.append(UInt8((mockEventDataLength + 7) & 0x000000ff))
