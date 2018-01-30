@@ -178,4 +178,16 @@ class DBController_Tests: XCTestCase {
         XCTAssertNil(resultAttribute.popularity)
         XCTAssertNil(resultAttribute.lastused)
     }
+
+    //MARK:- Wipe Database
+    func tests_06_01_WipeDatabase() {
+        XCTAssertTrue(DBController.WipeDatabase())
+    }
+    func tests_06_02_AfterWipe() {
+        let CloneList = DBController.GetBLECloneList()
+        XCTAssertEqual(CloneList.count, 0)
+        
+        let StackList = DBController.GetBLEStackList()
+        XCTAssertEqual(StackList.count, 0)
+    }
 }

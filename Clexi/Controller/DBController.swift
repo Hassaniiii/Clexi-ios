@@ -63,6 +63,12 @@ class DBController: NSObject {
     class func RemoveBLEStackItem(With ID: Int) -> Bool {
         return DBManager.RemoveBLEStackItem(With: ID)
     }
+
+    class func WipeDatabase() -> Bool {
+        return (DBManager.Wipe(entity: .BLEClone) &&
+            DBManager.Wipe(entity: .BLEStack) &&
+            DBManager.Wipe(entity: .LocalAttributes))
+    }
     
     //Special functions
     class func ItemSyncedSuccessfully(With ID: Int) -> Bool {
@@ -113,4 +119,6 @@ class DBController: NSObject {
         BLEClone.appid = BLEStack.appid
         return BLEClone
     }
+
+
 }

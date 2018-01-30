@@ -10,7 +10,6 @@ import UIKit
 
 class BLECloneModel: BaseModel {
     var appid:      String?
-    var id:         Int16!
     var title:      String!
     var url:        String?
     var username:   String?
