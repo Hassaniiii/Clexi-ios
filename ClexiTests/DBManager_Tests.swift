@@ -225,4 +225,18 @@ class DBManager_Tests: XCTestCase {
         let result = DBManager.RemoveAttribute(With: id)
         XCTAssertTrue(result)
     }
+    
+    //MARK:- Wipe Database
+    func tests_1_25_WipeDatabase() {
+        XCTAssertTrue(DBManager.Wipe(entity: .BLEClone))
+        XCTAssertTrue(DBManager.Wipe(entity: .BLEStack))
+        XCTAssertTrue(DBManager.Wipe(entity: .LocalAttributes))
+    }
+    func tests_1_26_AfterWipe() {
+        let CloneList = DBManager.GetBLECloneItemList()
+        XCTAssertEqual(CloneList.count, 0)
+        
+        let StackList = DBManager.GetBLEStackItemList()
+        XCTAssertEqual(StackList.count, 0)
+    }
 }

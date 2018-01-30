@@ -29,6 +29,11 @@ class DBManager: NSObject {
         database.isMock = isMock
         return database.managedObjectContext()
     }
+    private class func GetPersistentCoordinator() -> NSPersistentStoreCoordinator? {
+        let database = DatabaseInstance.SharedInstance()
+        database.isMock = isMock
+        return database.persistentStoreCoordinator
+    }
     
     //MARK:- Shared functions
     private class func GetList(from entity: Entity, result: inout [BaseModel]) {
@@ -177,6 +182,17 @@ class DBManager: NSObject {
     }
     class func UpdateAttribute(With ID: Int, To newAttribute: LocalAttributesModel) -> Bool {
         return UpdateItem(from: Entity.LocalAttributes, To: newAttribute, With: ID)
+    }
+
+    //MARK:- Dangerous Area
+    class func Wipe(entity: Entity) -> Bool {
+        var result = true
+        var items = [BaseModel]()
+        GetList(from: entity, result: &items)
+        for item in items {
+            result = result && RemoveItem(from: entity, With: Int(item.id))
+        }
+        return result
     }
 }
 

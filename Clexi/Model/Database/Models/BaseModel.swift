@@ -9,6 +9,7 @@
 import UIKit
 
 class BaseModel: NSObject {
+    var id:         Int16!
     func ModelToItem(Item: inout BaseManagedObject) {
         
     }
