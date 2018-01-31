@@ -12,9 +12,9 @@ import CoreData
 class BLECloneModel: BaseModel {
     var appid:      String?
     var title:      String!
-    var url:        String?
+    var url:        String!
     var username:   String?
-    var attributes: LocalAttributesModel?
+    var attributes: LocalAttributesModel!
     
     override init() {
         super.init()

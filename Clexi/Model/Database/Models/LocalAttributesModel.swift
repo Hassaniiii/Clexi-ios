@@ -10,8 +10,8 @@ import UIKit
 
 class LocalAttributesModel: BaseModel {
 
-    var popularity:     Int32!
-    var lastused:       NSDate!
+    var popularity:     Int!
+    var lastused:       Date!
     
     override init() {
         super.init()
@@ -24,7 +24,7 @@ class LocalAttributesModel: BaseModel {
     }
     func ModelToItem(Item: inout LocalAttributes) {
         Item.id = self.id
-        Item.popularity = self.popularity
-        Item.lastused = self.lastused
+        Item.popularity = Int32(self.popularity)
+        Item.lastused = self.lastused as NSDate?
     }
 }

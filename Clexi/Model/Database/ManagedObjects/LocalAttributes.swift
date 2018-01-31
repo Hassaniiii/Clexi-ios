@@ -20,8 +20,8 @@ class LocalAttributes: BaseManagedObject {
         let model = LocalAttributesModel()
 
         model.id = self.id
-        model.popularity = self.popularity
-        model.lastused = self.lastused
+        model.popularity = Int(self.popularity)
+        model.lastused = self.lastused as Date?
 
         return model
     }

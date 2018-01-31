@@ -65,10 +65,12 @@ class DBController_Tests: XCTestCase {
         XCTAssertEqual(result.popularity, 0)
         
         let formatter = DateFormatter()
-        formatter.dateFormat = "yyyy-MM-dd HH:mm"
+        formatter.dateFormat = "yyyy-MM-dd HH"
         formatter.timeZone = TimeZone.current
         let dateStr = formatter.string(from: Date())
-        XCTAssertEqual(result.lastused, formatter.date(from: dateStr) as NSDate!)
+        let itemDate = formatter.string(from: result.lastused)
+        
+        XCTAssertEqual(itemDate, dateStr)
     }
     func tests_02_03_LoadBLEStack() {
         let id = 1

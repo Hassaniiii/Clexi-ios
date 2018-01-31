@@ -33,10 +33,12 @@ extension Array where Iterator.Element == BLECloneModel {
         return self.sorted(by: {$0.title.compare($1.title) == Order})
     }
     private func SortByPopularity(Order: ComparisonResult) -> [BLECloneModel] {
-        return self
-//        return self.sorted(by: {DBController.GetBLEItemAttribute(With: Int($0.id)).compare(DBController.GetBLEItemAttribute(With: Int($1.id))) == Order})
+        if Order == .orderedAscending {
+            return self.sorted(by: {$0.attributes!.popularity < $1.attributes!.popularity})
+        }
+        return self.sorted(by: {$0.attributes!.popularity > $1.attributes!.popularity})
     }
     private func SortByLastUsed(Order: ComparisonResult) -> [BLECloneModel] {
-        return self
+        return self.sorted(by: {$0.attributes!.lastused!.compare($1.attributes!.lastused!) == Order})
     }
 }

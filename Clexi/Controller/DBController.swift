@@ -116,13 +116,13 @@ extension DBController {
     private class func RemoveAttribute(For ID: Int) -> Bool {
         return DBManager.RemoveAttribute(With: ID)
     }
-    private class func PrepareDate() -> NSDate {
+    private class func PrepareDate() -> Date {
         let formatter = DateFormatter()
-        formatter.dateFormat = "yyyy-MM-dd HH:mm"
+        formatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
         formatter.timeZone = TimeZone.current
         let dateStr = formatter.string(from: Date())
         
-        return formatter.date(from: dateStr) as NSDate!
+        return formatter.date(from: dateStr)!
     }
     private class func StackToClone(BLEStack: ChangesStackModel) -> BLECloneModel {
         let BLEClone = BLECloneModel()
