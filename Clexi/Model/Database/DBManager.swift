@@ -169,14 +169,6 @@ class DBManager: NSObject {
     }
     
     //MARK:- Local Attributes
-    class func AddAttribute(Attributes: LocalAttributesModel) -> Bool {
-        return InsertItem(into: Entity.LocalAttributes, item: Attributes)
-    }
-    class func LoadAttribute(With ID: Int) -> LocalAttributesModel? {
-        var result = BaseModel()
-        GetItem(from: Entity.LocalAttributes, With: ID, result: &result)
-        return result as? LocalAttributesModel
-    }
     class func RemoveAttribute(With ID: Int) -> Bool {
         return RemoveItem(from: Entity.LocalAttributes, With: ID)
     }
@@ -204,6 +196,7 @@ extension DBManager {
     
     //MARK:- Model To Item
     private class func ModelToItem(from Model: BaseModel, To Item: inout BaseManagedObject) {
+        Model.managedContext = GetDatabaseInstance()
         Model.ModelToItem(Item: &Item)
     }
 }

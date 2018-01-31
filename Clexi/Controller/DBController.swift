@@ -31,8 +31,8 @@ class DBController: NSObject {
         return ChangesStackModel()
     }
     class func GetBLEItemAttribute(With ID: Int) -> LocalAttributesModel {
-        if let item = DBManager.LoadAttribute(With: ID) {
-            return item
+        if let attribute = DBManager.LoadBLECloneItem(With: ID)?.attributes {
+            return attribute
         }
         return LocalAttributesModel()
     }
@@ -42,10 +42,8 @@ class DBController: NSObject {
         if DBManager.LoadBLECloneItem(With: id) != nil {
             return DBManager.UpdateBLECloneItem(With: id, To: BLEItem)
         }
-        if InitiateAttribute(For: id) {
-            return DBManager.InsertNew(BLEItem: BLEItem)
-        }
-        return false
+        BLEItem.attributes = InitiateAttribute(For: id)
+        return DBManager.InsertNew(BLEItem: BLEItem)
     }
     class func InsertBLEStackItem(BLEStack: ChangesStackModel) -> Bool {
         let id = Int(BLEStack.id)
@@ -57,8 +55,8 @@ class DBController: NSObject {
     
     class func RemoveBLECloneItem(With ID: Int) -> Bool {
         var result = true
-        result = result && RemoveAttribute(For: ID)
-        return result && DBManager.RemoveBLECloneItem(With: ID)
+        result = result && DBManager.RemoveBLECloneItem(With: ID)
+        return result && RemoveAttribute(For: ID)
     }
     class func RemoveBLEStackItem(With ID: Int) -> Bool {
         return DBManager.RemoveBLEStackItem(With: ID)
@@ -71,6 +69,18 @@ class DBController: NSObject {
     }
     
     //Special functions
+    class func ItemIsUsed(With ID: Int) -> Bool {
+        //get current attribute
+        let itemAttribute = GetBLEItemAttribute(With: ID)
+        
+        //update last used data
+        itemAttribute.lastused = PrepareDate()
+        
+        //update popularity
+        itemAttribute.popularity = itemAttribute.popularity + 1
+        
+        return DBManager.UpdateAttribute(With: ID, To: itemAttribute)
+    }
     class func ItemSyncedSuccessfully(With ID: Int) -> Bool {
         var result = true
         
@@ -91,13 +101,17 @@ class DBController: NSObject {
         return result
     }
     
-    private class func InitiateAttribute(For ID: Int) -> Bool {
+}
+
+extension DBController {
+    
+    private class func InitiateAttribute(For ID: Int) -> LocalAttributesModel {
         let inititateAttribute = LocalAttributesModel()
         inititateAttribute.id = Int16(ID)
         inititateAttribute.popularity = 0
         inititateAttribute.lastused = PrepareDate()
         
-        return DBManager.AddAttribute(Attributes: inititateAttribute)
+        return inititateAttribute
     }
     private class func RemoveAttribute(For ID: Int) -> Bool {
         return DBManager.RemoveAttribute(With: ID)
@@ -119,6 +133,4 @@ class DBController: NSObject {
         BLEClone.appid = BLEStack.appid
         return BLEClone
     }
-
-
 }

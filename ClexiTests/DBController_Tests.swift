@@ -33,7 +33,7 @@ class DBController_Tests: XCTestCase {
         let result = DBController.InsertBLECloneItem(BLEItem: bleCloneItem)
         XCTAssertTrue(result)
     }
-    func tests_01_03_InsertStackItem() {
+    func tests_01_02_InsertStackItem() {
         let bleStackItem = ChangesStackModel()
         bleStackItem.id = 1
         bleStackItem.appid = nil

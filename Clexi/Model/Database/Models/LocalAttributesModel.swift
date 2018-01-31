@@ -18,10 +18,13 @@ class LocalAttributesModel: BaseModel {
     }
     
     override func ModelToItem(Item: inout BaseManagedObject) {
-        if let item = Item as? LocalAttributes {
-            item.id = self.id
-            item.popularity = self.popularity
-            item.lastused = self.lastused
+        if var item = Item as? LocalAttributes {
+            ModelToItem(Item: &item)
         }
+    }
+    func ModelToItem(Item: inout LocalAttributes) {
+        Item.id = self.id
+        Item.popularity = self.popularity
+        Item.lastused = self.lastused
     }
 }
