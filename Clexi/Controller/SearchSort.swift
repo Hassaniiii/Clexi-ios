@@ -16,10 +16,11 @@ enum SortType: String {
 
 extension Array where Iterator.Element == BLECloneModel {
     
-    func Search(For title: String) -> [BLECloneModel] {
-        return self.filter({(item: BLECloneModel) -> Bool in
-            return item.title.lowercased().range(of: title.lowercased()) != nil
-        })
+    func Search(for title: String, matchWords: Bool = false) -> [BLECloneModel] {
+        if matchWords {
+            return SearchMatches(for: title)
+        }
+        return SearchAll(for: title)
     }
     
     func Sort(By: SortType, Order: ComparisonResult = .orderedDescending) -> [BLECloneModel] {
@@ -33,6 +34,17 @@ extension Array where Iterator.Element == BLECloneModel {
             return SortByLastUsed(Order: Order)
         }
         return self
+    }
+    
+    private func SearchMatches(for title: String) -> [BLECloneModel] {
+        return self.filter({(item: BLECloneModel) -> Bool in
+            return item.title.lowercased() == title.lowercased()
+        })
+    }
+    private func SearchAll(for title: String) -> [BLECloneModel] {
+        return self.filter({(item: BLECloneModel) -> Bool in
+            return item.title.lowercased().range(of: title.lowercased()) != nil
+        })
     }
     
     private func SortByTitle(Order: ComparisonResult) -> [BLECloneModel] {

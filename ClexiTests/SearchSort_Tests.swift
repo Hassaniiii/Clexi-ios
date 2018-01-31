@@ -27,7 +27,7 @@ class SearchSort_Tests: XCTestCase {
     func tests_0_2_SearchEmptyList() {
         let items = DBController.GetBLECloneList()
         XCTAssertNotNil(items)
-        XCTAssertEqual(items.Search(For: "title").count, 0)
+        XCTAssertEqual(items.Search(for: "title").count, 0)
     }
     
     func tests_1_0_Prepare() {
@@ -106,32 +106,37 @@ class SearchSort_Tests: XCTestCase {
     //MARK:- Searching tests
     func tests_2_1_SearchNotFound() {
         let items = DBController.GetBLECloneList()
-        let searchResult = items.Search(For: "BB")
+        let searchResult = items.Search(for: "BB")
         XCTAssertEqual(searchResult.count, 0)
     }
     func tests_2_2_SearchOneResult() {
         let items = DBController.GetBLECloneList()
-        let searchResult = items.Search(For: "A 1")
+        let searchResult = items.Search(for: "A 1")
         XCTAssertEqual(searchResult.count, 1)
         XCTAssertEqual(searchResult.first?.id, 1)
     }
     func tests_2_3_SearchManyResults() {
         let items = DBController.GetBLECloneList()
-        let searchResult = items.Search(For: "A")
+        let searchResult = items.Search(for: "A")
         XCTAssertEqual(searchResult.count, 10)
+    }
+    func tests_2_4_SearchMatchWords() {
+        let items = DBController.GetBLECloneList()
+        let searchResult = items.Search(for: "A", matchWords: true)
+        XCTAssertEqual(searchResult.count, 0)
     }
     
     //MARK:- Mixture of Search - Sort
     func tests_3_1_SearchThenSort() {
         let items = DBController.GetBLECloneList()
-        let searchResult = items.Search(For: "A")
+        let searchResult = items.Search(for: "A")
         let sortedSearch = searchResult.Sort(By: .Title, Order: .orderedAscending)
         XCTAssertEqual(sortedSearch.first?.id, 0)
     }
     func tests_3_2_SortThenSearch() {
         let items = DBController.GetBLECloneList()
         let sortedArray = items.Sort(By: .Title, Order: .orderedAscending)
-        let searchResult = sortedArray.Search(For: "A")
+        let searchResult = sortedArray.Search(for: "A")
         XCTAssertEqual(searchResult.first?.id, 0)
     }
 }
