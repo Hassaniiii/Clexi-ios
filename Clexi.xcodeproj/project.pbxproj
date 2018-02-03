@@ -29,7 +29,6 @@
 		1746A1D520160FEA008059C4 /* ResponsePacket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1746A1D320160FEA008059C4 /* ResponsePacket.swift */; };
 		1746A1D720161406008059C4 /* BluetoothPacket_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1746A1D620161406008059C4 /* BluetoothPacket_Tests.swift */; };
 		1746A1DA20161F5D008059C4 /* BLEManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1746A1D920161F5D008059C4 /* BLEManager.swift */; };
-		17534D01200B853E0062F480 /* NSUserDefaultManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17534D00200B853E0062F480 /* NSUserDefaultManager.swift */; };
 		17534D06200B880B0062F480 /* ClexiDB.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 17534D04200B880B0062F480 /* ClexiDB.xcdatamodeld */; };
 		175A9FAB20171BD000C9B00A /* StateManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 175A9FAA20171BD000C9B00A /* StateManager.swift */; };
 		175A9FAF20171D3100C9B00A /* BLEStates.swift in Sources */ = {isa = PBXBuildFile; fileRef = 175A9FAE20171D3100C9B00A /* BLEStates.swift */; };
@@ -39,14 +38,14 @@
 		17E2C64E200A0CF700503FD0 /* ClexiUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17E2C64D200A0CF700503FD0 /* ClexiUITests.swift */; };
 		17E3EE13200DF79F00B5AD95 /* BaseManagedObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17E3EE12200DF79F00B5AD95 /* BaseManagedObject.swift */; };
 		17E3EE15200DFA8700B5AD95 /* BaseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17E3EE14200DFA8700B5AD95 /* BaseModel.swift */; };
-		17E3EE18200E2E7400B5AD95 /* DBController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17E3EE17200E2E7400B5AD95 /* DBController.swift */; };
-		5C74879320207F38009B12B4 /* SearchSort.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C74879220207F38009B12B4 /* SearchSort.swift */; };
-		5CEFB161202080D70017F144 /* SearchSort_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CEFB160202080D70017F144 /* SearchSort_Tests.swift */; };
 		5C120B2A201DFE3100321C92 /* ListenForEventState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C120B29201DFE3100321C92 /* ListenForEventState.swift */; };
 		5C120B2C201DFE4600321C92 /* SendRequestState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C120B2B201DFE4600321C92 /* SendRequestState.swift */; };
 		5C120B2E201DFE6600321C92 /* ListenForResponseState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C120B2D201DFE6600321C92 /* ListenForResponseState.swift */; };
 		5C120B30201DFE9200321C92 /* SendSyncState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C120B2F201DFE9200321C92 /* SendSyncState.swift */; };
-		5C120B32201E185F00321C92 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5C120B31201E185F00321C92 /* Info.plist */; };
+		5C74879320207F38009B12B4 /* SearchSort.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C74879220207F38009B12B4 /* SearchSort.swift */; };
+		5CA2804B20258E4E009DFFD3 /* NSUserDefaultManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CA2804920258E4E009DFFD3 /* NSUserDefaultManager.swift */; };
+		5CA2804C20258E4E009DFFD3 /* DBController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CA2804A20258E4E009DFFD3 /* DBController.swift */; };
+		5CEFB161202080D70017F144 /* SearchSort_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CEFB160202080D70017F144 /* SearchSort_Tests.swift */; };
 		5DCFB590C5ED7C5679AFD7B9 /* Pods_ClexiUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 23F0B63B5633159B744703EC /* Pods_ClexiUITests.framework */; };
 		8518A68582AD150C9D8008EB /* Pods_Clexi.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6755A887D64F82C9BEF366B9 /* Pods_Clexi.framework */; };
 /* End PBXBuildFile section */
@@ -90,7 +89,6 @@
 		1746A1D320160FEA008059C4 /* ResponsePacket.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResponsePacket.swift; sourceTree = "<group>"; };
 		1746A1D620161406008059C4 /* BluetoothPacket_Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BluetoothPacket_Tests.swift; sourceTree = "<group>"; };
 		1746A1D920161F5D008059C4 /* BLEManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BLEManager.swift; sourceTree = "<group>"; };
-		17534D00200B853E0062F480 /* NSUserDefaultManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSUserDefaultManager.swift; sourceTree = "<group>"; };
 		17534D02200B85720062F480 /* NSUserDefaultManager_Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSUserDefaultManager_Tests.swift; sourceTree = "<group>"; };
 		17534D05200B880B0062F480 /* ClexiDB.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ClexiDB.xcdatamodel; sourceTree = "<group>"; };
 		175A9FAA20171BD000C9B00A /* StateManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StateManager.swift; sourceTree = "<group>"; };
@@ -104,21 +102,21 @@
 		17E2C64F200A0CF700503FD0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		17E3EE12200DF79F00B5AD95 /* BaseManagedObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseManagedObject.swift; sourceTree = "<group>"; };
 		17E3EE14200DFA8700B5AD95 /* BaseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseModel.swift; sourceTree = "<group>"; };
-		17E3EE17200E2E7400B5AD95 /* DBController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DBController.swift; sourceTree = "<group>"; };
 		17E3EE19200E389D00B5AD95 /* DBController_Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DBController_Tests.swift; sourceTree = "<group>"; };
 		202E4E995F692DAABBF0DEF3 /* Pods-ClexiUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ClexiUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ClexiUITests/Pods-ClexiUITests.release.xcconfig"; sourceTree = "<group>"; };
 		23F0B63B5633159B744703EC /* Pods_ClexiUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ClexiUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F6B65497AB0099B9AA83E31 /* Pods-Clexi.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Clexi.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Clexi/Pods-Clexi.debug.xcconfig"; sourceTree = "<group>"; };
 		410D5671024AC821392337C7 /* Pods_ClexiTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ClexiTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		468297D42AC30FE8A6F9E74B /* Pods-ClexiTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ClexiTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ClexiTests/Pods-ClexiTests.release.xcconfig"; sourceTree = "<group>"; };
-		5C74879220207F38009B12B4 /* SearchSort.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchSort.swift; sourceTree = "<group>"; };
-		5C74879420207F67009B12B4 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		5CEFB160202080D70017F144 /* SearchSort_Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchSort_Tests.swift; sourceTree = "<group>"; };
 		5C120B29201DFE3100321C92 /* ListenForEventState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListenForEventState.swift; sourceTree = "<group>"; };
 		5C120B2B201DFE4600321C92 /* SendRequestState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendRequestState.swift; sourceTree = "<group>"; };
 		5C120B2D201DFE6600321C92 /* ListenForResponseState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListenForResponseState.swift; sourceTree = "<group>"; };
 		5C120B2F201DFE9200321C92 /* SendSyncState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendSyncState.swift; sourceTree = "<group>"; };
-		5C120B31201E185F00321C92 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5C74879220207F38009B12B4 /* SearchSort.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchSort.swift; sourceTree = "<group>"; };
+		5C74879420207F67009B12B4 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5CA2804920258E4E009DFFD3 /* NSUserDefaultManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NSUserDefaultManager.swift; path = "../../../../../../../Temporary Files/NSUserDefaultManager.swift"; sourceTree = "<group>"; };
+		5CA2804A20258E4E009DFFD3 /* DBController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DBController.swift; path = "../../../../../../../Temporary Files/DBController.swift"; sourceTree = "<group>"; };
+		5CEFB160202080D70017F144 /* SearchSort_Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchSort_Tests.swift; sourceTree = "<group>"; };
 		6755A887D64F82C9BEF366B9 /* Pods_Clexi.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Clexi.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AA42F8E2B9C80F1C126B6346 /* Pods-ClexiTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ClexiTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ClexiTests/Pods-ClexiTests.debug.xcconfig"; sourceTree = "<group>"; };
 		B67E56D45BB7BC773045FD91 /* Pods-ClexiUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ClexiUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ClexiUITests/Pods-ClexiUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -178,8 +176,8 @@
 		1746A1C9201603DA008059C4 /* Data */ = {
 			isa = PBXGroup;
 			children = (
-				17E3EE17200E2E7400B5AD95 /* DBController.swift */,
-				17534D00200B853E0062F480 /* NSUserDefaultManager.swift */,
+				5CA2804A20258E4E009DFFD3 /* DBController.swift */,
+				5CA2804920258E4E009DFFD3 /* NSUserDefaultManager.swift */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -314,8 +312,6 @@
 			isa = PBXGroup;
 			children = (
 				17913F92200CF5BD00717EAA /* AppDelegate.swift */,
-				17E3EE17200E2E7400B5AD95 /* DBController.swift */,
-				17534D00200B853E0062F480 /* NSUserDefaultManager.swift */,
 				5C74879220207F38009B12B4 /* SearchSort.swift */,
 				1746A1C9201603DA008059C4 /* Data */,
 				1746A1CA201603E2008059C4 /* Bluetooth */,
@@ -477,7 +473,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5C120B32201E185F00321C92 /* Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -675,8 +670,8 @@
 				1739B2FE200CB32400F6BD48 /* DBManager.swift in Sources */,
 				5C120B2E201DFE6600321C92 /* ListenForResponseState.swift in Sources */,
 				17E3EE15200DFA8700B5AD95 /* BaseModel.swift in Sources */,
-				17534D01200B853E0062F480 /* NSUserDefaultManager.swift in Sources */,
 				1739B324200CBBE600F6BD48 /* BLEClone.swift in Sources */,
+				5CA2804B20258E4E009DFFD3 /* NSUserDefaultManager.swift in Sources */,
 				1739B311200CB35600F6BD48 /* BLECloneModel.swift in Sources */,
 				175A9FAB20171BD000C9B00A /* StateManager.swift in Sources */,
 				1746A1D420160FEA008059C4 /* RequestPacket.swift in Sources */,
@@ -689,11 +684,11 @@
 				1739B30B200CB34200F6BD48 /* LocalAttributes.swift in Sources */,
 				17534D06200B880B0062F480 /* ClexiDB.xcdatamodeld in Sources */,
 				1746A1D520160FEA008059C4 /* ResponsePacket.swift in Sources */,
+				5CA2804C20258E4E009DFFD3 /* DBController.swift in Sources */,
 				1739B312200CB35600F6BD48 /* ChangesStackModel.swift in Sources */,
 				5C74879320207F38009B12B4 /* SearchSort.swift in Sources */,
 				1739B329200CC53100F6BD48 /* DatabaseInstance.swift in Sources */,
 				1746A1DA20161F5D008059C4 /* BLEManager.swift in Sources */,
-				17E3EE18200E2E7400B5AD95 /* DBController.swift in Sources */,
 				5C120B30201DFE9200321C92 /* SendSyncState.swift in Sources */,
 				1746A1CC20160440008059C4 /* APDU.swift in Sources */,
 			);
@@ -896,6 +891,7 @@
 				CURRENT_PROJECT_VERSION = 0;
 				DEVELOPMENT_TEAM = 92TDT63R6P;
 				INFOPLIST_FILE = "$(SRCROOT)/Clexi/Resources/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.clexi.Clexi;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -917,6 +913,7 @@
 				CURRENT_PROJECT_VERSION = 0;
 				DEVELOPMENT_TEAM = 92TDT63R6P;
 				INFOPLIST_FILE = "$(SRCROOT)/Clexi/Resources/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.clexi.Clexi;
 				PRODUCT_NAME = "$(TARGET_NAME)";
