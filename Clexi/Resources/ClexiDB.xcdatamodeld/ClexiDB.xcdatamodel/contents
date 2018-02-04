@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="13772" systemVersion="17C88" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="13772" systemVersion="17D47" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
     <entity name="BLEClone" representedClassName=".BLEClone" syncable="YES">
         <attribute name="appid" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="id" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="title" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="url" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="username" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="attributes" maxCount="1" deletionRule="Nullify" destinationEntity="LocalAttributes" inverseName="clone" inverseEntity="LocalAttributes" syncable="YES"/>
     </entity>
     <entity name="ChangesStack" representedClassName=".ChangesStack" syncable="YES">
         <attribute name="appid" optional="YES" attributeType="String" syncable="YES"/>
@@ -21,10 +22,11 @@
         <attribute name="id" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="lastused" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
         <attribute name="popularity" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <relationship name="clone" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="BLEClone" inverseName="attributes" inverseEntity="BLEClone" syncable="YES"/>
     </entity>
     <elements>
-        <element name="BLEClone" positionX="-63" positionY="-18" width="128" height="120"/>
+        <element name="BLEClone" positionX="-63" positionY="-18" width="128" height="135"/>
         <element name="ChangesStack" positionX="-36" positionY="9" width="128" height="165"/>
-        <element name="LocalAttributes" positionX="-54" positionY="-9" width="128" height="90"/>
+        <element name="LocalAttributes" positionX="-54" positionY="-9" width="128" height="105"/>
     </elements>
 </model>

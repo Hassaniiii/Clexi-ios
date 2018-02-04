@@ -7,9 +7,11 @@
 //
 
 import UIKit
+import CoreData
 
 class BaseModel: NSObject {
-    func ModelToItem(Item: inout BaseManagedObject) {
-        
-    }
+    var managedContext: NSManagedObjectContext!
+    var id:             Int16!
+    
+    func ModelToItem(Item: inout BaseManagedObject) {}
 }

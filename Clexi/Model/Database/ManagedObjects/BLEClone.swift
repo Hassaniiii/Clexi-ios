@@ -18,6 +18,7 @@ class BLEClone: BaseManagedObject {
     @NSManaged public var appid: String?
     @NSManaged public var title: String?
     @NSManaged public var username: String?
+    @NSManaged public var attributes: LocalAttributes
     
     override func ItemToModel() -> BLECloneModel {
         let model = BLECloneModel()
@@ -27,6 +28,7 @@ class BLEClone: BaseManagedObject {
         model.title = self.title
         model.url = self.url
         model.username = self.username
+        model.attributes = self.attributes.ItemToModel()
         
         return model
     }

@@ -7,13 +7,14 @@
 //
 
 import UIKit
+import CoreData
 
 class BLECloneModel: BaseModel {
     var appid:      String?
-    var id:         Int16!
     var title:      String!
-    var url:        String?
+    var url:        String!
     var username:   String?
+    var attributes: LocalAttributesModel!
     
     override init() {
         super.init()
@@ -21,11 +22,20 @@ class BLECloneModel: BaseModel {
     
     override func ModelToItem(Item: inout BaseManagedObject) {
         if let item = Item as? BLEClone {
+            
             item.appid = self.appid
             item.id = self.id
             item.url = self.url
             item.title = self.title
             item.username = self.username
+            
+            if let currentAttribute = self.attributes {
+                if var attribute = NSEntityDescription.insertNewObject(forEntityName: Entity.LocalAttributes.rawValue, into: managedContext) as? LocalAttributes {
+                    
+                    currentAttribute.ModelToItem(Item: &attribute)
+                    item.attributes = attribute
+                }
+            }
         }
     }
 }

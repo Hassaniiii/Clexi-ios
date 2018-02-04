@@ -33,7 +33,7 @@ class DBController_Tests: XCTestCase {
         let result = DBController.InsertBLECloneItem(BLEItem: bleCloneItem)
         XCTAssertTrue(result)
     }
-    func tests_01_03_InsertStackItem() {
+    func tests_01_02_InsertStackItem() {
         let bleStackItem = ChangesStackModel()
         bleStackItem.id = 1
         bleStackItem.appid = nil
@@ -65,10 +65,12 @@ class DBController_Tests: XCTestCase {
         XCTAssertEqual(result.popularity, 0)
         
         let formatter = DateFormatter()
-        formatter.dateFormat = "yyyy-MM-dd HH:mm"
+        formatter.dateFormat = "yyyy-MM-dd HH"
         formatter.timeZone = TimeZone.current
         let dateStr = formatter.string(from: Date())
-        XCTAssertEqual(result.lastused, formatter.date(from: dateStr) as NSDate!)
+        let itemDate = formatter.string(from: result.lastused)
+        
+        XCTAssertEqual(itemDate, dateStr)
     }
     func tests_02_03_LoadBLEStack() {
         let id = 1
@@ -177,5 +179,17 @@ class DBController_Tests: XCTestCase {
         let resultAttribute = DBController.GetBLEItemAttribute(With: id)
         XCTAssertNil(resultAttribute.popularity)
         XCTAssertNil(resultAttribute.lastused)
+    }
+
+    //MARK:- Wipe Database
+    func tests_06_01_WipeDatabase() {
+        XCTAssertTrue(DBController.WipeDatabase())
+    }
+    func tests_06_02_AfterWipe() {
+        let CloneList = DBController.GetBLECloneList()
+        XCTAssertEqual(CloneList.count, 0)
+        
+        let StackList = DBController.GetBLEStackList()
+        XCTAssertEqual(StackList.count, 0)
     }
 }

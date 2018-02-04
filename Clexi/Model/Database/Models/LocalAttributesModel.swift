@@ -10,19 +10,21 @@ import UIKit
 
 class LocalAttributesModel: BaseModel {
 
-    var id:             Int16!
-    var popularity:     Int32!
-    var lastused:       NSDate!
+    var popularity:     Int!
+    var lastused:       Date!
     
     override init() {
         super.init()
     }
     
     override func ModelToItem(Item: inout BaseManagedObject) {
-        if let item = Item as? LocalAttributes {
-            item.id = self.id
-            item.popularity = self.popularity
-            item.lastused = self.lastused
+        if var item = Item as? LocalAttributes {
+            ModelToItem(Item: &item)
         }
+    }
+    func ModelToItem(Item: inout LocalAttributes) {
+        Item.id = self.id
+        Item.popularity = Int32(self.popularity)
+        Item.lastused = self.lastused as NSDate?
     }
 }

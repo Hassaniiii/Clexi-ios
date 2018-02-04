@@ -29,6 +29,11 @@ class DBManager: NSObject {
         database.isMock = isMock
         return database.managedObjectContext()
     }
+    private class func GetPersistentCoordinator() -> NSPersistentStoreCoordinator? {
+        let database = DatabaseInstance.SharedInstance()
+        database.isMock = isMock
+        return database.persistentStoreCoordinator
+    }
     
     //MARK:- Shared functions
     private class func GetList(from entity: Entity, result: inout [BaseModel]) {
@@ -164,19 +169,22 @@ class DBManager: NSObject {
     }
     
     //MARK:- Local Attributes
-    class func AddAttribute(Attributes: LocalAttributesModel) -> Bool {
-        return InsertItem(into: Entity.LocalAttributes, item: Attributes)
-    }
-    class func LoadAttribute(With ID: Int) -> LocalAttributesModel? {
-        var result = BaseModel()
-        GetItem(from: Entity.LocalAttributes, With: ID, result: &result)
-        return result as? LocalAttributesModel
-    }
     class func RemoveAttribute(With ID: Int) -> Bool {
         return RemoveItem(from: Entity.LocalAttributes, With: ID)
     }
     class func UpdateAttribute(With ID: Int, To newAttribute: LocalAttributesModel) -> Bool {
         return UpdateItem(from: Entity.LocalAttributes, To: newAttribute, With: ID)
+    }
+
+    //MARK:- Dangerous Area
+    class func Wipe(entity: Entity) -> Bool {
+        var result = true
+        var items = [BaseModel]()
+        GetList(from: entity, result: &items)
+        for item in items {
+            result = result && RemoveItem(from: entity, With: Int(item.id))
+        }
+        return result
     }
 }
 
@@ -188,6 +196,7 @@ extension DBManager {
     
     //MARK:- Model To Item
     private class func ModelToItem(from Model: BaseModel, To Item: inout BaseManagedObject) {
+        Model.managedContext = GetDatabaseInstance()
         Model.ModelToItem(Item: &Item)
     }
 }
