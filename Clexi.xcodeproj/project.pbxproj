@@ -7,16 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1705D30B20189359005CA430 /* Iconboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1705D30A20189359005CA430 /* Iconboard.swift */; };
-		1705D311201893F3005CA430 /* IconButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1705D30C201893F2005CA430 /* IconButton.swift */; };
-		1705D312201893F3005CA430 /* UIView+Constraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1705D30D201893F2005CA430 /* UIView+Constraints.swift */; };
-		1705D313201893F3005CA430 /* SuccessView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1705D30E201893F2005CA430 /* SuccessView.swift */; };
-		1705D314201893F3005CA430 /* IconboardHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1705D30F201893F3005CA430 /* IconboardHeader.swift */; };
-		1705D315201893F3005CA430 /* SubmitButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1705D310201893F3005CA430 /* SubmitButton.swift */; };
 		1705D31620189622005CA430 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1739B313200CB3B700F6BD48 /* Assets.xcassets */; };
 		1705D31820189D8D005CA430 /* Pods_Clexi.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6755A887D64F82C9BEF366B9 /* Pods_Clexi.framework */; };
-		1707F3BC201758100063D4E5 /* NotificationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1707F3BB201758100063D4E5 /* NotificationService.swift */; };
-		1707F3C0201758100063D4E5 /* ServiceExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 1707F3B9201758100063D4E5 /* ServiceExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		1739B2FE200CB32400F6BD48 /* DBManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1739B2FD200CB32400F6BD48 /* DBManager.swift */; };
 		1739B308200CB34200F6BD48 /* ChangesStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1739B302200CB34100F6BD48 /* ChangesStack.swift */; };
 		1739B30B200CB34200F6BD48 /* LocalAttributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1739B305200CB34200F6BD48 /* LocalAttributes.swift */; };
@@ -65,13 +57,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		1707F3BE201758100063D4E5 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 17E2C622200A0CF600503FD0 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 1707F3B8201758100063D4E5;
-			remoteInfo = ServiceExtension;
-		};
 		1746A1A12015D8A0008059C4 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 17E2C622200A0CF600503FD0 /* Project object */;
@@ -102,7 +87,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 13;
 			files = (
-				1707F3C0201758100063D4E5 /* ServiceExtension.appex in Embed App Extensions */,
 				175A9FC4201743C400C9B00A /* ContentExtension.appex in Embed App Extensions */,
 			);
 			name = "Embed App Extensions";
@@ -111,15 +95,6 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		1705D30A20189359005CA430 /* Iconboard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Iconboard.swift; sourceTree = "<group>"; };
-		1705D30C201893F2005CA430 /* IconButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IconButton.swift; sourceTree = "<group>"; };
-		1705D30D201893F2005CA430 /* UIView+Constraints.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Constraints.swift"; sourceTree = "<group>"; };
-		1705D30E201893F2005CA430 /* SuccessView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SuccessView.swift; sourceTree = "<group>"; };
-		1705D30F201893F3005CA430 /* IconboardHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IconboardHeader.swift; sourceTree = "<group>"; };
-		1705D310201893F3005CA430 /* SubmitButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SubmitButton.swift; sourceTree = "<group>"; };
-		1707F3B9201758100063D4E5 /* ServiceExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = ServiceExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
-		1707F3BB201758100063D4E5 /* NotificationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationService.swift; sourceTree = "<group>"; };
-		1707F3BD201758100063D4E5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1739B2FB200CB30A00F6BD48 /* DBManager_Tests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DBManager_Tests.swift; sourceTree = "<group>"; };
 		1739B2FD200CB32400F6BD48 /* DBManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DBManager.swift; sourceTree = "<group>"; };
 		1739B302200CB34100F6BD48 /* ChangesStack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChangesStack.swift; sourceTree = "<group>"; };
@@ -184,13 +159,6 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		1707F3B6201758100063D4E5 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		1746A1A72015D8A0008059C4 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -229,15 +197,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		1707F3BA201758100063D4E5 /* ServiceExtension */ = {
-			isa = PBXGroup;
-			children = (
-				1707F3BB201758100063D4E5 /* NotificationService.swift */,
-				1707F3BD201758100063D4E5 /* Info.plist */,
-			);
-			path = ServiceExtension;
-			sourceTree = "<group>";
-		};
 		1739B2FF200CB33300F6BD48 /* ManagedObjects */ = {
 			isa = PBXGroup;
 			children = (
@@ -342,12 +301,6 @@
 			isa = PBXGroup;
 			children = (
 				5CAC8324201DDD44009F7859 /* Keyboard */,
-				1705D30A20189359005CA430 /* Iconboard.swift */,
-				1705D30F201893F3005CA430 /* IconboardHeader.swift */,
-				1705D30C201893F2005CA430 /* IconButton.swift */,
-				1705D310201893F3005CA430 /* SubmitButton.swift */,
-				1705D30E201893F2005CA430 /* SuccessView.swift */,
-				1705D30D201893F2005CA430 /* UIView+Constraints.swift */,
 				175A9FBC201743C400C9B00A /* NotificationViewController.swift */,
 				175A9FBE201743C400C9B00A /* MainInterface.storyboard */,
 				175A9FC1201743C400C9B00A /* Info.plist */,
@@ -362,7 +315,6 @@
 				17E2C641200A0CF700503FD0 /* ClexiTests */,
 				17E2C64C200A0CF700503FD0 /* ClexiUITests */,
 				175A9FBB201743C400C9B00A /* ContentExtension */,
-				1707F3BA201758100063D4E5 /* ServiceExtension */,
 				17E2C62B200A0CF600503FD0 /* Products */,
 				AE0965E879DFC5670E2DC744 /* Pods */,
 				4006895E7F1C1224C71FACC5 /* Frameworks */,
@@ -377,7 +329,6 @@
 				17E2C649200A0CF700503FD0 /* ClexiUITests.xctest */,
 				1746A1AF2015D8A0008059C4 /* ClexiTests.xctest */,
 				175A9FB6201743C400C9B00A /* ContentExtension.appex */,
-				1707F3B9201758100063D4E5 /* ServiceExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -476,23 +427,6 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		1707F3B8201758100063D4E5 /* ServiceExtension */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 1707F3C3201758100063D4E5 /* Build configuration list for PBXNativeTarget "ServiceExtension" */;
-			buildPhases = (
-				1707F3B5201758100063D4E5 /* Sources */,
-				1707F3B6201758100063D4E5 /* Frameworks */,
-				1707F3B7201758100063D4E5 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = ServiceExtension;
-			productName = ServiceExtension;
-			productReference = 1707F3B9201758100063D4E5 /* ServiceExtension.appex */;
-			productType = "com.apple.product-type.app-extension";
-		};
 		1746A19F2015D8A0008059C4 /* ClexiTests */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1746A1AC2015D8A0008059C4 /* Build configuration list for PBXNativeTarget "ClexiTests" */;
@@ -549,7 +483,6 @@
 			);
 			dependencies = (
 				175A9FC3201743C400C9B00A /* PBXTargetDependency */,
-				1707F3BF201758100063D4E5 /* PBXTargetDependency */,
 			);
 			name = Clexi;
 			productName = Clexi;
@@ -587,10 +520,6 @@
 				LastUpgradeCheck = 0920;
 				ORGANIZATIONNAME = "Hassan Shahbazi";
 				TargetAttributes = {
-					1707F3B8201758100063D4E5 = {
-						CreatedOnToolsVersion = 9.2;
-						ProvisioningStyle = Automatic;
-					};
 					1746A19F2015D8A0008059C4 = {
 						ProvisioningStyle = Automatic;
 					};
@@ -629,7 +558,6 @@
 			targets = (
 				17E2C629200A0CF600503FD0 /* Clexi */,
 				175A9FB5201743C400C9B00A /* ContentExtension */,
-				1707F3B8201758100063D4E5 /* ServiceExtension */,
 				1746A19F2015D8A0008059C4 /* ClexiTests */,
 				17E2C648200A0CF700503FD0 /* ClexiUITests */,
 			);
@@ -637,13 +565,6 @@
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		1707F3B7201758100063D4E5 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		1746A1A92015D8A0008059C4 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -864,14 +785,6 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		1707F3B5201758100063D4E5 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				1707F3BC201758100063D4E5 /* NotificationService.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		1746A1A32015D8A0008059C4 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -890,13 +803,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1705D311201893F3005CA430 /* IconButton.swift in Sources */,
 				175A9FBD201743C400C9B00A /* NotificationViewController.swift in Sources */,
-				1705D313201893F3005CA430 /* SuccessView.swift in Sources */,
-				1705D30B20189359005CA430 /* Iconboard.swift in Sources */,
-				1705D315201893F3005CA430 /* SubmitButton.swift in Sources */,
-				1705D314201893F3005CA430 /* IconboardHeader.swift in Sources */,
-				1705D312201893F3005CA430 /* UIView+Constraints.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -942,11 +849,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		1707F3BF201758100063D4E5 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 1707F3B8201758100063D4E5 /* ServiceExtension */;
-			targetProxy = 1707F3BE201758100063D4E5 /* PBXContainerItemProxy */;
-		};
 		1746A1A02015D8A0008059C4 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 17E2C629200A0CF600503FD0 /* Clexi */;
@@ -992,40 +894,6 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		1707F3C1201758100063D4E5 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 92TDT63R6P;
-				INFOPLIST_FILE = ServiceExtension/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.clexi.Clexi.ServiceExtension;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Debug;
-		};
-		1707F3C2201758100063D4E5 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 92TDT63R6P;
-				INFOPLIST_FILE = ServiceExtension/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.clexi.Clexi.ServiceExtension;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Release;
-		};
 		1746A1AD2015D8A0008059C4 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = AA42F8E2B9C80F1C126B6346 /* Pods-ClexiTests.debug.xcconfig */;
@@ -1288,15 +1156,6 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		1707F3C3201758100063D4E5 /* Build configuration list for PBXNativeTarget "ServiceExtension" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				1707F3C1201758100063D4E5 /* Debug */,
-				1707F3C2201758100063D4E5 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		1746A1AC2015D8A0008059C4 /* Build configuration list for PBXNativeTarget "ClexiTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

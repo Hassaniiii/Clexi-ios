@@ -24,7 +24,6 @@ class NotificationViewController: UIViewController, UNNotificationContentExtensi
     @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var table: UITableView!
     private var tableItems = [String]()
-    private let iconboard = Iconboard()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -56,16 +55,10 @@ class NotificationViewController: UIViewController, UNNotificationContentExtensi
         changeCaps(row4)
     }
     
-   
     @IBAction func keyPressed(_ button: UIButton) {
         let string = button.titleLabel!.text
         (searchBar.value(forKey: "searchField") as! UIKeyInput).insertText("\(string!)")
-        
-        UIView.animate(withDuration: 0.2, animations: {
-            button.transform = button.transform.scaledBy(x: 2.0, y: 2.0)
-        }, completion: {(_) -> Void in
-            button.transform = button.transform.scaledBy(x: 0.5, y: 0.5)
-        })
+        AnimateClick(button)
     }
     
     @IBAction func backSpacePressed(_ button: UIButton) {
@@ -92,14 +85,23 @@ class NotificationViewController: UIViewController, UNNotificationContentExtensi
         }
     }
     
-    @IBAction func CopyUsername(_ sender: Any) {
+    @IBAction func CopyUsername(_ button: UIButton) {
         UIPasteboard.general.string = "hasan.shahbazi@rsa.ir"
+        AnimateClick(button)
     }
     
-    @IBAction func CopyPassword(_ sender: Any) {
+    @IBAction func CopyPassword(_ button: UIButton) {
         UIPasteboard.general.string = "123456"
+        AnimateClick(button)
     }
     
+    func AnimateClick(_ button: UIButton) {
+        UIView.animate(withDuration: 0.2, animations: {
+            button.transform = button.transform.scaledBy(x: 2.0, y: 2.0)
+        }, completion: {(_) -> Void in
+            button.transform = button.transform.scaledBy(x: 0.5, y: 0.5)
+        })
+    }
     
     func changeCaps(_ containerView: UIView) {
         for view in containerView.subviews {

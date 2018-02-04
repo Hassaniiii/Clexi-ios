@@ -34,7 +34,7 @@ class ViewController: UIViewController {
 }
 
 extension ViewController: BLECentralManagerDelegate {
-    func centralStateChanged(_ state: CBCentralManagerState) {
+    func centralStateChanged(_ state: CBManagerState) {
         DispatchQueue.main.async {
             if state == .poweredOn {
                 CentralManager.sharedInstance().connect()

@@ -10,7 +10,7 @@ EXTERNAL SOURCES:
 
 CHECKOUT OPTIONS:
   BLEManager:
-    :commit: 9340f15770de81d3716c0a9582583fc510b11d77
+    :commit: 7a7a57df2b8328a1577a2110834b95e28cfa80eb
     :git: https://github.com/Hassaniiii/BLEManager.git
 
 SPEC CHECKSUMS:
