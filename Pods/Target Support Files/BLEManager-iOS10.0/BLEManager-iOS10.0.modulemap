@@ -1,5 +1,5 @@
 framework module BLEManager {
-  umbrella header "BLEManager-umbrella.h"
+  umbrella header "BLEManager-iOS10.0-umbrella.h"
 
   export *
   module * { export * }

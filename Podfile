@@ -16,5 +16,6 @@ end
 
 target 'ContentExtension' do
     use_frameworks!
+    pod 'BLEManager', :git => "https://github.com/Hassaniiii/BLEManager.git"
 end
 

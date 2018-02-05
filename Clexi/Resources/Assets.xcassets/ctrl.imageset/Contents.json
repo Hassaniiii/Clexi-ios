@@ -2,12 +2,11 @@
   "images" : [
     {
       "idiom" : "universal",
-      "filename" : "shift-selected.png",
+      "filename" : "ctrl.png",
       "scale" : "1x"
     },
     {
       "idiom" : "universal",
-      "filename" : "shift-selected@2x.png",
       "scale" : "2x"
     },
     {

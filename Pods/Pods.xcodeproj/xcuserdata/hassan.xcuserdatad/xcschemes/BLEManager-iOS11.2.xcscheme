@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "4EAE1386557B0D0BA0E0194BB791C15B"
-               BuildableName = "Pods_ContentExtension.framework"
-               BlueprintName = "Pods-ContentExtension"
+               BlueprintIdentifier = "6DE6F7628E66A946E707CA2E1574F7C8"
+               BuildableName = "BLEManager.framework"
+               BlueprintName = "BLEManager-iOS11.2"
                ReferencedContainer = "container:Pods.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -47,9 +47,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "4EAE1386557B0D0BA0E0194BB791C15B"
-            BuildableName = "Pods_ContentExtension.framework"
-            BlueprintName = "Pods-ContentExtension"
+            BlueprintIdentifier = "6DE6F7628E66A946E707CA2E1574F7C8"
+            BuildableName = "BLEManager.framework"
+            BlueprintName = "BLEManager-iOS11.2"
             ReferencedContainer = "container:Pods.xcodeproj">
          </BuildableReference>
       </MacroExpansion>

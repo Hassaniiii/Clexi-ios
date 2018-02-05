@@ -134,10 +134,12 @@ strip_invalid_archs() {
 
 
 if [[ "$CONFIGURATION" == "Debug" ]]; then
-  install_framework "${BUILT_PRODUCTS_DIR}/BLEManager/BLEManager.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/BLEManager-iOS10.0/BLEManager.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/BLEManager-iOS11.2/BLEManager.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
-  install_framework "${BUILT_PRODUCTS_DIR}/BLEManager/BLEManager.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/BLEManager-iOS10.0/BLEManager.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/BLEManager-iOS11.2/BLEManager.framework"
 fi
 if [ "${COCOAPODS_PARALLEL_CODE_SIGN}" == "true" ]; then
   wait

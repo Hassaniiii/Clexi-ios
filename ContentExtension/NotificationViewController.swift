@@ -6,88 +6,69 @@
 //  Copyright © 1396 AP Hassan Shahbazi. All rights reserved.
 //
 
+import Clexi
 import UIKit
 import UserNotifications
 import UserNotificationsUI
 
 class NotificationViewController: UIViewController, UNNotificationContentExtension {
 
-    var capsLockOn = true
+    @IBOutlet weak var numbers: UIView!
     @IBOutlet weak var row1: UIView!
     @IBOutlet weak var row2: UIView!
     @IBOutlet weak var row3: UIView!
     @IBOutlet weak var row4: UIView!
-    @IBOutlet weak var row5: UIView!
-    @IBOutlet weak var charSet1: UIView!
-    @IBOutlet weak var charSet2: UIView!
-
-    @IBOutlet weak var searchBar: UISearchBar!
+    @IBOutlet weak var SearchBox: UIView!
+    @IBOutlet weak var searchBar: UITextField!
+    @IBOutlet weak var MatchSuggestion: UILabel!
     @IBOutlet weak var table: UITableView!
-    private var tableItems = [String]()
+    private var tableItems = [BLECloneModel]()
+    private var wholeItems = [BLECloneModel]()
+    private var Keyboard: UIView?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         self.preferredContentSize = CGSize(width: 350, height: 180)
-        searchBar.delegate = self
+        
+        #if DEBUG
+            DBManager.isMock = true
+            InsertMockBLEClone(Count: 10)
+        #endif
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
+        self.Keyboard = UINib(nibName: "KeyboardView", bundle: nil).instantiate(withOwner: self, options: nil)[0] as? UIView
+        self.Keyboard?.autoresizingMask = .flexibleBottomMargin
         becomeFirstResponder()
     }
     
     func didReceive(_ notification: UNNotification) {
-        tableItems = ["First item", "Second item", "Third item", "Final item"]
-        table.reloadData()
-    }
-    
-    @IBAction func nextKeyboardPressed(_ button: UIButton) {
-        //        advanceToNextInputMode()
-    }
-    
-    @IBAction func capsLockPressed(_ button: UIButton) {
-        capsLockOn = !capsLockOn
-        
-        changeCaps(row1)
-        changeCaps(row2)
-        changeCaps(row3)
-        changeCaps(row4)
+        wholeItems = DBController.GetBLECloneList()
+        tableItems = wholeItems
+        GetSuggestion(firstLoading: true)
     }
     
     @IBAction func keyPressed(_ button: UIButton) {
-        let string = button.titleLabel!.text
-        (searchBar.value(forKey: "searchField") as! UIKeyInput).insertText("\(string!)")
+        searchBar.insertText(button.titleLabel!.text!)
+        textfieldDidChanged()
         AnimateClick(button)
     }
     
     @IBAction func backSpacePressed(_ button: UIButton) {
-        (searchBar.value(forKey: "searchField") as! UIKeyInput).deleteBackward()
+        searchBar.deleteBackward()
+        textfieldDidChanged()
     }
     
     @IBAction func spacePressed(_ button: UIButton) {
-        (searchBar.value(forKey: "searchField") as! UIKeyInput).insertText(" ")
-    }
-    
-    @IBAction func returnPressed(_ button: UIButton) {
-        (searchBar.value(forKey: "searchField") as! UIKeyInput).insertText("\n")
-    }
-    
-    @IBAction func charSetPressed(_ button: UIButton) {
-        if button.titleLabel!.text == "1/2" {
-            charSet1.isHidden = true
-            charSet2.isHidden = false
-            button.setTitle("2/2", for: .normal)
-        } else if button.titleLabel!.text == "2/2" {
-            charSet1.isHidden = false
-            charSet2.isHidden = true
-            button.setTitle("1/2", for: .normal)
-        }
+        searchBar.insertText(" ")
+        textfieldDidChanged()
     }
     
     @IBAction func CopyUsername(_ button: UIButton) {
         UIPasteboard.general.string = "hasan.shahbazi@rsa.ir"
         AnimateClick(button)
+        self.searchBar.endEditing(true)
     }
     
     @IBAction func CopyPassword(_ button: UIButton) {
@@ -95,58 +76,54 @@ class NotificationViewController: UIViewController, UNNotificationContentExtensi
         AnimateClick(button)
     }
     
-    func AnimateClick(_ button: UIButton) {
+    private func AnimateClick(_ button: UIButton) {
         UIView.animate(withDuration: 0.2, animations: {
             button.transform = button.transform.scaledBy(x: 2.0, y: 2.0)
         }, completion: {(_) -> Void in
             button.transform = button.transform.scaledBy(x: 0.5, y: 0.5)
         })
     }
-    
-    func changeCaps(_ containerView: UIView) {
-        for view in containerView.subviews {
-            if let button = view as? UIButton {
-                let buttonTitle = button.titleLabel!.text
-                if capsLockOn {
-                    let text = buttonTitle!.uppercased()
-                    button.setTitle("\(text)", for: .normal)
-                } else {
-                    let text = buttonTitle!.lowercased()
-                    button.setTitle("\(text)", for: .normal)
-                }
-            }
+
+    private func textfieldDidChanged() {
+        tableItems = wholeItems.Search(for: searchBar.text!)
+        GetSuggestion()
+    }
+
+    private func GetSuggestion(firstLoading initiate: Bool = false) {
+        tableItems = tableItems.Sort(By: (initiate) ? .LastUsed : .Title)
+        if let title = tableItems.first?.title {
+            MatchSuggestion.text = title
         }
+        else {
+            tableItems = wholeItems
+            MatchSuggestion.text = "There is nothing to show"
+        }
+        table.reloadData()
     }
 }
 
 extension NotificationViewController {
     override var inputView: UIView? {
-        if let keyboard = UINib(nibName: "KeyboardView", bundle: nil).instantiate(withOwner: self, options: nil)[0] as? UIView {
-            charSet2.isHidden = true
-            return keyboard
-        }
-        return UIView()
+        return Keyboard
     }
 
     override var canBecomeFirstResponder: Bool {
         return true
     }
-}
-
-extension NotificationViewController: UISearchBarDelegate {
-    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-        if tableItems.count > 0 {
-            tableItems.removeLast()
-            table.reloadData()
+    
+    //Helper functions
+    private func InsertMockBLEClone(Count: Int) {
+        for counter in 0..<Count {
+            let item = BLECloneModel()
+            item.id = Int16(counter)
+            item.title = "Title \(counter)"
+            item.url = "URL"
+            item.username = "Username"
+            _ = DBController.InsertBLECloneItem(BLEItem: item)
         }
     }
 }
 
-extension NotificationViewController: UITableViewDelegate {
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print("hello world")
-    }
-}
 extension NotificationViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return tableItems.count
@@ -155,7 +132,7 @@ extension NotificationViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if let cell = tableView.dequeueReusableCell(withIdentifier: "notification_cell") {
             if let titleLabel = cell.viewWithTag(1) as? UILabel {
-                titleLabel.text = tableItems[indexPath.row]
+                titleLabel.text = tableItems[indexPath.row].title
             }
             return cell
         }

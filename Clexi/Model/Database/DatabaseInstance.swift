@@ -65,7 +65,7 @@ class DatabaseInstance: NSObject {
             }
             
             alertController.addAction(confirmAction)
-            (UIApplication.shared.delegate as? AppDelegate)?.window?.rootViewController?.present(alertController, animated: true,  completion: nil)
+//            (UIApplication.shared.delegate as? AppDelegate)?.window?.rootViewController?.present(alertController, animated: true,  completion: nil)
             
         } catch {
             fatalError()

@@ -2,12 +2,11 @@
   "images" : [
     {
       "idiom" : "universal",
-      "filename" : "shift.png",
+      "filename" : "backspace.png",
       "scale" : "1x"
     },
     {
       "idiom" : "universal",
-      "filename" : "shift@2x.png",
       "scale" : "2x"
     },
     {

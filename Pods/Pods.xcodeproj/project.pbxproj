@@ -3,111 +3,160 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 48;
+	objectVersion = 46;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		015A11A647F084F42350967F4CFB722A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
-		038A6EF1F4DC7BB58A9DBA6F6DED2E90 /* ErrorCodes.h in Headers */ = {isa = PBXBuildFile; fileRef = 00F68067535FF0DE8F99AE23716D7B16 /* ErrorCodes.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		0578832F8E414FAF5582344466A21897 /* ErrorCodes.plist in Sources */ = {isa = PBXBuildFile; fileRef = 3C0E8CD8B0AE723ED2615427F740D997 /* ErrorCodes.plist */; };
+		0433FBB1D1A7B713F4FFB04CC550D03E /* PeripheralManager.m in Sources */ = {isa = PBXBuildFile; fileRef = FB05A2CDF5C0E32BB5C8F47972E2668D /* PeripheralManager.m */; };
+		09B2B9C9F4EB31C7863881501276A91F /* ErrorHandler.h in Headers */ = {isa = PBXBuildFile; fileRef = 94B2E04606AD0C039512847CC8030928 /* ErrorHandler.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0B4BD90011FFF46A8F53DE9B88D9A0CC /* Pods-ClexiTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E267CA91639EE7BABF8EDE86F5A96CB /* Pods-ClexiTests-dummy.m */; };
-		19929D974DBF35AF5356F3E754C5CBF0 /* PeripheralManager.m in Sources */ = {isa = PBXBuildFile; fileRef = B02E19A8DF9629F79EA63F0B6981D2FF /* PeripheralManager.m */; };
-		2CF01E236DEB23E5340C8FEACA8F77C9 /* ErrorHandler.h in Headers */ = {isa = PBXBuildFile; fileRef = CC7505DD36B3DB91940B890FE3C290AA /* ErrorHandler.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		2E4C45C3B15236B81FE76312F4A73C1F /* Pods-ContentExtension-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 80AB6420ECB7CF54B6CE9ACBFD218B56 /* Pods-ContentExtension-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		4B1E9AABF85EA3B17491CE434B782A7F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
+		109AD0D1ECD733E2BB8BC9F49189C918 /* ErrorCodes.plist in Sources */ = {isa = PBXBuildFile; fileRef = B5CBA4D37224CBC2B8E25F36AAB020AC /* ErrorCodes.plist */; };
+		1650B7C58AD7297289DE894F22465F72 /* PeripheralManager.m in Sources */ = {isa = PBXBuildFile; fileRef = FB05A2CDF5C0E32BB5C8F47972E2668D /* PeripheralManager.m */; };
+		16E7D58D9BF6DD3217335F310031F028 /* Pods-Clexi-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E922A4E1C48F4157ABCB3DCD72B304E /* Pods-Clexi-dummy.m */; };
+		1871EDF9E8E71F3ABF166A832D2A88A8 /* ErrorHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C01D11CC5DBDB1F4F444E8B421C4ECE /* ErrorHandler.m */; };
+		2BF92C865A756E7C67E42D4F9FE96899 /* PeripheralManager.h in Headers */ = {isa = PBXBuildFile; fileRef = C7C358D3F2257B0316DB11751D019697 /* PeripheralManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		34939CE0F4D3D6E1BDB205ED7CF07EC9 /* Pods-Clexi-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = F5B214EBDC8502EBB965FA933E3CDA4C /* Pods-Clexi-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		40D46C6515BB43830F16E9833E1EF58C /* BLEManager-iOS11.2-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = AF1A8A061247EA56D28E4D41F3001B96 /* BLEManager-iOS11.2-dummy.m */; };
+		45D529089331FA04790693EB2CCE405D /* Pods-ContentExtension-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CEBB7F46C73E2F1037A51CEB5FF15C0 /* Pods-ContentExtension-dummy.m */; };
+		52ED1D7FF0C33156C5B5880BF3F643DC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
 		53CA446B7D7631EDB6D19ABF0EF2399B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
-		5F3A3B79E51807FDD8C3DAF0069F7C01 /* Pods-Clexi-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E922A4E1C48F4157ABCB3DCD72B304E /* Pods-Clexi-dummy.m */; };
-		68A2AD224459AE07888F7B7460F1A055 /* CentralManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FCE5B26D5469E5B044DE1C858AE57B2 /* CentralManager.m */; };
-		6C209EBF046EE35F9E877BAFB059230D /* BLEManager-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 8406CF907B0AE3CCC43C9EE23233ED89 /* BLEManager-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		751E3FCCDF3D4ECD30C338316DC0CA20 /* BLEManager-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = CB1562563DE06D7471AC5CA50DCCFB56 /* BLEManager-dummy.m */; };
-		90FEBDFD72D5FD5C77C750482040AE23 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
-		9530AF24F3F3F58A006E9BE3A494F97B /* BLEManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 690ABFD334AB7A66722209A4A1B2E7A9 /* BLEManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		99698883E47C3ADF231F4F1C671E460C /* CentralManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 2CEB3D90392C82684C5FD90F65438B9E /* CentralManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		A97F6A149EC1DACA0E77E33B95526EA3 /* Pods-ContentExtension-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CEBB7F46C73E2F1037A51CEB5FF15C0 /* Pods-ContentExtension-dummy.m */; };
+		53EA34C07E2D98C81E3694FA927F4149 /* PeripheralManager.h in Headers */ = {isa = PBXBuildFile; fileRef = C7C358D3F2257B0316DB11751D019697 /* PeripheralManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		588B84ABEB3825610B84609ECC5B3365 /* ErrorCodes.h in Headers */ = {isa = PBXBuildFile; fileRef = F64619546151406373439D2B21782A9F /* ErrorCodes.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5D35708428AD99ECE4FB2E991007DEF0 /* CentralManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FBDA2BBEC27F5D64EC8D15BA6481714 /* CentralManager.m */; };
+		625742E2C796F6B89875617DC4E7651A /* CentralManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FBDA2BBEC27F5D64EC8D15BA6481714 /* CentralManager.m */; };
+		689EB3B9AA2512E002318E5518A0A2C6 /* BLEManager-iOS11.2-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = D6CE38E148C9C9A84EA4C5D03431E20F /* BLEManager-iOS11.2-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6E0F4D06979FBEBCA25FE6F7A89BF28A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
+		72F78434D1A37EA63C3EFE8F77B78EE8 /* BLEManager-iOS10.0-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 5278FFB2F54B074CD183F654B9668B71 /* BLEManager-iOS10.0-dummy.m */; };
+		82D209A0E18A85217D5DA386DC8B55E7 /* ErrorHandler.h in Headers */ = {isa = PBXBuildFile; fileRef = 94B2E04606AD0C039512847CC8030928 /* ErrorHandler.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8B9B3CD343021EA445669A449C814A49 /* BLEManager-iOS10.0-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 85444ED017C086AC79CB9FA56DA97727 /* BLEManager-iOS10.0-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		98A74FB22B51D0C3AF0C819241A6B9C2 /* CentralManager.h in Headers */ = {isa = PBXBuildFile; fileRef = A1F799FAA3DB1E2EF72B7E64C3F6E21A /* CentralManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		AF6275116C91B565E3A25C575AFD174C /* Pods-ClexiUITests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 9DFA6DC2D8F2A30B65092BA098503760 /* Pods-ClexiUITests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		D0CB904B0CC60A9D51A09732685D470A /* ErrorHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AE17BC747D251DDE93709BA96AD727C /* ErrorHandler.m */; };
-		DAE09377A307E3CF311F37584FDBF469 /* Pods-Clexi-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = F5B214EBDC8502EBB965FA933E3CDA4C /* Pods-Clexi-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B8FDEFE5CFC88E2C428278F978237E3A /* BLEManager.h in Headers */ = {isa = PBXBuildFile; fileRef = B212F802E0C78038D64CBE8BECBFD116 /* BLEManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C55B8682B9064016EE3C2AA570965F12 /* Pods-ContentExtension-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 80AB6420ECB7CF54B6CE9ACBFD218B56 /* Pods-ContentExtension-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CA75A1E42DB16162798780219B922602 /* ErrorCodes.h in Headers */ = {isa = PBXBuildFile; fileRef = F64619546151406373439D2B21782A9F /* ErrorCodes.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CDAA95383561EF2A02E1DC85287B2EAA /* CentralManager.h in Headers */ = {isa = PBXBuildFile; fileRef = A1F799FAA3DB1E2EF72B7E64C3F6E21A /* CentralManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D6665AF610E187F90FE4D356D6B8C28C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
 		DEDAE91F407CA52A53EB776C8735ECF3 /* Pods-ClexiTests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 191DBBBC3BFA8AFBD1F02A7796DD014B /* Pods-ClexiTests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		E856600BA08A08030E86C135DF4BE2BC /* PeripheralManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 7F18254B3BCCE3F7E7EAD534C8117696 /* PeripheralManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E0498F712668AFF287A50E04D8614512 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
+		EB48671C1F92410F2DC370991A72F0D2 /* ErrorHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C01D11CC5DBDB1F4F444E8B421C4ECE /* ErrorHandler.m */; };
+		F053CB66D76A43818AAD95BE1B012E5B /* ErrorCodes.plist in Sources */ = {isa = PBXBuildFile; fileRef = B5CBA4D37224CBC2B8E25F36AAB020AC /* ErrorCodes.plist */; };
 		FD3CF41D76A9B476ADEAC88FAFF3E50F /* Pods-ClexiUITests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = B1F43F3B37FCA1C33BFBC3996B9B8CB7 /* Pods-ClexiUITests-dummy.m */; };
 		FDBBD565DFFC570CF692AC8716480D74 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
+		FE894127EAB3826D3E1487D450911684 /* BLEManager.h in Headers */ = {isa = PBXBuildFile; fileRef = B212F802E0C78038D64CBE8BECBFD116 /* BLEManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		C2CC220A249409B37E7CE90FB54667C1 /* PBXContainerItemProxy */ = {
+		64D6423C94163756607AA143A84F6797 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = E1FC1EFDF831EF980B6E77A481D2518B;
-			remoteInfo = BLEManager;
+			remoteGlobalIDString = 1D5C7BC123E08BE3B2EDDF983FA6B2FC;
+			remoteInfo = "BLEManager-iOS10.0";
+		};
+		BD9650A5D9852D3C6C5DC69595361515 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6DE6F7628E66A946E707CA2E1574F7C8;
+			remoteInfo = "BLEManager-iOS11.2";
+		};
+		C18809F2C85A91FA00FBC7CD29DDE4ED /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6DE6F7628E66A946E707CA2E1574F7C8;
+			remoteInfo = "BLEManager-iOS11.2";
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		00F68067535FF0DE8F99AE23716D7B16 /* ErrorCodes.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ErrorCodes.h; path = BLEManager/Classes/ErrorCodes.h; sourceTree = "<group>"; };
 		0648D29EF054287CD2E9AC8847F5FD64 /* Pods-ClexiUITests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-ClexiUITests-acknowledgements.markdown"; sourceTree = "<group>"; };
-		0DD44F5AE13B98BFB501C2B0F6552C9D /* Pods-ContentExtension.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-ContentExtension.modulemap"; sourceTree = "<group>"; };
+		0DD44F5AE13B98BFB501C2B0F6552C9D /* Pods-ContentExtension.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-ContentExtension.modulemap"; sourceTree = "<group>"; };
 		0E922A4E1C48F4157ABCB3DCD72B304E /* Pods-Clexi-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Clexi-dummy.m"; sourceTree = "<group>"; };
 		14E2C0BF93B37B43AB7CA2102D4E1552 /* Pods-ClexiTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-ClexiTests-acknowledgements.markdown"; sourceTree = "<group>"; };
-		159517C7B743E91CB5C867DE0A25264A /* Pods_ClexiUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_ClexiUITests.framework; path = "Pods-ClexiUITests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		187E3543CE9D5290232F827BE543B0FF /* Pods-ClexiUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ClexiUITests.release.xcconfig"; sourceTree = "<group>"; };
 		18A234B0598CC23170AE2D17E4A9E535 /* Pods-ClexiTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ClexiTests.debug.xcconfig"; sourceTree = "<group>"; };
 		191DBBBC3BFA8AFBD1F02A7796DD014B /* Pods-ClexiTests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-ClexiTests-umbrella.h"; sourceTree = "<group>"; };
-		1BED4963E3755C3657C1244422B87E72 /* Pods-ClexiUITests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-ClexiUITests.modulemap"; sourceTree = "<group>"; };
+		1BED4963E3755C3657C1244422B87E72 /* Pods-ClexiUITests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-ClexiUITests.modulemap"; sourceTree = "<group>"; };
 		247C1B35195B51BD291A3689504E05C0 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		2CEB3D90392C82684C5FD90F65438B9E /* CentralManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CentralManager.h; path = BLEManager/Classes/CentralManager.h; sourceTree = "<group>"; };
+		2BDDD3364F385CA610A65E9B03455483 /* BLEManager-iOS11.2.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "BLEManager-iOS11.2.xcconfig"; path = "../BLEManager-iOS11.2/BLEManager-iOS11.2.xcconfig"; sourceTree = "<group>"; };
 		2E267CA91639EE7BABF8EDE86F5A96CB /* Pods-ClexiTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-ClexiTests-dummy.m"; sourceTree = "<group>"; };
 		2FC590F00B1F1E86DB448AF868A071DD /* Pods-Clexi.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Clexi.release.xcconfig"; sourceTree = "<group>"; };
+		38C75F2994F5F8B8515E55284AB4AA27 /* BLEManager.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = BLEManager.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3BCBA0C4F15962EAE856783CA51DB279 /* Pods-ContentExtension-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-ContentExtension-acknowledgements.plist"; sourceTree = "<group>"; };
-		3C0E8CD8B0AE723ED2615427F740D997 /* ErrorCodes.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; name = ErrorCodes.plist; path = BLEManager/Classes/ErrorCodes.plist; sourceTree = "<group>"; };
-		3E2143EA092A9295749E1A8AB3710421 /* BLEManager.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = BLEManager.xcconfig; sourceTree = "<group>"; };
+		3C01D11CC5DBDB1F4F444E8B421C4ECE /* ErrorHandler.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ErrorHandler.m; path = BLEManager/Classes/ErrorHandler.m; sourceTree = "<group>"; };
 		3F3DB073B48AB08BA927A31059986512 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		400B60E03CE777EFA52F18BA5CA93ED9 /* Pods-ClexiUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ClexiUITests.debug.xcconfig"; sourceTree = "<group>"; };
-		4067D004DCA5AACE7BCCA257B88B11E1 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		40C7052BBB73E20159D22F97F9150800 /* BLEManager.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = BLEManager.framework; path = BLEManager.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4319EA99C4652C84ACB49E2C574ADA5B /* Pods_ContentExtension.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ContentExtension.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		453DD72DE9DD2A63BDA794462275502D /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		463A6A3D2B140B18485B4CC24F1FEEEB /* Pods_ClexiTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ClexiTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		47E2D23032CD8C3C5FB03763619D1105 /* Pods-ContentExtension.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ContentExtension.release.xcconfig"; sourceTree = "<group>"; };
 		4EFAB5E59CEBF26BF3BF26F9F4E492A3 /* Pods-ClexiTests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-ClexiTests-resources.sh"; sourceTree = "<group>"; };
 		5034687A6AFA3CB0A5A95AF7957A9269 /* Pods-ContentExtension-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-ContentExtension-resources.sh"; sourceTree = "<group>"; };
+		5278FFB2F54B074CD183F654B9668B71 /* BLEManager-iOS10.0-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "BLEManager-iOS10.0-dummy.m"; sourceTree = "<group>"; };
 		563690A078F30DE03FDB1CA3D08B17B9 /* Pods-Clexi-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Clexi-resources.sh"; sourceTree = "<group>"; };
 		589D9ACB0414A185A578CB5A7D42E496 /* Pods-Clexi-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Clexi-acknowledgements.markdown"; sourceTree = "<group>"; };
-		595A28ECD0D71D2CE90109874D2752E8 /* Pods_ClexiTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_ClexiTests.framework; path = "Pods-ClexiTests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		66E4E635E6DE755FB94189B85D550AC9 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		690ABFD334AB7A66722209A4A1B2E7A9 /* BLEManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BLEManager.h; path = BLEManager/Classes/BLEManager.h; sourceTree = "<group>"; };
 		69496CF5B25ED788F223B29866FC9834 /* Pods-Clexi-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Clexi-frameworks.sh"; sourceTree = "<group>"; };
+		6B0FE62196FFB47CFEE9D3E81CC87073 /* BLEManager-iOS11.2.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; name = "BLEManager-iOS11.2.modulemap"; path = "../BLEManager-iOS11.2/BLEManager-iOS11.2.modulemap"; sourceTree = "<group>"; };
 		6CEBB7F46C73E2F1037A51CEB5FF15C0 /* Pods-ContentExtension-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-ContentExtension-dummy.m"; sourceTree = "<group>"; };
-		6FCE5B26D5469E5B044DE1C858AE57B2 /* CentralManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CentralManager.m; path = BLEManager/Classes/CentralManager.m; sourceTree = "<group>"; };
-		71F8AB2638592B822B7423951C3DD53A /* Pods_ContentExtension.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_ContentExtension.framework; path = "Pods-ContentExtension.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		7AE17BC747D251DDE93709BA96AD727C /* ErrorHandler.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ErrorHandler.m; path = BLEManager/Classes/ErrorHandler.m; sourceTree = "<group>"; };
-		7F18254B3BCCE3F7E7EAD534C8117696 /* PeripheralManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PeripheralManager.h; path = BLEManager/Classes/PeripheralManager.h; sourceTree = "<group>"; };
+		7EEB57BB39A360F159B46CB90E18982E /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; name = Info.plist; path = "../BLEManager-iOS11.2/Info.plist"; sourceTree = "<group>"; };
 		80AB6420ECB7CF54B6CE9ACBFD218B56 /* Pods-ContentExtension-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-ContentExtension-umbrella.h"; sourceTree = "<group>"; };
-		8406CF907B0AE3CCC43C9EE23233ED89 /* BLEManager-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "BLEManager-umbrella.h"; sourceTree = "<group>"; };
+		839C22BB9B5C873EAE107EA8C5F62E63 /* Pods_Clexi.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Clexi.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		85444ED017C086AC79CB9FA56DA97727 /* BLEManager-iOS10.0-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "BLEManager-iOS10.0-umbrella.h"; sourceTree = "<group>"; };
 		8564FE9901223C672B10BB29F7AFEC6E /* Pods-ClexiUITests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-ClexiUITests-frameworks.sh"; sourceTree = "<group>"; };
-		88E75F5AFF695534E29C84E48A556033 /* BLEManager.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = BLEManager.modulemap; sourceTree = "<group>"; };
-		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		860CB6E3F8EBBA521C07D76772B39688 /* BLEManager-iOS11.2-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "BLEManager-iOS11.2-prefix.pch"; path = "../BLEManager-iOS11.2/BLEManager-iOS11.2-prefix.pch"; sourceTree = "<group>"; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		94B2E04606AD0C039512847CC8030928 /* ErrorHandler.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ErrorHandler.h; path = BLEManager/Classes/ErrorHandler.h; sourceTree = "<group>"; };
 		950CF05E04C7731F0220251F6CCA96F2 /* Pods-ClexiTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ClexiTests.release.xcconfig"; sourceTree = "<group>"; };
 		963E20530B8D1CC60392F6EDF138244D /* Pods-ClexiTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-ClexiTests-acknowledgements.plist"; sourceTree = "<group>"; };
 		9746E64C6C68E6F1F107708FA9AB469E /* Pods-Clexi.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Clexi.debug.xcconfig"; sourceTree = "<group>"; };
 		9C3F3C182A41E95EE2DE80CBDAFEC054 /* Pods-ClexiTests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-ClexiTests-frameworks.sh"; sourceTree = "<group>"; };
 		9DFA6DC2D8F2A30B65092BA098503760 /* Pods-ClexiUITests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-ClexiUITests-umbrella.h"; sourceTree = "<group>"; };
+		9FBDA2BBEC27F5D64EC8D15BA6481714 /* CentralManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CentralManager.m; path = BLEManager/Classes/CentralManager.m; sourceTree = "<group>"; };
+		A1F799FAA3DB1E2EF72B7E64C3F6E21A /* CentralManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CentralManager.h; path = BLEManager/Classes/CentralManager.h; sourceTree = "<group>"; };
+		A5D4172692CE76C6D6AA3FD5833DC5F0 /* BLEManager.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = BLEManager.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A5F4D4C22B7BE6E4831AEDAC863942A8 /* BLEManager-iOS10.0.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "BLEManager-iOS10.0.modulemap"; sourceTree = "<group>"; };
 		AADAAE7B39C3858F9FD977C104FD09D8 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		B02E19A8DF9629F79EA63F0B6981D2FF /* PeripheralManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PeripheralManager.m; path = BLEManager/Classes/PeripheralManager.m; sourceTree = "<group>"; };
+		AF1A8A061247EA56D28E4D41F3001B96 /* BLEManager-iOS11.2-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "BLEManager-iOS11.2-dummy.m"; path = "../BLEManager-iOS11.2/BLEManager-iOS11.2-dummy.m"; sourceTree = "<group>"; };
 		B0AD549A413CE4DA1F6C05375E9916DC /* Pods-ClexiUITests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-ClexiUITests-resources.sh"; sourceTree = "<group>"; };
 		B1F43F3B37FCA1C33BFBC3996B9B8CB7 /* Pods-ClexiUITests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-ClexiUITests-dummy.m"; sourceTree = "<group>"; };
+		B212F802E0C78038D64CBE8BECBFD116 /* BLEManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BLEManager.h; path = BLEManager/Classes/BLEManager.h; sourceTree = "<group>"; };
+		B59B9C0D5EADAE2F7533DC8ABE649B1E /* BLEManager-iOS10.0.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "BLEManager-iOS10.0.xcconfig"; sourceTree = "<group>"; };
+		B5CBA4D37224CBC2B8E25F36AAB020AC /* ErrorCodes.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; name = ErrorCodes.plist; path = BLEManager/Classes/ErrorCodes.plist; sourceTree = "<group>"; };
 		B66F3A47B5DB619DA1DD608191F45297 /* Pods-ContentExtension-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-ContentExtension-acknowledgements.markdown"; sourceTree = "<group>"; };
-		B74E9295EBB6556E08FAE4CE37397111 /* Pods-ClexiTests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-ClexiTests.modulemap"; sourceTree = "<group>"; };
+		B74E9295EBB6556E08FAE4CE37397111 /* Pods-ClexiTests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-ClexiTests.modulemap"; sourceTree = "<group>"; };
 		B8C35F471EF9B0628F23B72CB40E6110 /* Pods-ContentExtension.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ContentExtension.debug.xcconfig"; sourceTree = "<group>"; };
-		B937173915011618C4A1A53B980E67EF /* BLEManager-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "BLEManager-prefix.pch"; sourceTree = "<group>"; };
-		CB1562563DE06D7471AC5CA50DCCFB56 /* BLEManager-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "BLEManager-dummy.m"; sourceTree = "<group>"; };
-		CC7505DD36B3DB91940B890FE3C290AA /* ErrorHandler.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ErrorHandler.h; path = BLEManager/Classes/ErrorHandler.h; sourceTree = "<group>"; };
-		DBC705D5F7BD38C6A74485B032B8F882 /* Pods_Clexi.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_Clexi.framework; path = "Pods-Clexi.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		F090BAAF028050A454BA147879229188 /* Pods-Clexi.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-Clexi.modulemap"; sourceTree = "<group>"; };
+		C2B5615F2BA29FEF3C8F9C0A457F5FC2 /* Pods_ClexiUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ClexiUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C7C358D3F2257B0316DB11751D019697 /* PeripheralManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PeripheralManager.h; path = BLEManager/Classes/PeripheralManager.h; sourceTree = "<group>"; };
+		D054CA2843F5730E9AA89E98EA4BC183 /* BLEManager-iOS10.0-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "BLEManager-iOS10.0-prefix.pch"; sourceTree = "<group>"; };
+		D6CE38E148C9C9A84EA4C5D03431E20F /* BLEManager-iOS11.2-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "BLEManager-iOS11.2-umbrella.h"; path = "../BLEManager-iOS11.2/BLEManager-iOS11.2-umbrella.h"; sourceTree = "<group>"; };
+		F090BAAF028050A454BA147879229188 /* Pods-Clexi.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-Clexi.modulemap"; sourceTree = "<group>"; };
 		F5B214EBDC8502EBB965FA933E3CDA4C /* Pods-Clexi-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Clexi-umbrella.h"; sourceTree = "<group>"; };
+		F64619546151406373439D2B21782A9F /* ErrorCodes.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ErrorCodes.h; path = BLEManager/Classes/ErrorCodes.h; sourceTree = "<group>"; };
 		F92CFC5D614EBF9485A3F9FCFED250A2 /* Pods-Clexi-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Clexi-acknowledgements.plist"; sourceTree = "<group>"; };
 		F92EBC19723007E2CDE6C23DB53700E5 /* Pods-ClexiUITests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-ClexiUITests-acknowledgements.plist"; sourceTree = "<group>"; };
+		FB05A2CDF5C0E32BB5C8F47972E2668D /* PeripheralManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PeripheralManager.m; path = BLEManager/Classes/PeripheralManager.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		5632AEC78EFEF36E459D18EA14DD291D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6E0F4D06979FBEBCA25FE6F7A89BF28A /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		60DCC0CF96A97780D93957E0DA277453 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				52ED1D7FF0C33156C5B5880BF3F643DC /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		754D79C0EBB40C1B72A823342EE647BE /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -116,27 +165,19 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		7F443EAF2C74EBC34079E0E6F8A89410 /* Frameworks */ = {
+		8D2C5C8A42286AED5EFCCBCD547B3E13 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				90FEBDFD72D5FD5C77C750482040AE23 /* Foundation.framework in Frameworks */,
+				D6665AF610E187F90FE4D356D6B8C28C /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		95F355CC54FB6DB3BEB3A1BA23F97F85 /* Frameworks */ = {
+		C04DC89925383ABF1BA1B8D541372AB6 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				015A11A647F084F42350967F4CFB722A /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		BD67CB586F4A9137CDBC2048ED3F0F82 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				4B1E9AABF85EA3B17491CE434B782A7F /* Foundation.framework in Frameworks */,
+				E0498F712668AFF287A50E04D8614512 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -151,20 +192,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		042A46FB3C577C0DEB35DF8F59757F80 /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				88E75F5AFF695534E29C84E48A556033 /* BLEManager.modulemap */,
-				3E2143EA092A9295749E1A8AB3710421 /* BLEManager.xcconfig */,
-				CB1562563DE06D7471AC5CA50DCCFB56 /* BLEManager-dummy.m */,
-				B937173915011618C4A1A53B980E67EF /* BLEManager-prefix.pch */,
-				8406CF907B0AE3CCC43C9EE23233ED89 /* BLEManager-umbrella.h */,
-				4067D004DCA5AACE7BCCA257B88B11E1 /* Info.plist */,
-			);
-			name = "Support Files";
-			path = "../Target Support Files/BLEManager";
-			sourceTree = "<group>";
-		};
 		059913798FEF7AD7C98535A3F714D148 /* Pods-Clexi */ = {
 			isa = PBXGroup;
 			children = (
@@ -181,6 +208,26 @@
 			);
 			name = "Pods-Clexi";
 			path = "Target Support Files/Pods-Clexi";
+			sourceTree = "<group>";
+		};
+		14C6484F59BC1040D37E22AC6CD57BA7 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				A5F4D4C22B7BE6E4831AEDAC863942A8 /* BLEManager-iOS10.0.modulemap */,
+				B59B9C0D5EADAE2F7533DC8ABE649B1E /* BLEManager-iOS10.0.xcconfig */,
+				5278FFB2F54B074CD183F654B9668B71 /* BLEManager-iOS10.0-dummy.m */,
+				D054CA2843F5730E9AA89E98EA4BC183 /* BLEManager-iOS10.0-prefix.pch */,
+				85444ED017C086AC79CB9FA56DA97727 /* BLEManager-iOS10.0-umbrella.h */,
+				6B0FE62196FFB47CFEE9D3E81CC87073 /* BLEManager-iOS11.2.modulemap */,
+				2BDDD3364F385CA610A65E9B03455483 /* BLEManager-iOS11.2.xcconfig */,
+				AF1A8A061247EA56D28E4D41F3001B96 /* BLEManager-iOS11.2-dummy.m */,
+				860CB6E3F8EBBA521C07D76772B39688 /* BLEManager-iOS11.2-prefix.pch */,
+				D6CE38E148C9C9A84EA4C5D03431E20F /* BLEManager-iOS11.2-umbrella.h */,
+				7EEB57BB39A360F159B46CB90E18982E /* Info.plist */,
+				453DD72DE9DD2A63BDA794462275502D /* Info.plist */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/BLEManager-iOS10.0";
 			sourceTree = "<group>";
 		};
 		3F48971FBB1904C4D1B6F8434D9DE3D6 /* Pods-ContentExtension */ = {
@@ -200,6 +247,23 @@
 			path = "Target Support Files/Pods-ContentExtension";
 			sourceTree = "<group>";
 		};
+		46C9B7D6952C73403C0036F17BF844D4 /* BLEManager */ = {
+			isa = PBXGroup;
+			children = (
+				B212F802E0C78038D64CBE8BECBFD116 /* BLEManager.h */,
+				A1F799FAA3DB1E2EF72B7E64C3F6E21A /* CentralManager.h */,
+				9FBDA2BBEC27F5D64EC8D15BA6481714 /* CentralManager.m */,
+				F64619546151406373439D2B21782A9F /* ErrorCodes.h */,
+				B5CBA4D37224CBC2B8E25F36AAB020AC /* ErrorCodes.plist */,
+				94B2E04606AD0C039512847CC8030928 /* ErrorHandler.h */,
+				3C01D11CC5DBDB1F4F444E8B421C4ECE /* ErrorHandler.m */,
+				C7C358D3F2257B0316DB11751D019697 /* PeripheralManager.h */,
+				FB05A2CDF5C0E32BB5C8F47972E2668D /* PeripheralManager.m */,
+				14C6484F59BC1040D37E22AC6CD57BA7 /* Support Files */,
+			);
+			path = BLEManager;
+			sourceTree = "<group>";
+		};
 		5AE6A1B63254DB0259C3E73B379E909B /* Targets Support Files */ = {
 			isa = PBXGroup;
 			children = (
@@ -211,28 +275,10 @@
 			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
-		71266471E231C38B84854FBAFD410B05 /* BLEManager */ = {
-			isa = PBXGroup;
-			children = (
-				690ABFD334AB7A66722209A4A1B2E7A9 /* BLEManager.h */,
-				2CEB3D90392C82684C5FD90F65438B9E /* CentralManager.h */,
-				6FCE5B26D5469E5B044DE1C858AE57B2 /* CentralManager.m */,
-				00F68067535FF0DE8F99AE23716D7B16 /* ErrorCodes.h */,
-				3C0E8CD8B0AE723ED2615427F740D997 /* ErrorCodes.plist */,
-				CC7505DD36B3DB91940B890FE3C290AA /* ErrorHandler.h */,
-				7AE17BC747D251DDE93709BA96AD727C /* ErrorHandler.m */,
-				7F18254B3BCCE3F7E7EAD534C8117696 /* PeripheralManager.h */,
-				B02E19A8DF9629F79EA63F0B6981D2FF /* PeripheralManager.m */,
-				042A46FB3C577C0DEB35DF8F59757F80 /* Support Files */,
-			);
-			name = BLEManager;
-			path = BLEManager;
-			sourceTree = "<group>";
-		};
 		785D8B681785F74BADC4A9118D2189A0 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				71266471E231C38B84854FBAFD410B05 /* BLEManager */,
+				46C9B7D6952C73403C0036F17BF844D4 /* BLEManager */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -243,7 +289,7 @@
 				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
 				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
 				785D8B681785F74BADC4A9118D2189A0 /* Pods */,
-				FAD0725BBDF566698424DB765D8B015A /* Products */,
+				C736819DF7B64E7C2019511FCDB03364 /* Products */,
 				5AE6A1B63254DB0259C3E73B379E909B /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
@@ -274,6 +320,19 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		C736819DF7B64E7C2019511FCDB03364 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				38C75F2994F5F8B8515E55284AB4AA27 /* BLEManager.framework */,
+				A5D4172692CE76C6D6AA3FD5833DC5F0 /* BLEManager.framework */,
+				839C22BB9B5C873EAE107EA8C5F62E63 /* Pods_Clexi.framework */,
+				463A6A3D2B140B18485B4CC24F1FEEEB /* Pods_ClexiTests.framework */,
+				C2B5615F2BA29FEF3C8F9C0A457F5FC2 /* Pods_ClexiUITests.framework */,
+				4319EA99C4652C84ACB49E2C574ADA5B /* Pods_ContentExtension.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		D35AF013A5F0BAD4F32504907A52519E /* iOS */ = {
 			isa = PBXGroup;
 			children = (
@@ -300,26 +359,27 @@
 			path = "Target Support Files/Pods-ClexiUITests";
 			sourceTree = "<group>";
 		};
-		FAD0725BBDF566698424DB765D8B015A /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				40C7052BBB73E20159D22F97F9150800 /* BLEManager.framework */,
-				DBC705D5F7BD38C6A74485B032B8F882 /* Pods_Clexi.framework */,
-				595A28ECD0D71D2CE90109874D2752E8 /* Pods_ClexiTests.framework */,
-				159517C7B743E91CB5C867DE0A25264A /* Pods_ClexiUITests.framework */,
-				71F8AB2638592B822B7423951C3DD53A /* Pods_ContentExtension.framework */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		064DA71B179DC610F6EDBEEC1AAF10AA /* Headers */ = {
+		157AC2D1756794944ECE21A0B7E327CE /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2E4C45C3B15236B81FE76312F4A73C1F /* Pods-ContentExtension-umbrella.h in Headers */,
+				8B9B3CD343021EA445669A449C814A49 /* BLEManager-iOS10.0-umbrella.h in Headers */,
+				FE894127EAB3826D3E1487D450911684 /* BLEManager.h in Headers */,
+				98A74FB22B51D0C3AF0C819241A6B9C2 /* CentralManager.h in Headers */,
+				CA75A1E42DB16162798780219B922602 /* ErrorCodes.h in Headers */,
+				09B2B9C9F4EB31C7863881501276A91F /* ErrorHandler.h in Headers */,
+				2BF92C865A756E7C67E42D4F9FE96899 /* PeripheralManager.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2CBA08CAB9CBC4814B0000CE0063EA05 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				34939CE0F4D3D6E1BDB205ED7CF07EC9 /* Pods-Clexi-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -331,24 +391,11 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		522682BC6D20D25D055E040B73580279 /* Headers */ = {
+		66ADAB77273DDD476B68519768E4548B /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6C209EBF046EE35F9E877BAFB059230D /* BLEManager-umbrella.h in Headers */,
-				9530AF24F3F3F58A006E9BE3A494F97B /* BLEManager.h in Headers */,
-				99698883E47C3ADF231F4F1C671E460C /* CentralManager.h in Headers */,
-				038A6EF1F4DC7BB58A9DBA6F6DED2E90 /* ErrorCodes.h in Headers */,
-				2CF01E236DEB23E5340C8FEACA8F77C9 /* ErrorHandler.h in Headers */,
-				E856600BA08A08030E86C135DF4BE2BC /* PeripheralManager.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		7FB181A0449A4920C13C4239F50D99D8 /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				DAE09377A307E3CF311F37584FDBF469 /* Pods-Clexi-umbrella.h in Headers */,
+				C55B8682B9064016EE3C2AA570965F12 /* Pods-ContentExtension-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -360,25 +407,91 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		F917380E005F4944012D6CC58B7926FE /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				689EB3B9AA2512E002318E5518A0A2C6 /* BLEManager-iOS11.2-umbrella.h in Headers */,
+				B8FDEFE5CFC88E2C428278F978237E3A /* BLEManager.h in Headers */,
+				CDAA95383561EF2A02E1DC85287B2EAA /* CentralManager.h in Headers */,
+				588B84ABEB3825610B84609ECC5B3365 /* ErrorCodes.h in Headers */,
+				82D209A0E18A85217D5DA386DC8B55E7 /* ErrorHandler.h in Headers */,
+				53EA34C07E2D98C81E3694FA927F4149 /* PeripheralManager.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		39589CD9671442D9D70083EACCA68D3A /* Pods-Clexi */ = {
+		1D5C7BC123E08BE3B2EDDF983FA6B2FC /* BLEManager-iOS10.0 */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = F94660448B7ADB821C7262A947D196C0 /* Build configuration list for PBXNativeTarget "Pods-Clexi" */;
+			buildConfigurationList = 9160B7F85BDF6862D47E8FF712E82EA1 /* Build configuration list for PBXNativeTarget "BLEManager-iOS10.0" */;
 			buildPhases = (
-				0CB3F9B21134CAA6EDE05ABEB088192D /* Sources */,
-				7F443EAF2C74EBC34079E0E6F8A89410 /* Frameworks */,
-				7FB181A0449A4920C13C4239F50D99D8 /* Headers */,
+				18B34464C21EA4B6D4CFCD4675CFEADF /* Sources */,
+				60DCC0CF96A97780D93957E0DA277453 /* Frameworks */,
+				157AC2D1756794944ECE21A0B7E327CE /* Headers */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				A37A73053006D715448AA0E27ABB0862 /* PBXTargetDependency */,
+			);
+			name = "BLEManager-iOS10.0";
+			productName = "BLEManager-iOS10.0";
+			productReference = 38C75F2994F5F8B8515E55284AB4AA27 /* BLEManager.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		29706DE17840BDC1CFF54D221DA644F8 /* Pods-Clexi */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 790DD0D1CB3B3723DA87B46E05543A59 /* Build configuration list for PBXNativeTarget "Pods-Clexi" */;
+			buildPhases = (
+				5B143C49091645D08BDF1182D1FFB8C0 /* Sources */,
+				8D2C5C8A42286AED5EFCCBCD547B3E13 /* Frameworks */,
+				2CBA08CAB9CBC4814B0000CE0063EA05 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E28E18FD526FEBE87587A94D13E97E5F /* PBXTargetDependency */,
+				D52398C3F8A5B0EA92EF2A4EB387DADC /* PBXTargetDependency */,
 			);
 			name = "Pods-Clexi";
 			productName = "Pods-Clexi";
-			productReference = DBC705D5F7BD38C6A74485B032B8F882 /* Pods_Clexi.framework */;
+			productReference = 839C22BB9B5C873EAE107EA8C5F62E63 /* Pods_Clexi.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		4EAE1386557B0D0BA0E0194BB791C15B /* Pods-ContentExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5AFC7F695970610217A4324B8F349AB9 /* Build configuration list for PBXNativeTarget "Pods-ContentExtension" */;
+			buildPhases = (
+				AE2548BF5D07841963FC0E10FB256C7C /* Sources */,
+				5632AEC78EFEF36E459D18EA14DD291D /* Frameworks */,
+				66ADAB77273DDD476B68519768E4548B /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D02CE339B2C09ACC0563ED7D25774C1A /* PBXTargetDependency */,
+			);
+			name = "Pods-ContentExtension";
+			productName = "Pods-ContentExtension";
+			productReference = 4319EA99C4652C84ACB49E2C574ADA5B /* Pods_ContentExtension.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		6DE6F7628E66A946E707CA2E1574F7C8 /* BLEManager-iOS11.2 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = ED84E264C9ACC58B6397E4422DAB96C6 /* Build configuration list for PBXNativeTarget "BLEManager-iOS11.2" */;
+			buildPhases = (
+				E7945EE5A8C7B33D84BA399DA5B0821A /* Sources */,
+				C04DC89925383ABF1BA1B8D541372AB6 /* Frameworks */,
+				F917380E005F4944012D6CC58B7926FE /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "BLEManager-iOS11.2";
+			productName = "BLEManager-iOS11.2";
+			productReference = A5D4172692CE76C6D6AA3FD5833DC5F0 /* BLEManager.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		8D1B27E7BA0A4B74F15207C2A88ECF6B /* Pods-ClexiTests */ = {
@@ -395,24 +508,7 @@
 			);
 			name = "Pods-ClexiTests";
 			productName = "Pods-ClexiTests";
-			productReference = 595A28ECD0D71D2CE90109874D2752E8 /* Pods_ClexiTests.framework */;
-			productType = "com.apple.product-type.framework";
-		};
-		93B9FF543B64FD83CE1AD725A89721EC /* Pods-ContentExtension */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = D1684FDB9FA24DF1CC7B61CD7C6346DA /* Build configuration list for PBXNativeTarget "Pods-ContentExtension" */;
-			buildPhases = (
-				391B0BBF11CFA2F8F54169517C4D6DFE /* Sources */,
-				95F355CC54FB6DB3BEB3A1BA23F97F85 /* Frameworks */,
-				064DA71B179DC610F6EDBEEC1AAF10AA /* Headers */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = "Pods-ContentExtension";
-			productName = "Pods-ContentExtension";
-			productReference = 71F8AB2638592B822B7423951C3DD53A /* Pods_ContentExtension.framework */;
+			productReference = 463A6A3D2B140B18485B4CC24F1FEEEB /* Pods_ClexiTests.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		C8CEE323D85FD2B0773F729C6DE3D1F4 /* Pods-ClexiUITests */ = {
@@ -429,24 +525,7 @@
 			);
 			name = "Pods-ClexiUITests";
 			productName = "Pods-ClexiUITests";
-			productReference = 159517C7B743E91CB5C867DE0A25264A /* Pods_ClexiUITests.framework */;
-			productType = "com.apple.product-type.framework";
-		};
-		E1FC1EFDF831EF980B6E77A481D2518B /* BLEManager */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = F50F9140041402CF45108AEF3915D954 /* Build configuration list for PBXNativeTarget "BLEManager" */;
-			buildPhases = (
-				E6EC861ACB4DFEBCE0578D08B613BEAE /* Sources */,
-				BD67CB586F4A9137CDBC2048ED3F0F82 /* Frameworks */,
-				522682BC6D20D25D055E040B73580279 /* Headers */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = BLEManager;
-			productName = BLEManager;
-			productReference = 40C7052BBB73E20159D22F97F9150800 /* BLEManager.framework */;
+			productReference = C2B5615F2BA29FEF3C8F9C0A457F5FC2 /* Pods_ClexiUITests.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -466,25 +545,30 @@
 				en,
 			);
 			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
-			productRefGroup = FAD0725BBDF566698424DB765D8B015A /* Products */;
+			productRefGroup = C736819DF7B64E7C2019511FCDB03364 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				E1FC1EFDF831EF980B6E77A481D2518B /* BLEManager */,
-				39589CD9671442D9D70083EACCA68D3A /* Pods-Clexi */,
+				1D5C7BC123E08BE3B2EDDF983FA6B2FC /* BLEManager-iOS10.0 */,
+				6DE6F7628E66A946E707CA2E1574F7C8 /* BLEManager-iOS11.2 */,
+				29706DE17840BDC1CFF54D221DA644F8 /* Pods-Clexi */,
 				8D1B27E7BA0A4B74F15207C2A88ECF6B /* Pods-ClexiTests */,
 				C8CEE323D85FD2B0773F729C6DE3D1F4 /* Pods-ClexiUITests */,
-				93B9FF543B64FD83CE1AD725A89721EC /* Pods-ContentExtension */,
+				4EAE1386557B0D0BA0E0194BB791C15B /* Pods-ContentExtension */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
-		0CB3F9B21134CAA6EDE05ABEB088192D /* Sources */ = {
+		18B34464C21EA4B6D4CFCD4675CFEADF /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5F3A3B79E51807FDD8C3DAF0069F7C01 /* Pods-Clexi-dummy.m in Sources */,
+				72F78434D1A37EA63C3EFE8F77B78EE8 /* BLEManager-iOS10.0-dummy.m in Sources */,
+				625742E2C796F6B89875617DC4E7651A /* CentralManager.m in Sources */,
+				F053CB66D76A43818AAD95BE1B012E5B /* ErrorCodes.plist in Sources */,
+				EB48671C1F92410F2DC370991A72F0D2 /* ErrorHandler.m in Sources */,
+				0433FBB1D1A7B713F4FFB04CC550D03E /* PeripheralManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -496,14 +580,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		391B0BBF11CFA2F8F54169517C4D6DFE /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				A97F6A149EC1DACA0E77E33B95526EA3 /* Pods-ContentExtension-dummy.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		4CCF3397940C45CAE3FA9CF4079AD767 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -512,26 +588,54 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		E6EC861ACB4DFEBCE0578D08B613BEAE /* Sources */ = {
+		5B143C49091645D08BDF1182D1FFB8C0 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				751E3FCCDF3D4ECD30C338316DC0CA20 /* BLEManager-dummy.m in Sources */,
-				68A2AD224459AE07888F7B7460F1A055 /* CentralManager.m in Sources */,
-				0578832F8E414FAF5582344466A21897 /* ErrorCodes.plist in Sources */,
-				D0CB904B0CC60A9D51A09732685D470A /* ErrorHandler.m in Sources */,
-				19929D974DBF35AF5356F3E754C5CBF0 /* PeripheralManager.m in Sources */,
+				16E7D58D9BF6DD3217335F310031F028 /* Pods-Clexi-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AE2548BF5D07841963FC0E10FB256C7C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				45D529089331FA04790693EB2CCE405D /* Pods-ContentExtension-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E7945EE5A8C7B33D84BA399DA5B0821A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				40D46C6515BB43830F16E9833E1EF58C /* BLEManager-iOS11.2-dummy.m in Sources */,
+				5D35708428AD99ECE4FB2E991007DEF0 /* CentralManager.m in Sources */,
+				109AD0D1ECD733E2BB8BC9F49189C918 /* ErrorCodes.plist in Sources */,
+				1871EDF9E8E71F3ABF166A832D2A88A8 /* ErrorHandler.m in Sources */,
+				1650B7C58AD7297289DE894F22465F72 /* PeripheralManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		A37A73053006D715448AA0E27ABB0862 /* PBXTargetDependency */ = {
+		D02CE339B2C09ACC0563ED7D25774C1A /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			name = BLEManager;
-			target = E1FC1EFDF831EF980B6E77A481D2518B /* BLEManager */;
-			targetProxy = C2CC220A249409B37E7CE90FB54667C1 /* PBXContainerItemProxy */;
+			name = "BLEManager-iOS11.2";
+			target = 6DE6F7628E66A946E707CA2E1574F7C8 /* BLEManager-iOS11.2 */;
+			targetProxy = BD9650A5D9852D3C6C5DC69595361515 /* PBXContainerItemProxy */;
+		};
+		D52398C3F8A5B0EA92EF2A4EB387DADC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "BLEManager-iOS11.2";
+			target = 6DE6F7628E66A946E707CA2E1574F7C8 /* BLEManager-iOS11.2 */;
+			targetProxy = C18809F2C85A91FA00FBC7CD29DDE4ED /* PBXContainerItemProxy */;
+		};
+		E28E18FD526FEBE87587A94D13E97E5F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "BLEManager-iOS10.0";
+			target = 1D5C7BC123E08BE3B2EDDF983FA6B2FC /* BLEManager-iOS10.0 */;
+			targetProxy = 64D6423C94163756607AA143A84F6797 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -569,9 +673,9 @@
 			};
 			name = Release;
 		};
-		079C63452B82A1B6EF736B3AA827490F /* Debug */ = {
+		141DE52B5CE28DB923E1B632135F8C6E /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 9746E64C6C68E6F1F107708FA9AB469E /* Pods-Clexi.debug.xcconfig */;
+			baseConfigurationReference = 2FC590F00B1F1E86DB448AF868A071DD /* Pods-Clexi.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -596,14 +700,15 @@
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
-			name = Debug;
+			name = Release;
 		};
-		2B2E9A87CBED91A858DB280AF645AD74 /* Debug */ = {
+		2C2122CF73747904679BA377B7DABD65 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B8C35F471EF9B0628F23B72CB40E6110 /* Pods-ContentExtension.debug.xcconfig */;
+			baseConfigurationReference = B59B9C0D5EADAE2F7533DC8ABE649B1E /* BLEManager-iOS10.0.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -614,44 +719,12 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-ContentExtension/Info.plist";
+				GCC_PREFIX_HEADER = "Target Support Files/BLEManager-iOS10.0/BLEManager-iOS10.0-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/BLEManager-iOS10.0/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-ContentExtension/Pods-ContentExtension.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = Pods_ContentExtension;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		3052F7E211D402C13FC764184D3EBD61 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3E2143EA092A9295749E1A8AB3710421 /* BLEManager.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/BLEManager/BLEManager-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/BLEManager/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/BLEManager/BLEManager.modulemap";
+				MODULEMAP_FILE = "Target Support Files/BLEManager-iOS10.0/BLEManager-iOS10.0.modulemap";
 				PRODUCT_NAME = BLEManager;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
@@ -690,36 +763,6 @@
 				PRODUCT_NAME = Pods_ClexiTests;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		6C08034E93C88A724D2BC51DAFE17D19 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3E2143EA092A9295749E1A8AB3710421 /* BLEManager.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/BLEManager/BLEManager-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/BLEManager/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/BLEManager/BLEManager.modulemap";
-				PRODUCT_NAME = BLEManager;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -786,39 +829,6 @@
 			};
 			name = Debug;
 		};
-		8D5EC05274BAF9BA7B57CE0EB663A1DA /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 2FC590F00B1F1E86DB448AF868A071DD /* Pods-Clexi.release.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-Clexi/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-Clexi/Pods-Clexi.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = Pods_Clexi;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
 		98F29E7567052F62660DDD7069ADF73C /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -874,6 +884,102 @@
 			};
 			name = Release;
 		};
+		AA735252C07E22846D15124CAE3E01A6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2BDDD3364F385CA610A65E9B03455483 /* BLEManager-iOS11.2.xcconfig */;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/BLEManager-iOS11.2/BLEManager-iOS11.2-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/BLEManager-iOS11.2/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/BLEManager-iOS11.2/BLEManager-iOS11.2.modulemap";
+				PRODUCT_NAME = BLEManager;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		AE0F59DB2A0D527F7F4F75528D100B15 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9746E64C6C68E6F1F107708FA9AB469E /* Pods-Clexi.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-Clexi/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Clexi/Pods-Clexi.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_Clexi;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		BEAE6E458764D4B49889DC833CAB4AB9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B8C35F471EF9B0628F23B72CB40E6110 /* Pods-ContentExtension.debug.xcconfig */;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-ContentExtension/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-ContentExtension/Pods-ContentExtension.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_ContentExtension;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
 		CD76969CF65D6115E016471E1C107905 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 400B60E03CE777EFA52F18BA5CA93ED9 /* Pods-ClexiUITests.debug.xcconfig */;
@@ -905,6 +1011,38 @@
 				VERSION_INFO_PREFIX = "";
 			};
 			name = Debug;
+		};
+		E4A8B513CAD34661B6EB2B55D76CA25F /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2BDDD3364F385CA610A65E9B03455483 /* BLEManager-iOS11.2.xcconfig */;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/BLEManager-iOS11.2/BLEManager-iOS11.2-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/BLEManager-iOS11.2/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/BLEManager-iOS11.2/BLEManager-iOS11.2.modulemap";
+				PRODUCT_NAME = BLEManager;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
 		};
 		E4FA10FA0E83827066514D5DF88A517A /* Release */ = {
 			isa = XCBuildConfiguration;
@@ -939,10 +1077,11 @@
 			};
 			name = Release;
 		};
-		E51CA08EA79D02043CE0D334A88E1B42 /* Release */ = {
+		FA0C5A8C873E627F91835B4B49D32BA4 /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 47E2D23032CD8C3C5FB03763619D1105 /* Pods-ContentExtension.release.xcconfig */;
 			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -972,6 +1111,36 @@
 			};
 			name = Release;
 		};
+		FEF508EA085CF0ED3854EB1C79C712B0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B59B9C0D5EADAE2F7533DC8ABE649B1E /* BLEManager-iOS10.0.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/BLEManager-iOS10.0/BLEManager-iOS10.0-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/BLEManager-iOS10.0/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/BLEManager-iOS10.0/BLEManager-iOS10.0.modulemap";
+				PRODUCT_NAME = BLEManager;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -980,6 +1149,15 @@
 			buildConfigurations = (
 				7C07ED8089F70A31B83996A8910D7F18 /* Debug */,
 				98F29E7567052F62660DDD7069ADF73C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5AFC7F695970610217A4324B8F349AB9 /* Build configuration list for PBXNativeTarget "Pods-ContentExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BEAE6E458764D4B49889DC833CAB4AB9 /* Debug */,
+				FA0C5A8C873E627F91835B4B49D32BA4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -993,6 +1171,24 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
+		790DD0D1CB3B3723DA87B46E05543A59 /* Build configuration list for PBXNativeTarget "Pods-Clexi" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AE0F59DB2A0D527F7F4F75528D100B15 /* Debug */,
+				141DE52B5CE28DB923E1B632135F8C6E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9160B7F85BDF6862D47E8FF712E82EA1 /* Build configuration list for PBXNativeTarget "BLEManager-iOS10.0" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FEF508EA085CF0ED3854EB1C79C712B0 /* Debug */,
+				2C2122CF73747904679BA377B7DABD65 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		A10FC7DA19C49873258C849D9967EB5B /* Build configuration list for PBXNativeTarget "Pods-ClexiUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -1002,29 +1198,11 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		D1684FDB9FA24DF1CC7B61CD7C6346DA /* Build configuration list for PBXNativeTarget "Pods-ContentExtension" */ = {
+		ED84E264C9ACC58B6397E4422DAB96C6 /* Build configuration list for PBXNativeTarget "BLEManager-iOS11.2" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				2B2E9A87CBED91A858DB280AF645AD74 /* Debug */,
-				E51CA08EA79D02043CE0D334A88E1B42 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		F50F9140041402CF45108AEF3915D954 /* Build configuration list for PBXNativeTarget "BLEManager" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				6C08034E93C88A724D2BC51DAFE17D19 /* Debug */,
-				3052F7E211D402C13FC764184D3EBD61 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		F94660448B7ADB821C7262A947D196C0 /* Build configuration list for PBXNativeTarget "Pods-Clexi" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				079C63452B82A1B6EF736B3AA827490F /* Debug */,
-				8D5EC05274BAF9BA7B57CE0EB663A1DA /* Release */,
+				AA735252C07E22846D15124CAE3E01A6 /* Debug */,
+				E4A8B513CAD34661B6EB2B55D76CA25F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

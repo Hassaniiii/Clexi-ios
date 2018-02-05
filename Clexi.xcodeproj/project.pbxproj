@@ -37,7 +37,6 @@
 		175A9FB12017287200C9B00A /* BluetoothStates_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 175A9FB02017287200C9B00A /* BluetoothStates_Tests.swift */; };
 		175A9FB8201743C400C9B00A /* UserNotifications.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 175A9FB7201743C400C9B00A /* UserNotifications.framework */; };
 		175A9FBA201743C400C9B00A /* UserNotificationsUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 175A9FB9201743C400C9B00A /* UserNotificationsUI.framework */; };
-		175A9FBD201743C400C9B00A /* NotificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 175A9FBC201743C400C9B00A /* NotificationViewController.swift */; };
 		175A9FC0201743C400C9B00A /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 175A9FBE201743C400C9B00A /* MainInterface.storyboard */; };
 		175A9FC4201743C400C9B00A /* ContentExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 175A9FB6201743C400C9B00A /* ContentExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		175A9FCB201746CD00C9B00A /* NotificationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 175A9FCA201746CD00C9B00A /* NotificationManager.swift */; };
@@ -49,6 +48,31 @@
 		543E751F3322E673EF492F55 /* Pods_ContentExtension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 545EE0EE37E26DBC4946A740 /* Pods_ContentExtension.framework */; };
 		5C352D0120270415001051C5 /* DBController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C352CFF20270415001051C5 /* DBController.swift */; };
 		5C352D0220270415001051C5 /* NSUserDefaultManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C352D0020270415001051C5 /* NSUserDefaultManager.swift */; };
+		5C352D1C202725AE001051C5 /* DBController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C352CFF20270415001051C5 /* DBController.swift */; };
+		5C352D1D202725AE001051C5 /* NSUserDefaultManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C352D0020270415001051C5 /* NSUserDefaultManager.swift */; };
+		5C352D1E202725AE001051C5 /* BLEManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1746A1D920161F5D008059C4 /* BLEManager.swift */; };
+		5C352D1F202725AE001051C5 /* SearchSort.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C74879220207F38009B12B4 /* SearchSort.swift */; };
+		5C352D20202725AE001051C5 /* BaseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17E3EE14200DFA8700B5AD95 /* BaseModel.swift */; };
+		5C352D21202725AE001051C5 /* BLECloneModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1739B30E200CB35500F6BD48 /* BLECloneModel.swift */; };
+		5C352D22202725AE001051C5 /* ChangesStackModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1739B30F200CB35600F6BD48 /* ChangesStackModel.swift */; };
+		5C352D23202725AE001051C5 /* LocalAttributesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1739B30D200CB35500F6BD48 /* LocalAttributesModel.swift */; };
+		5C352D24202725AE001051C5 /* BaseManagedObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17E3EE12200DF79F00B5AD95 /* BaseManagedObject.swift */; };
+		5C352D25202725AE001051C5 /* BLEClone.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1739B323200CBBE600F6BD48 /* BLEClone.swift */; };
+		5C352D26202725AE001051C5 /* ChangesStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1739B302200CB34100F6BD48 /* ChangesStack.swift */; };
+		5C352D27202725AE001051C5 /* LocalAttributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1739B305200CB34200F6BD48 /* LocalAttributes.swift */; };
+		5C352D29202725C8001051C5 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C352D28202725C8001051C5 /* CoreData.framework */; };
+		5C352D2A202725E9001051C5 /* DBManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1739B2FD200CB32400F6BD48 /* DBManager.swift */; };
+		5C352D2B202725E9001051C5 /* DatabaseInstance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1739B328200CC53100F6BD48 /* DatabaseInstance.swift */; };
+		5C352D2C20272629001051C5 /* StateManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 175A9FAA20171BD000C9B00A /* StateManager.swift */; };
+		5C352D2D20272629001051C5 /* BLEStates.swift in Sources */ = {isa = PBXBuildFile; fileRef = 175A9FAE20171D3100C9B00A /* BLEStates.swift */; };
+		5C352D2E20272638001051C5 /* APDU.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1746A1CB20160440008059C4 /* APDU.swift */; };
+		5C352D2F20272638001051C5 /* PacketStructure.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1746A1CF20160DD2008059C4 /* PacketStructure.swift */; };
+		5C352D3020272638001051C5 /* RequestPacket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1746A1D220160FEA008059C4 /* RequestPacket.swift */; };
+		5C352D3120272638001051C5 /* ResponsePacket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1746A1D320160FEA008059C4 /* ResponsePacket.swift */; };
+		5C352D3220272638001051C5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17913F92200CF5BD00717EAA /* AppDelegate.swift */; };
+		5C352D33202726B0001051C5 /* NotificationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 175A9FCA201746CD00C9B00A /* NotificationManager.swift */; };
+		5C352D3420272766001051C5 /* NotificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 175A9FBC201743C400C9B00A /* NotificationViewController.swift */; };
+		5C352D36202727D0001051C5 /* ClexiDB.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 17534D04200B880B0062F480 /* ClexiDB.xcdatamodeld */; };
 		5C74879320207F38009B12B4 /* SearchSort.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C74879220207F38009B12B4 /* SearchSort.swift */; };
 		5CAC8328201DDD4F009F7859 /* KeyboardView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5CAC8326201DDD4F009F7859 /* KeyboardView.xib */; };
 		5CEFB161202080D70017F144 /* SearchSort_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CEFB160202080D70017F144 /* SearchSort_Tests.swift */; };
@@ -147,8 +171,8 @@
 		5C352CFF20270415001051C5 /* DBController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DBController.swift; sourceTree = "<group>"; };
 		5C352D0020270415001051C5 /* NSUserDefaultManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSUserDefaultManager.swift; sourceTree = "<group>"; };
 		5C352D03202704E8001051C5 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5C352D28202725C8001051C5 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		5C74879220207F38009B12B4 /* SearchSort.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchSort.swift; sourceTree = "<group>"; };
-		5C8AB7BB201DC12900426686 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5CAC8326201DDD4F009F7859 /* KeyboardView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = KeyboardView.xib; sourceTree = "<group>"; };
 		5CEFB160202080D70017F144 /* SearchSort_Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchSort_Tests.swift; sourceTree = "<group>"; };
 		6755A887D64F82C9BEF366B9 /* Pods_Clexi.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Clexi.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -171,6 +195,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5C352D29202725C8001051C5 /* CoreData.framework in Frameworks */,
 				1705D31820189D8D005CA430 /* Pods_Clexi.framework in Frameworks */,
 				175A9FBA201743C400C9B00A /* UserNotificationsUI.framework in Frameworks */,
 				175A9FB8201743C400C9B00A /* UserNotifications.framework in Frameworks */,
@@ -300,8 +325,8 @@
 		175A9FBB201743C400C9B00A /* ContentExtension */ = {
 			isa = PBXGroup;
 			children = (
-				5CAC8324201DDD44009F7859 /* Keyboard */,
 				175A9FBC201743C400C9B00A /* NotificationViewController.swift */,
+				5CAC8326201DDD4F009F7859 /* KeyboardView.xib */,
 				175A9FBE201743C400C9B00A /* MainInterface.storyboard */,
 				175A9FC1201743C400C9B00A /* Info.plist */,
 			);
@@ -318,7 +343,6 @@
 				17E2C62B200A0CF600503FD0 /* Products */,
 				AE0965E879DFC5670E2DC744 /* Pods */,
 				4006895E7F1C1224C71FACC5 /* Frameworks */,
-				5C352CFE202703F0001051C5 /* Recovered References */,
 			);
 			sourceTree = "<group>";
 		};
@@ -383,6 +407,7 @@
 		4006895E7F1C1224C71FACC5 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				5C352D28202725C8001051C5 /* CoreData.framework */,
 				6755A887D64F82C9BEF366B9 /* Pods_Clexi.framework */,
 				410D5671024AC821392337C7 /* Pods_ClexiTests.framework */,
 				23F0B63B5633159B744703EC /* Pods_ClexiUITests.framework */,
@@ -391,22 +416,6 @@
 				545EE0EE37E26DBC4946A740 /* Pods_ContentExtension.framework */,
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		5C352CFE202703F0001051C5 /* Recovered References */ = {
-			isa = PBXGroup;
-			children = (
-				5C8AB7BB201DC12900426686 /* Info.plist */,
-			);
-			name = "Recovered References";
-			sourceTree = "<group>";
-		};
-		5CAC8324201DDD44009F7859 /* Keyboard */ = {
-			isa = PBXGroup;
-			children = (
-				5CAC8326201DDD4F009F7859 /* KeyboardView.xib */,
-			);
-			path = Keyboard;
 			sourceTree = "<group>";
 		};
 		AE0965E879DFC5670E2DC744 /* Pods */ = {
@@ -771,7 +780,8 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Clexi/Pods-Clexi-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/BLEManager/BLEManager.framework",
+				"${BUILT_PRODUCTS_DIR}/BLEManager-iOS10.0/BLEManager.framework",
+				"${BUILT_PRODUCTS_DIR}/BLEManager-iOS11.2/BLEManager.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
@@ -803,7 +813,30 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				175A9FBD201743C400C9B00A /* NotificationViewController.swift in Sources */,
+				5C352D36202727D0001051C5 /* ClexiDB.xcdatamodeld in Sources */,
+				5C352D3420272766001051C5 /* NotificationViewController.swift in Sources */,
+				5C352D33202726B0001051C5 /* NotificationManager.swift in Sources */,
+				5C352D2E20272638001051C5 /* APDU.swift in Sources */,
+				5C352D2F20272638001051C5 /* PacketStructure.swift in Sources */,
+				5C352D3020272638001051C5 /* RequestPacket.swift in Sources */,
+				5C352D3120272638001051C5 /* ResponsePacket.swift in Sources */,
+				5C352D3220272638001051C5 /* AppDelegate.swift in Sources */,
+				5C352D2C20272629001051C5 /* StateManager.swift in Sources */,
+				5C352D2D20272629001051C5 /* BLEStates.swift in Sources */,
+				5C352D2A202725E9001051C5 /* DBManager.swift in Sources */,
+				5C352D2B202725E9001051C5 /* DatabaseInstance.swift in Sources */,
+				5C352D1C202725AE001051C5 /* DBController.swift in Sources */,
+				5C352D1D202725AE001051C5 /* NSUserDefaultManager.swift in Sources */,
+				5C352D1E202725AE001051C5 /* BLEManager.swift in Sources */,
+				5C352D1F202725AE001051C5 /* SearchSort.swift in Sources */,
+				5C352D20202725AE001051C5 /* BaseModel.swift in Sources */,
+				5C352D21202725AE001051C5 /* BLECloneModel.swift in Sources */,
+				5C352D22202725AE001051C5 /* ChangesStackModel.swift in Sources */,
+				5C352D23202725AE001051C5 /* LocalAttributesModel.swift in Sources */,
+				5C352D24202725AE001051C5 /* BaseManagedObject.swift in Sources */,
+				5C352D25202725AE001051C5 /* BLEClone.swift in Sources */,
+				5C352D26202725AE001051C5 /* ChangesStack.swift in Sources */,
+				5C352D27202725AE001051C5 /* LocalAttributes.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
