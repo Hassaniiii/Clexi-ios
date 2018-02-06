@@ -34,9 +34,17 @@ class ListenForEventState: State {
         PacketManager.AnalyzeData(rawData: Data)
         if PacketManager.APDUPackage.INS == 0x10 {
             print("Single Click event is recieved")
-            NotificationManager.AddLocalNotification(Message: "Single Click event is recieved")
+            NotificationManager.AddLocalNotification(Message: "Manager")
         }
         if PacketManager.APDUPackage.INS == 0x30 {
+            #if DEBUG
+                let items = DBController.GetBLECloneList().Sort(By: .LastUsed, Order: .orderedDescending)
+                if let lastItem = items.first {
+                    UIPasteboard.general.string = NSUserDefaultManager.LoadItem(lastItem.title) as? String ?? ""
+                    _ = DBController.ItemIsUsed(With: Int(lastItem.id))
+                    
+                }
+            #endif
             print("Double Click event is recieved")
         }
     }

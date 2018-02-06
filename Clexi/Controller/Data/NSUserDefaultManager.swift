@@ -15,6 +15,7 @@ let Reinstallation      = "Reinstall Application"
 
 //Keys
 let App_Key             = "ClexiApp"
+let App_Group           = "group.clexi.clexi"
 
 class NSUserDefaultManager: NSObject {
     class func SaveItem(_ item: Any, key: String) {

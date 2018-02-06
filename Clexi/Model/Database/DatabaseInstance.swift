@@ -40,9 +40,15 @@ class DatabaseInstance: NSObject {
         return NSManagedObjectModel(contentsOf: modelURL)!
     }()
     
+    lazy var secureAppGroupPersistentStoreURL : URL = {
+        let fileManager = FileManager.default
+        let groupDirectory = fileManager.containerURL(forSecurityApplicationGroupIdentifier: App_Group)!
+        return groupDirectory.appendingPathComponent("ClexiDB.sqlite")
+    }()
+    
     lazy var persistentStoreCoordinator: NSPersistentStoreCoordinator? = {
         var coordinator: NSPersistentStoreCoordinator? = NSPersistentStoreCoordinator(managedObjectModel: self.managedObjectModel)
-        let url = self.applicationDocumentsDirectory.appendingPathComponent("ClexiDB.sqlite")
+        let url = secureAppGroupPersistentStoreURL
         var error: NSError? = nil
         var failureReason = "There was an error creating or loading the application's saved data."
         do {

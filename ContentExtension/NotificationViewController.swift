@@ -6,7 +6,6 @@
 //  Copyright © 1396 AP Hassan Shahbazi. All rights reserved.
 //
 
-import Clexi
 import UIKit
 import UserNotifications
 import UserNotificationsUI
@@ -29,11 +28,6 @@ class NotificationViewController: UIViewController, UNNotificationContentExtensi
     override func viewDidLoad() {
         super.viewDidLoad()
         self.preferredContentSize = CGSize(width: 350, height: 180)
-        
-        #if DEBUG
-            DBManager.isMock = true
-            InsertMockBLEClone(Count: 10)
-        #endif
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -66,13 +60,20 @@ class NotificationViewController: UIViewController, UNNotificationContentExtensi
     }
     
     @IBAction func CopyUsername(_ button: UIButton) {
-        UIPasteboard.general.string = "hasan.shahbazi@rsa.ir"
+        if let item = tableItems.first {
+            UIPasteboard.general.string = item.username
+            _ = DBController.ItemIsUsed(With: Int(item.id))
+        }
         AnimateClick(button)
-        self.searchBar.endEditing(true)
     }
     
     @IBAction func CopyPassword(_ button: UIButton) {
-        UIPasteboard.general.string = "123456"
+        #if DEBUG
+            if let item = tableItems.first {
+                UIPasteboard.general.string = NSUserDefaultManager.LoadItem(item.title) as? String ?? ""
+                _ = DBController.ItemIsUsed(With: Int(item.id))
+            }
+        #endif
         AnimateClick(button)
     }
     
@@ -110,17 +111,11 @@ extension NotificationViewController {
     override var canBecomeFirstResponder: Bool {
         return true
     }
-    
-    //Helper functions
-    private func InsertMockBLEClone(Count: Int) {
-        for counter in 0..<Count {
-            let item = BLECloneModel()
-            item.id = Int16(counter)
-            item.title = "Title \(counter)"
-            item.url = "URL"
-            item.username = "Username"
-            _ = DBController.InsertBLECloneItem(BLEItem: item)
-        }
+}
+
+extension NotificationViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 35
     }
 }
 
@@ -138,9 +133,5 @@ extension NotificationViewController: UITableViewDataSource {
         }
         return UITableViewCell()
     }
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 35
-    }
-    
 }
 

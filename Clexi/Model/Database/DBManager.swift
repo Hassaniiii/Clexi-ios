@@ -27,7 +27,9 @@ class DBManager: NSObject {
     private class func GetDatabaseInstance() -> NSManagedObjectContext {
         let database = DatabaseInstance.SharedInstance()
         database.isMock = isMock
-        return database.managedObjectContext()
+        let managedObjectContext = database.managedObjectContext()
+        managedObjectContext.refreshAllObjects()
+        return managedObjectContext
     }
     private class func GetPersistentCoordinator() -> NSPersistentStoreCoordinator? {
         let database = DatabaseInstance.SharedInstance()

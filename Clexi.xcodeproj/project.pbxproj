@@ -74,6 +74,7 @@
 		5C352D3420272766001051C5 /* NotificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 175A9FBC201743C400C9B00A /* NotificationViewController.swift */; };
 		5C352D36202727D0001051C5 /* ClexiDB.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 17534D04200B880B0062F480 /* ClexiDB.xcdatamodeld */; };
 		5C74879320207F38009B12B4 /* SearchSort.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C74879220207F38009B12B4 /* SearchSort.swift */; };
+		5C7BCFF7202855BD007207B5 /* MainListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C7BCFF6202855BD007207B5 /* MainListTableViewCell.swift */; };
 		5CAC8328201DDD4F009F7859 /* KeyboardView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5CAC8326201DDD4F009F7859 /* KeyboardView.xib */; };
 		5CEFB161202080D70017F144 /* SearchSort_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CEFB160202080D70017F144 /* SearchSort_Tests.swift */; };
 		5DCFB590C5ED7C5679AFD7B9 /* Pods_ClexiUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 23F0B63B5633159B744703EC /* Pods_ClexiUITests.framework */; };
@@ -173,6 +174,9 @@
 		5C352D03202704E8001051C5 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5C352D28202725C8001051C5 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		5C74879220207F38009B12B4 /* SearchSort.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchSort.swift; sourceTree = "<group>"; };
+		5C7BCFF6202855BD007207B5 /* MainListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainListTableViewCell.swift; sourceTree = "<group>"; };
+		5C7BCFF8202984CC007207B5 /* ContentExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ContentExtension.entitlements; sourceTree = "<group>"; };
+		5C7BCFF92029858F007207B5 /* Clexi.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Clexi.entitlements; sourceTree = "<group>"; };
 		5CAC8326201DDD4F009F7859 /* KeyboardView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = KeyboardView.xib; sourceTree = "<group>"; };
 		5CEFB160202080D70017F144 /* SearchSort_Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchSort_Tests.swift; sourceTree = "<group>"; };
 		6755A887D64F82C9BEF366B9 /* Pods_Clexi.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Clexi.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -285,6 +289,7 @@
 		17534CFC200B4EAF0062F480 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				5C7BCFF52028559E007207B5 /* Cells */,
 				17913F91200CF5BD00717EAA /* ViewController.swift */,
 			);
 			path = View;
@@ -325,6 +330,7 @@
 		175A9FBB201743C400C9B00A /* ContentExtension */ = {
 			isa = PBXGroup;
 			children = (
+				5C7BCFF8202984CC007207B5 /* ContentExtension.entitlements */,
 				175A9FBC201743C400C9B00A /* NotificationViewController.swift */,
 				5CAC8326201DDD4F009F7859 /* KeyboardView.xib */,
 				175A9FBE201743C400C9B00A /* MainInterface.storyboard */,
@@ -360,6 +366,7 @@
 		17E2C62C200A0CF600503FD0 /* Clexi */ = {
 			isa = PBXGroup;
 			children = (
+				5C7BCFF92029858F007207B5 /* Clexi.entitlements */,
 				17534CFC200B4EAF0062F480 /* View */,
 				17E3EE16200E2E5B00B5AD95 /* Controller */,
 				17534CFB200B4E8F0062F480 /* Model */,
@@ -416,6 +423,14 @@
 				545EE0EE37E26DBC4946A740 /* Pods_ContentExtension.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		5C7BCFF52028559E007207B5 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				5C7BCFF6202855BD007207B5 /* MainListTableViewCell.swift */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 		AE0965E879DFC5670E2DC744 /* Pods */ = {
@@ -535,11 +550,19 @@
 					175A9FB5201743C400C9B00A = {
 						CreatedOnToolsVersion = 9.2;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 					17E2C629200A0CF600503FD0 = {
 						CreatedOnToolsVersion = 9.2;
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
 							com.apple.BackgroundModes = {
 								enabled = 1;
 							};
@@ -858,6 +881,7 @@
 				17913F93200CF5BD00717EAA /* ViewController.swift in Sources */,
 				1739B310200CB35600F6BD48 /* LocalAttributesModel.swift in Sources */,
 				1739B308200CB34200F6BD48 /* ChangesStack.swift in Sources */,
+				5C7BCFF7202855BD007207B5 /* MainListTableViewCell.swift in Sources */,
 				1739B30B200CB34200F6BD48 /* LocalAttributes.swift in Sources */,
 				17534D06200B880B0062F480 /* ClexiDB.xcdatamodeld in Sources */,
 				1746A1D520160FEA008059C4 /* ResponsePacket.swift in Sources */,
@@ -967,6 +991,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 43B5EDE6120A3E09D3E64474 /* Pods-ContentExtension.debug.xcconfig */;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = ContentExtension/ContentExtension.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
@@ -985,6 +1010,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = D16F1BB50EAA24F0C05B61CC /* Pods-ContentExtension.release.xcconfig */;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = ContentExtension/ContentExtension.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
@@ -1112,6 +1138,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Clexi/Clexi.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
@@ -1135,6 +1162,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Clexi/Clexi.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
