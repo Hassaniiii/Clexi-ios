@@ -23,6 +23,7 @@ class NotificationViewController: UIViewController, UNNotificationContentExtensi
     @IBOutlet weak var table: UITableView!
     private var tableItems = [BLECloneModel]()
     private var wholeItems = [BLECloneModel]()
+    private var matchedItem: BLECloneModel?
     private var Keyboard: UIView?
     
     override func viewDidLoad() {
@@ -60,7 +61,7 @@ class NotificationViewController: UIViewController, UNNotificationContentExtensi
     }
     
     @IBAction func CopyUsername(_ button: UIButton) {
-        if let item = tableItems.first {
+        if let item = matchedItem {
             UIPasteboard.general.string = item.username
             _ = DBController.ItemIsUsed(With: Int(item.id))
         }
@@ -69,7 +70,7 @@ class NotificationViewController: UIViewController, UNNotificationContentExtensi
     
     @IBAction func CopyPassword(_ button: UIButton) {
         #if DEBUG
-            if let item = tableItems.first {
+            if let item = matchedItem {
                 UIPasteboard.general.string = NSUserDefaultManager.LoadItem(item.title) as? String ?? ""
                 _ = DBController.ItemIsUsed(With: Int(item.id))
             }
@@ -92,13 +93,13 @@ class NotificationViewController: UIViewController, UNNotificationContentExtensi
 
     private func GetSuggestion(firstLoading initiate: Bool = false) {
         tableItems = tableItems.Sort(By: (initiate) ? .LastUsed : .Title)
-        if let title = tableItems.first?.title {
-            MatchSuggestion.text = title
+        if let item = tableItems.first {
+            matchedItem = item
         }
         else {
-            tableItems = wholeItems
-            MatchSuggestion.text = "There is nothing to show"
+            matchedItem = nil
         }
+        MatchSuggestion.text = matchedItem?.title ?? "There is nothing to show"
         table.reloadData()
     }
 }
