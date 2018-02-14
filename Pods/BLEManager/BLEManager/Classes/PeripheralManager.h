@@ -8,12 +8,16 @@
 
 #import <Foundation/Foundation.h>
 #import <CoreBluetooth/CoreBluetooth.h>
+#import "MyCharacterstic.h"
 
 @protocol BLEPeripheralManagerDelegate <NSObject>
 @optional
-- (void)PeripheralStateChanged:(CBPeripheralManagerState )state;
+- (void)PeripheralStateChanged:(CBManagerState )state;
 - (void)PeripheralStartAdvertising;
 - (void)Error:(NSError *)error;
+- (void)PeripheralDidReceivedRead:(CBATTRequest *)request;
+- (void)PeripheralDidReceivedWrite:(NSArray<CBATTRequest *> *)requests;
+
 @end
 
 @interface PeripheralManager : NSObject <CBPeripheralManagerDelegate>
@@ -27,11 +31,7 @@
 
 - (void)StartAdvertising;
 
-@end
+- (NSData *)PrepareValue:(NSString *)rawValue;
 
-
-@interface Characteristic : NSObject
-@property (nonatomic, strong) NSString *Value;
-@property (nonatomic, strong) CBUUID *UUID;
-@property (nonatomic, assign) CBAttributePermissions Attribute;
+- (void)PeripheralSendResponse:(CBATTRequest *)request WithResult:(CBATTError )result;
 @end

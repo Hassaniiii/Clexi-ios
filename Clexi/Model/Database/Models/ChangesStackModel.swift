@@ -9,16 +9,9 @@
 import UIKit
 
 enum ChangeKey: Int16 {
-    case Insert
-    case Remove
-    case Update
-    var desciption: Int16 {
-        switch self {
-            case .Insert: return 0
-            case .Remove: return 1
-            case .Update: return 2
-        }
-    }
+    case Insert = 0
+    case Remove = 1
+    case Update = 2
 }
 
 class ChangesStackModel: BaseModel {
@@ -42,7 +35,7 @@ class ChangesStackModel: BaseModel {
             item.title = self.title
             item.username = self.username
             item.password = self.password
-            item.changekey = self.changekey.desciption
+            item.changekey = self.changekey.rawValue
             item.hashkey = self.hashKey
         }
     }

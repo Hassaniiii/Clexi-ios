@@ -10,16 +10,9 @@ import UIKit
 import CoreData
 
 enum Entity: String {
-    case BLEClone
-    case BLEStack
-    case LocalAttributes
-    var description: String {
-        switch self {
-            case .BLEClone: return "BLEClone"
-            case .BLEStack: return "ChangesStack"
-            case .LocalAttributes: return "LocalAttributes"
-        }
-    }
+    case BLEClone = "BLEClone"
+    case BLEStack = "ChangesStack"
+    case LocalAttributes = "LocalAttributes"
 }
 
 class DBManager: NSObject {
@@ -37,7 +30,7 @@ class DBManager: NSObject {
     
     //MARK:- Shared functions
     private class func GetList(from entity: Entity, result: inout [BaseModel]) {
-        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: entity.description)
+        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: entity.rawValue)
         let managedContext = GetDatabaseInstance()
         if let fetchResults = (try? managedContext.fetch(fetchRequest)) {
             for record in fetchResults {
@@ -48,7 +41,7 @@ class DBManager: NSObject {
         }
     }
     private class func GetItem(from entity: Entity, With ID: Int, result: inout BaseModel) {
-        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: entity.description)
+        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: entity.rawValue)
         let managedContext = GetDatabaseInstance()
         let fetchPredicate = NSPredicate(format: "id = \(ID)")
         fetchRequest.predicate = fetchPredicate
@@ -64,7 +57,7 @@ class DBManager: NSObject {
     }
     private class func InsertItem(into entity: Entity, item: BaseModel) -> Bool {
         let managedContext = GetDatabaseInstance()
-        if var newItem = NSEntityDescription.insertNewObject(forEntityName: entity.description, into:managedContext) as? BaseManagedObject {
+        if var newItem = NSEntityDescription.insertNewObject(forEntityName: entity.rawValue, into:managedContext) as? BaseManagedObject {
             ModelToItem(from: item, To: &newItem)
             do {
                 try managedContext.save()
@@ -78,7 +71,7 @@ class DBManager: NSObject {
         }
     }
     private class func RemoveItem(from entity: Entity, With ID: Int) -> Bool {
-        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: entity.description)
+        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: entity.rawValue)
         let managedContext = GetDatabaseInstance()
         let fetchPredicate = NSPredicate(format: "id = \(ID)")
         fetchRequest.predicate = fetchPredicate
@@ -102,7 +95,7 @@ class DBManager: NSObject {
         return false
     }
     private class func UpdateItem(from entity: Entity, To New: BaseModel, With ID: Int) -> Bool {
-        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: entity.description)
+        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: entity.rawValue)
         let managedContext = GetDatabaseInstance()
         let fetchPredicate = NSPredicate(format: "id = \(ID)")
         fetchRequest.predicate = fetchPredicate

@@ -15,6 +15,6 @@ class SendSyncState: State {
     override func NextState() {
         Manager.setState(Manager.ListenForResponse)
     }
-    override func SendRequest() {}
+    override func SendRequest(Type: PacketTypes, INS: Instructions, Data: [UInt8]) {}
     override func Receive(Data: [UInt8]) {}
 }

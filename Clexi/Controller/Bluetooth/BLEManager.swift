@@ -21,8 +21,8 @@ class BLEManager: NSObject {
         super.init()
     }
     
-    func SendRequest() {
-        State.sendRequest()
+    func SendRequest(Type: PacketTypes, INS: Instructions, Data: [UInt8] = []) {
+        State.sendRequest(Type: Type, INS: INS, Data: Data)
     }
     
     func SendSync() {

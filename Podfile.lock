@@ -10,7 +10,7 @@ EXTERNAL SOURCES:
 
 CHECKOUT OPTIONS:
   BLEManager:
-    :commit: 9340f15770de81d3716c0a9582583fc510b11d77
+    :commit: f4f1a6e416ecb3754bd856445b95d611f9b8d1b8
     :git: https://github.com/Hassaniiii/BLEManager.git
 
 SPEC CHECKSUMS:
@@ -18,4 +18,4 @@ SPEC CHECKSUMS:
 
 PODFILE CHECKSUM: 565decaeb2d2916426fabdd927b052c2de950add
 
-COCOAPODS: 1.3.1
+COCOAPODS: 1.4.0

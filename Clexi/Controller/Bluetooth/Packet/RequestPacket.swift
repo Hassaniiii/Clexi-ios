@@ -21,6 +21,9 @@ class RequestPacket: Packet {
         
         self.PacketLastIndex = 0
         self.ReqType = type ?? 0x01
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(DataSent),
+                                               name: NSNotification.Name(rawValue: "Data_Sent_To_Fob"), object: nil)
     }
     
     func CreateReqPacket(INS: UInt8, Data: [UInt8]) {
@@ -34,14 +37,16 @@ class RequestPacket: Packet {
         ReqData = APDUPackage.CreateAPDU()
         
         PacketQueue.append(InitiatePacket())
-        for index in 1..<ReqData.count / PacketLength {
+        for index in 0..<ReqData.count / PacketLength {
             PacketQueue.append(ContinuesPacket(index))
         }
         SendDataToTerminal(PacketLastIndex)
     }
     
     private func SizePacket(_ rawData: inout [UInt8]) {
-        rawData.append(contentsOf: Array(repeating: 0, count: PacketLength - (rawData.count % PacketLength)))
+        if rawData.count > 0 {
+            rawData.append(contentsOf: Array(repeating: 0, count: PacketLength - (rawData.count % PacketLength)))
+        }
     }
     
     //MARK:- Preparing data for BLE Interface communication
@@ -52,7 +57,7 @@ class RequestPacket: Packet {
         data.append(UInt8((ReqData.count & 0x00ff0000) >> 16))
         data.append(UInt8((ReqData.count & 0x0000ff00) >> 8))
         data.append(UInt8(ReqData.count & 0x000000ff))
-        for index in 0..<PacketLength {
+        for index in 0..<ReqData.count {
             data.append(ReqData[index])
         }
         return data
@@ -60,10 +65,16 @@ class RequestPacket: Packet {
     private func ContinuesPacket(_ index: Int) -> [UInt8] {
         var data = [UInt8]()
         
-        data.append(UInt8(index-1))
-        for byte in (PacketLength * index ..< PacketLength * (index + 1)) {
+        data.append(UInt8(index))
+        for byte in (PacketLength * (index + 1) ..< PacketLength * (index + 2)) {
             data.append(ReqData[byte])
         }
         return data
+    }
+}
+
+extension RequestPacket {
+    @objc func DataSent() {
+        print("item sent")
     }
 }

@@ -25,7 +25,7 @@ class BluetoothStates_Tests: XCTestCase {
     }
     func tests_02_SendRequest() {
         let State = StateManager()
-        State.sendRequest()
+        State.sendRequest(Type: PacketTypes.Info, INS: Instructions.GET_VERSION, Data: [])
         XCTAssertTrue(State.getState() as AnyObject? === State.SendRequest as AnyObject?)
         
         State.getState().NextState()
@@ -41,7 +41,7 @@ class BluetoothStates_Tests: XCTestCase {
     }
     func tests_04_RequestTimeOut() {
         let State = StateManager()
-        State.sendRequest()
+        State.sendRequest(Type: PacketTypes.Info, INS: Instructions.GET_VERSION, Data: [])
         
         wait(for: 5)
         XCTAssertTrue(State.getState() as AnyObject? === State.ListenForEvent as AnyObject?)
@@ -50,7 +50,7 @@ class BluetoothStates_Tests: XCTestCase {
         let State = StateManager()
         let MockEvent = BluetoothPacket_Tests().CreateMockEventData(INS: 0x00)
         
-        State.sendRequest()
+        State.sendRequest(Type: PacketTypes.Info, INS: Instructions.GET_VERSION, Data: [])
         wait(for: 5)
         
         State.receive(data: MockEvent)

@@ -43,9 +43,9 @@
 		5C120B2E201DFE6600321C92 /* ListenForResponseState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C120B2D201DFE6600321C92 /* ListenForResponseState.swift */; };
 		5C120B30201DFE9200321C92 /* SendSyncState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C120B2F201DFE9200321C92 /* SendSyncState.swift */; };
 		5C74879320207F38009B12B4 /* SearchSort.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C74879220207F38009B12B4 /* SearchSort.swift */; };
-		5CA2804B20258E4E009DFFD3 /* NSUserDefaultManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CA2804920258E4E009DFFD3 /* NSUserDefaultManager.swift */; };
-		5CA2804C20258E4E009DFFD3 /* DBController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CA2804A20258E4E009DFFD3 /* DBController.swift */; };
 		5CEFB161202080D70017F144 /* SearchSort_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CEFB160202080D70017F144 /* SearchSort_Tests.swift */; };
+		5CF8350820343F4600D69663 /* NSUserDefaultManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CF8350620343F4600D69663 /* NSUserDefaultManager.swift */; };
+		5CF8350920343F4600D69663 /* DBController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CF8350720343F4600D69663 /* DBController.swift */; };
 		5DCFB590C5ED7C5679AFD7B9 /* Pods_ClexiUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 23F0B63B5633159B744703EC /* Pods_ClexiUITests.framework */; };
 		8518A68582AD150C9D8008EB /* Pods_Clexi.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6755A887D64F82C9BEF366B9 /* Pods_Clexi.framework */; };
 /* End PBXBuildFile section */
@@ -114,9 +114,9 @@
 		5C120B2F201DFE9200321C92 /* SendSyncState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendSyncState.swift; sourceTree = "<group>"; };
 		5C74879220207F38009B12B4 /* SearchSort.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchSort.swift; sourceTree = "<group>"; };
 		5C74879420207F67009B12B4 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		5CA2804920258E4E009DFFD3 /* NSUserDefaultManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NSUserDefaultManager.swift; path = "../../../../../../../Temporary Files/NSUserDefaultManager.swift"; sourceTree = "<group>"; };
-		5CA2804A20258E4E009DFFD3 /* DBController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DBController.swift; path = "../../../../../../../Temporary Files/DBController.swift"; sourceTree = "<group>"; };
 		5CEFB160202080D70017F144 /* SearchSort_Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchSort_Tests.swift; sourceTree = "<group>"; };
+		5CF8350620343F4600D69663 /* NSUserDefaultManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NSUserDefaultManager.swift; path = "../../../../../../Temporary Files/NSUserDefaultManager.swift"; sourceTree = "<group>"; };
+		5CF8350720343F4600D69663 /* DBController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DBController.swift; path = "../../../../../../Temporary Files/DBController.swift"; sourceTree = "<group>"; };
 		6755A887D64F82C9BEF366B9 /* Pods_Clexi.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Clexi.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AA42F8E2B9C80F1C126B6346 /* Pods-ClexiTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ClexiTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ClexiTests/Pods-ClexiTests.debug.xcconfig"; sourceTree = "<group>"; };
 		B67E56D45BB7BC773045FD91 /* Pods-ClexiUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ClexiUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ClexiUITests/Pods-ClexiUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -176,8 +176,8 @@
 		1746A1C9201603DA008059C4 /* Data */ = {
 			isa = PBXGroup;
 			children = (
-				5CA2804A20258E4E009DFFD3 /* DBController.swift */,
-				5CA2804920258E4E009DFFD3 /* NSUserDefaultManager.swift */,
+				5CF8350720343F4600D69663 /* DBController.swift */,
+				5CF8350620343F4600D69663 /* NSUserDefaultManager.swift */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -671,7 +671,7 @@
 				5C120B2E201DFE6600321C92 /* ListenForResponseState.swift in Sources */,
 				17E3EE15200DFA8700B5AD95 /* BaseModel.swift in Sources */,
 				1739B324200CBBE600F6BD48 /* BLEClone.swift in Sources */,
-				5CA2804B20258E4E009DFFD3 /* NSUserDefaultManager.swift in Sources */,
+				5CF8350820343F4600D69663 /* NSUserDefaultManager.swift in Sources */,
 				1739B311200CB35600F6BD48 /* BLECloneModel.swift in Sources */,
 				175A9FAB20171BD000C9B00A /* StateManager.swift in Sources */,
 				1746A1D420160FEA008059C4 /* RequestPacket.swift in Sources */,
@@ -684,7 +684,7 @@
 				1739B30B200CB34200F6BD48 /* LocalAttributes.swift in Sources */,
 				17534D06200B880B0062F480 /* ClexiDB.xcdatamodeld in Sources */,
 				1746A1D520160FEA008059C4 /* ResponsePacket.swift in Sources */,
-				5CA2804C20258E4E009DFFD3 /* DBController.swift in Sources */,
+				5CF8350920343F4600D69663 /* DBController.swift in Sources */,
 				1739B312200CB35600F6BD48 /* ChangesStackModel.swift in Sources */,
 				5C74879320207F38009B12B4 /* SearchSort.swift in Sources */,
 				1739B329200CC53100F6BD48 /* DatabaseInstance.swift in Sources */,

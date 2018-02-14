@@ -129,8 +129,15 @@
 }
 
 - (void)TestPairing {
+    [self Read:_localCharacteristic];
+    
+}
+
+- (void)Read:(CBCharacteristic *)Characterstic {
+    if (Characterstic == NULL)
+        Characterstic = _localCharacteristic;
     if (_localPeriperal)
-        [_localPeriperal readValueForCharacteristic:_localCharacteristic];
+        [_localPeriperal readValueForCharacteristic:Characterstic];
     else
         if ([_delegate respondsToSelector:@selector(Error:)])
             [_delegate Error:[self GetErrorObjectForCode:LocalPeripheral_Null]];
@@ -144,7 +151,6 @@
     else {
         if (data) {
             if (_Logging)
-                NSLog(@"bytes to write: %@", data);
             [_localPeriperal writeValue: data
                       forCharacteristic:_localCharacteristic
                                    type:CBCharacteristicWriteWithResponse];
@@ -167,7 +173,7 @@
 #pragma mark - Central Manager Delegate
 - (void)centralManagerDidUpdateState:(CBCentralManager *)central {
     if ([_delegate respondsToSelector:@selector(CentralStateChanged:)])
-        [_delegate CentralStateChanged:(CBCentralManagerState )central.state];
+        [_delegate CentralStateChanged:central.state];
 }
 - (void)centralManager:(CBCentralManager *)central didDiscoverPeripheral:(CBPeripheral *)peripheral advertisementData:(NSDictionary<NSString *,id> *)advertisementData RSSI:(NSNumber *)RSSI {
     if (!peripheral.name || [peripheral.name isEqualToString:@""]) {
@@ -184,8 +190,8 @@
             [self StopScanning];
         }
         else if (RSSI.integerValue > _RSSI_filter && RSSI.integerValue < 0) {
-            if ([_delegate respondsToSelector:@selector(DongleFound:)])
-                [_delegate DongleFound:peripheral.identifier.UUIDString];
+            if ([_delegate respondsToSelector:@selector(CentralDidFound:)])
+                [_delegate CentralDidFound:peripheral.identifier.UUIDString];
         }
         else {
             [self StartScanning];
@@ -200,8 +206,8 @@
     [central stopScan];
     
     [_localPeriperal discoverServices:nil];
-    if ([_delegate respondsToSelector:@selector(DongleConnected)])
-        [_delegate DongleConnected];
+    if ([_delegate respondsToSelector:@selector(CentralDidConnected)])
+        [_delegate CentralDidConnected];
 }
 - (void)centralManager:(CBCentralManager *)central didFailToConnectPeripheral:(CBPeripheral *)peripheral error:(NSError *)error {
     if ([_delegate respondsToSelector:@selector(Error:)])
@@ -209,8 +215,8 @@
 }
 - (void)centralManager:(CBCentralManager *)central didDisconnectPeripheral:(CBPeripheral *)peripheral error:(NSError *)error {
     _connectedMacAddress = @"";
-    if ([_delegate respondsToSelector:@selector(DongleDisconnected)])
-        [_delegate DongleDisconnected];
+    if ([_delegate respondsToSelector:@selector(CentralDidDisconnected)])
+        [_delegate CentralDidDisconnected];
     if ([_AutoConnectDongles count])
         [self StartScanning];
 
@@ -225,8 +231,8 @@
     _localPeriperal = [peripherals firstObject];
     _localPeriperal.delegate = self;
     
-    if ([_delegate respondsToSelector:@selector(PairedDongles:)])
-        [_delegate PairedDongles:peripherals];
+    if ([_delegate respondsToSelector:@selector(PairedCentral:)])
+        [_delegate PairedCentral:peripherals];
 }
 
 #pragma mark - Peripheral Delegate
@@ -246,7 +252,6 @@
     }
     else {
         for (CBService *service in peripheral.services) {
-            NSLog(@"Service: %@", service);
             if ([_ServiceUUIDs containsObject:service.UUID])
                 [peripheral discoverCharacteristics:nil forService:service];
         }
@@ -258,8 +263,8 @@
             [_delegate Error:error];
     }
     else {
-        if ([_delegate respondsToSelector:@selector(RSSIRead:)])
-            [_delegate RSSIRead:RSSI.integerValue];
+        if ([_delegate respondsToSelector:@selector(CentralDidReadRSSI:)])
+            [_delegate CentralDidReadRSSI:RSSI.integerValue];
         if (_RSSI_lock && (RSSI.integerValue < _RSSI_lockValue)) {
             _lockCount++;
             if (_lockCount >= _RSSI_delay) {
@@ -286,7 +291,6 @@
     }
     else {
         for (CBCharacteristic *characteristic in service.characteristics) {
-            NSLog(@"Characterstics: %@", characteristic);
             if ([characteristic.UUID.UUIDString isEqualToString:_ServiceCharacteristic.UUIDString])
                 _localCharacteristic = characteristic;
             if ([characteristic.UUID.UUIDString isEqualToString:_ServiceNotifyCharacteristic.UUIDString])
@@ -306,22 +310,22 @@
             [_delegate Error:error];
     }
     else
-        if ([_delegate respondsToSelector:@selector(DataTransfered)])
-            [_delegate DataTransfered];
+        if ([_delegate respondsToSelector:@selector(CentralDataDidTransfered)])
+            [_delegate CentralDataDidTransfered];
 }
 - (void)peripheral:(CBPeripheral *)peripheral didUpdateValueForCharacteristic:(CBCharacteristic *)characteristic error:(NSError *)error {
     if (error)
         if (error == [ErrorHandler PairingError]) {
-            if ([_delegate respondsToSelector:@selector(DonglePairingFailed)])
-                [_delegate DonglePairingFailed];
+            if ([_delegate respondsToSelector:@selector(CentralPairingFailed)])
+                [_delegate CentralPairingFailed];
         }
         else {
             if ([_delegate respondsToSelector:@selector(Error:)])
                 [_delegate Error:error];
         }
     else
-        if ([_delegate respondsToSelector:@selector(DongleRecived:)])
-            [_delegate DongleRecived:characteristic.value];
+        if ([_delegate respondsToSelector:@selector(CentralDidRecived:)])
+            [_delegate CentralDidRecived:characteristic.value];
 }
 - (void)peripheral:(CBPeripheral *)peripheral didDiscoverIncludedServicesForService:(CBService *)service error:(NSError *)error {
     

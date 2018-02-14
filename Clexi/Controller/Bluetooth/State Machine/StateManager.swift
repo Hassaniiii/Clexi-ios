@@ -12,7 +12,7 @@ protocol BLEState {
     var Manager: StateManager {get set}
     
     func NextState()
-    func SendRequest()
+    func SendRequest(Type: PacketTypes, INS: Instructions, Data: [UInt8])
     func Receive(Data: [UInt8])
 }
 
@@ -42,14 +42,14 @@ class StateManager: NSObject {
         return self.state
     }
     
-    func sendRequest() {
+    func sendRequest(Type: PacketTypes, INS: Instructions, Data: [UInt8]) {
         setState(SendRequest)
-        state.SendRequest()
+        state.SendRequest(Type: Type, INS: INS, Data: Data)
         startTimeOut()
     }
     func sendSync() {
         setState(SendSync)
-        state.SendRequest()
+//        state.SendRequest()
         startTimeOut()
     }
     func receive(data: [UInt8]) {

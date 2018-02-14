@@ -14,6 +14,7 @@
 #import "CentralManager.h"
 #import "ErrorCodes.h"
 #import "ErrorHandler.h"
+#import "MyCharacterstic.h"
 #import "PeripheralManager.h"
 
 FOUNDATION_EXPORT double BLEManagerVersionNumber;

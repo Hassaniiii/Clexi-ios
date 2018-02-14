@@ -9,23 +9,24 @@
 import UIKit
 
 class ListenForEventState: State {
-    private let Events = [0x10, 0x30]
     private var PacketManager: ResponsePacket!
     
     override init(Manager: StateManager) {
         super.init(Manager: Manager)
     }
     override func NextState() {}
-    override func SendRequest() {}
+    override func SendRequest(Type: PacketTypes, INS: Instructions, Data: [UInt8]) {}
     override func Receive(Data: [UInt8]) {
         PacketManager = ResponsePacket()
         PacketManager.PacketType = PacketTypes.Event
         PacketManager.AnalyzeData(rawData: Data)
-        if PacketManager.APDUPackage.INS == 0x10 {
-            print("Single Click event is recieved")
+        if PacketManager.APDUPackage.INS == Events.SingleClick.rawValue {
+//            print("Single Click event is recieved")
+            NotificationCenter.default.post(name: NSNotification.Name(rawValue: "Event_Received"), object: nil)
         }
-        if PacketManager.APDUPackage.INS == 0x30 {
-            print("Double Click event is recieved")
+        if PacketManager.APDUPackage.INS == Events.DoubleClick.rawValue {
+//            print("Double Click event is recieved")
+            NotificationCenter.default.post(name: NSNotification.Name(rawValue: "Event_Received"), object: nil)
         }
     }
 }

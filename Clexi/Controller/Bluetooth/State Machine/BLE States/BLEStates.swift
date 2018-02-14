@@ -16,7 +16,7 @@ class State: NSObject, BLEState {
     }
     
     func NextState() {}
-    func SendRequest() {}
+    func SendRequest(Type: PacketTypes, INS: Instructions, Data: [UInt8]) {}
     func Receive(Data: [UInt8]) {}
 }
 
